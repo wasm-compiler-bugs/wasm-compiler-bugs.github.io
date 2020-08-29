@@ -13,7 +13,7 @@ All of the tables used in the paper can be found in the [Tables](https://github.
 Here we provide some of the statistics that are used to create the figures in the paper.
 
 ### Statistics For Figure 2
-<img src="https://github.com/wasm-compiler-bugs/wasm-compiler-bugs.github.io/raw/master/Tables/Statistics-Of-WebAssembly-Compilers-In-The-Wild.PNG" width="500" alt="Statistics For Figure 2" >
+<img src="https://github.com/wasm-compiler-bugs/wasm-compiler-bugs.github.io/raw/master/Tables/Statistics-Of-WebAssembly-Compilers-In-The-Wild.PNG" width="400" alt="Statistics For Figure 2" >
 
 
 ###  Statistics For Figure 4
