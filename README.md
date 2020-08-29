@@ -1,37 +1,11 @@
-## Welcome to GitHub Pages
+## An Empirical Study on WebAssembly Compiler Bugs
 
-You can use the [editor on GitHub](https://github.com/wasm-compiler-bugs/wasm-compiler-bugs.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+This repo contains the figures and data presented in the ICSE 2021 submission "An Empirical Study on WebAssembly Compiler Bugs".
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Figures
+All of the figures used in the paper can be found in the [Figures]()
+directory. The figures are provided as hihg-resolution .png and .pdf files.
 
-### Markdown
+## Tables
+All of the tables used in the paper can be found in the [Tables]() directory with the table numbers matching those found in the paper. There are also tables that were ommitted from the paper for space. The tables are provided as high-resolution .png files.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/wasm-compiler-bugs/wasm-compiler-bugs.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
