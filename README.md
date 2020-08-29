@@ -13,23 +13,24 @@ All of the tables used in the paper can be found in the [Tables](https://github.
 Here we provide some of the statistics that are used to create the figures in the paper.
 
 ### Statistics For Figure 2
-![Statistics For Figure 2](https://github.com/wasm-compiler-bugs/wasm-compiler-bugs.github.io/raw/master/Tables/Statistics-Of-WebAssembly-Compilers-In-The-Wild.PNG)
+<img src="https://github.com/wasm-compiler-bugs/wasm-compiler-bugs.github.io/raw/master/Tables/Statistics-Of-WebAssembly-Compilers-In-The-Wild.PNG" width="500" alt="Statistics For Figure 2" >
+
 
 ###  Statistics For Figure 4
-![Statistics For Figure 4](https://github.com/wasm-compiler-bugs/wasm-compiler-bugs.github.io/raw/master/Tables/Statistics-of-Lifecycle-of-Bugs-In-Days.PNG)
+<img src="https://github.com/wasm-compiler-bugs/wasm-compiler-bugs.github.io/raw/master/Tables/Statistics-of-Lifecycle-of-Bugs-In-Days.PNG" alt="Statistics For Figure 4" width="500">
 
 ### Statistics For Figure 12
-![Statistics For Figure 12](https://github.com/wasm-compiler-bugs/wasm-compiler-bugs.github.io/raw/master/Tables/Statistics-For-Figure-12.PNG)
+<img src="https://github.com/wasm-compiler-bugs/wasm-compiler-bugs.github.io/raw/master/Tables/Statistics-For-Figure-12.PNG" alt="Statistics For Figure 12" width="500">
 
 ### Statistics For Figure 14
-![Statistics For Figure 14](https://github.com/wasm-compiler-bugs/wasm-compiler-bugs.github.io/raw/master/Tables/Statistics-of-Test-input-Lines-of-Code.PNG)
+<img src="https://github.com/wasm-compiler-bugs/wasm-compiler-bugs.github.io/raw/master/Tables/Statistics-of-Test-input-Lines-of-Code.PNG" alt="Statistics For Figure 14" width="500">
 
 ### Statistics For Figure 15
-![Statistics For Figure 15](https://github.com/wasm-compiler-bugs/wasm-compiler-bugs.github.io/raw/master/Tables/Statistics-of-Lines-of-Code-For-Bug-Fixes.PNG)
+<img src="https://github.com/wasm-compiler-bugs/wasm-compiler-bugs.github.io/raw/master/Tables/Statistics-of-Lines-of-Code-For-Bug-Fixes.PNG" alt="Statistics For Figure 15" width="500">
 
 ### Issues With Test Case LOC Over 100
-![Issues With Test Case LOC Over 100](https://github.com/wasm-compiler-bugs/wasm-compiler-bugs.github.io/raw/master/Tables/Issues-With-Test-Input-LOC-Count-Over-100.PNG)
+<img src="https://github.com/wasm-compiler-bugs/wasm-compiler-bugs.github.io/raw/master/Tables/Issues-With-Test-Input-LOC-Count-Over-100.PNG" alt="Issues With Test Case LOC Over 100" width="500">
 
 ### Top 10 Buggy Files In Compilers
-![Top 10 Buggy Files In Compilers](https://github.com/wasm-compiler-bugs/wasm-compiler-bugs.github.io/raw/master/Tables/Top-10-Buggy-Files.PNG)
+<img src="https://github.com/wasm-compiler-bugs/wasm-compiler-bugs.github.io/raw/master/Tables/Top-10-Buggy-Files.PNG" alt="Top 10 Buggy Files In Compilers" width="500">
 
