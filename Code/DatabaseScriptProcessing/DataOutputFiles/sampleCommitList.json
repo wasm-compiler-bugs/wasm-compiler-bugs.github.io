@@ -1,0 +1,2372 @@
+[
+    {
+      "sha": "1a26a40a4b8aa3f86d79b903f489e86163ac9b20",
+      "node_id": "MDY6Q29tbWl0MTA1MTM4MzU2OjFhMjZhNDBhNGI4YWEzZjg2ZDc5YjkwM2Y0ODllODYxNjNhYzliMjA=",
+      "commit": {
+        "author": {
+          "name": "Daniel Wirtz",
+          "email": "dcode@dcode.io",
+          "date": "2020-04-01T04:24:21Z"
+        },
+        "committer": {
+          "name": "GitHub",
+          "email": "noreply@github.com",
+          "date": "2020-04-01T04:24:21Z"
+        },
+        "message": "Handle instantiation of unmanaged class via object literal (#1189)",
+        "tree": {
+          "sha": "30e3c669d9f4f9e47445a53b8d2d1c86206ba01f",
+          "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/git/trees/30e3c669d9f4f9e47445a53b8d2d1c86206ba01f"
+        },
+        "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/git/commits/1a26a40a4b8aa3f86d79b903f489e86163ac9b20",
+        "comment_count": 0,
+        "verification": {
+          "verified": true,
+          "reason": "valid",
+          "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJehBd1CRBK7hj4Ov3rIwAAdHIIAGXKqmCdICo48V1SL1KKA1g0\nx4KeokMSOGU/eC1sGta9aXjcUs8Ud3irMonCiZXKOLmaCUQTsc+Or7jKuZJLtRHz\njXF2nmTn0goFCOd/Bj86uYMPMfN4e0NLE9r5w82B4tpBy2T8+c7iKWqxi8CglzEb\nkV3PjkGqsXgL6rbRsQxka351VHpnaPxXDLPX1Kdv4oQV9Qvm7Z4kHIMLIc6Unxlg\nWINw1UbMiZ3gktTiIZnKyeGP5tFmNMleyjtmZTFML6NPH/CoS5P0WYAouy17Vh93\niCqsEEWkkcZ5CbFjPLCLk2akQRFRibI5+VcmLjgN5xtffMIlM2jLufOy5NEAtbU=\n=nfjE\n-----END PGP SIGNATURE-----\n",
+          "payload": "tree 30e3c669d9f4f9e47445a53b8d2d1c86206ba01f\nparent 125944af9a2e4bdfe5756ef0228cffc561594639\nauthor Daniel Wirtz <dcode@dcode.io> 1585715061 +0200\ncommitter GitHub <noreply@github.com> 1585715061 +0200\n\nHandle instantiation of unmanaged class via object literal (#1189)\n\n"
+        }
+      },
+      "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/commits/1a26a40a4b8aa3f86d79b903f489e86163ac9b20",
+      "html_url": "https://github.com/AssemblyScript/assemblyscript/commit/1a26a40a4b8aa3f86d79b903f489e86163ac9b20",
+      "comments_url": "https://api.github.com/repos/AssemblyScript/assemblyscript/commits/1a26a40a4b8aa3f86d79b903f489e86163ac9b20/comments",
+      "author": {
+        "login": "dcodeIO",
+        "id": 1136893,
+        "node_id": "MDQ6VXNlcjExMzY4OTM=",
+        "avatar_url": "https://avatars0.githubusercontent.com/u/1136893?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/dcodeIO",
+        "html_url": "https://github.com/dcodeIO",
+        "followers_url": "https://api.github.com/users/dcodeIO/followers",
+        "following_url": "https://api.github.com/users/dcodeIO/following{/other_user}",
+        "gists_url": "https://api.github.com/users/dcodeIO/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/dcodeIO/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/dcodeIO/subscriptions",
+        "organizations_url": "https://api.github.com/users/dcodeIO/orgs",
+        "repos_url": "https://api.github.com/users/dcodeIO/repos",
+        "events_url": "https://api.github.com/users/dcodeIO/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/dcodeIO/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "committer": {
+        "login": "web-flow",
+        "id": 19864447,
+        "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+        "avatar_url": "https://avatars3.githubusercontent.com/u/19864447?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/web-flow",
+        "html_url": "https://github.com/web-flow",
+        "followers_url": "https://api.github.com/users/web-flow/followers",
+        "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+        "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+        "organizations_url": "https://api.github.com/users/web-flow/orgs",
+        "repos_url": "https://api.github.com/users/web-flow/repos",
+        "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/web-flow/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "parents": [
+        {
+          "sha": "125944af9a2e4bdfe5756ef0228cffc561594639",
+          "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/commits/125944af9a2e4bdfe5756ef0228cffc561594639",
+          "html_url": "https://github.com/AssemblyScript/assemblyscript/commit/125944af9a2e4bdfe5756ef0228cffc561594639"
+        }
+      ]
+    },
+    {
+      "sha": "125944af9a2e4bdfe5756ef0228cffc561594639",
+      "node_id": "MDY6Q29tbWl0MTA1MTM4MzU2OjEyNTk0NGFmOWEyZTRiZGZlNTc1NmVmMDIyOGNmZmM1NjE1OTQ2Mzk=",
+      "commit": {
+        "author": {
+          "name": "Duncan",
+          "email": "duncan.uszkay@gmail.com",
+          "date": "2020-03-31T16:38:28Z"
+        },
+        "committer": {
+          "name": "GitHub",
+          "email": "noreply@github.com",
+          "date": "2020-03-31T16:38:28Z"
+        },
+        "message": "Change assert to allow blank strings in global aliases (#1177)",
+        "tree": {
+          "sha": "64af7b536385b84c3868b581bb46b18c06a0d469",
+          "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/git/trees/64af7b536385b84c3868b581bb46b18c06a0d469"
+        },
+        "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/git/commits/125944af9a2e4bdfe5756ef0228cffc561594639",
+        "comment_count": 0,
+        "verification": {
+          "verified": true,
+          "reason": "valid",
+          "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJeg3IECRBK7hj4Ov3rIwAAdHIIABjrI9MPImlXpThM1vVJgJLi\n8pbY12xyImgFiFnnHXNhy2rQJfOZb5Jbs4/gGEDl44ovgXFU1BQJYzvyDCOevRWU\n0i+ctyNDiJ8fjQ++mQHrs/mBM5TaNFBDYws7pZUmVcW3dBlFTgQWHjjFiHwJnu8f\ny1aNZYY0AajyL1e7VW0jbyWhhCiZoesFcJ4jCCwxGN4hEo+NfzW49rYQgOdEiN2c\nDGJ8HZn8WP4zOgAFO+WftVfPmU5jC+czakDAyqJH38CxXNE8O/CWq9VlMLwK7a4R\nJmMed1ox/w4t4Ov05Dwy17dF9/iagtBTyKpip0q3cw4P+V1+NTpbMNyAwdtAMY0=\n=OeiT\n-----END PGP SIGNATURE-----\n",
+          "payload": "tree 64af7b536385b84c3868b581bb46b18c06a0d469\nparent 08075c6dd531664c884a74b5d22b70e9c433e29a\nauthor Duncan <duncan.uszkay@gmail.com> 1585672708 -0400\ncommitter GitHub <noreply@github.com> 1585672708 +0200\n\nChange assert to allow blank strings in global aliases (#1177)\n\n"
+        }
+      },
+      "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/commits/125944af9a2e4bdfe5756ef0228cffc561594639",
+      "html_url": "https://github.com/AssemblyScript/assemblyscript/commit/125944af9a2e4bdfe5756ef0228cffc561594639",
+      "comments_url": "https://api.github.com/repos/AssemblyScript/assemblyscript/commits/125944af9a2e4bdfe5756ef0228cffc561594639/comments",
+      "author": {
+        "login": "DuncanUszkay1",
+        "id": 8670351,
+        "node_id": "MDQ6VXNlcjg2NzAzNTE=",
+        "avatar_url": "https://avatars2.githubusercontent.com/u/8670351?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/DuncanUszkay1",
+        "html_url": "https://github.com/DuncanUszkay1",
+        "followers_url": "https://api.github.com/users/DuncanUszkay1/followers",
+        "following_url": "https://api.github.com/users/DuncanUszkay1/following{/other_user}",
+        "gists_url": "https://api.github.com/users/DuncanUszkay1/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/DuncanUszkay1/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/DuncanUszkay1/subscriptions",
+        "organizations_url": "https://api.github.com/users/DuncanUszkay1/orgs",
+        "repos_url": "https://api.github.com/users/DuncanUszkay1/repos",
+        "events_url": "https://api.github.com/users/DuncanUszkay1/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/DuncanUszkay1/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "committer": {
+        "login": "web-flow",
+        "id": 19864447,
+        "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+        "avatar_url": "https://avatars3.githubusercontent.com/u/19864447?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/web-flow",
+        "html_url": "https://github.com/web-flow",
+        "followers_url": "https://api.github.com/users/web-flow/followers",
+        "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+        "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+        "organizations_url": "https://api.github.com/users/web-flow/orgs",
+        "repos_url": "https://api.github.com/users/web-flow/repos",
+        "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/web-flow/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "parents": [
+        {
+          "sha": "08075c6dd531664c884a74b5d22b70e9c433e29a",
+          "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/commits/08075c6dd531664c884a74b5d22b70e9c433e29a",
+          "html_url": "https://github.com/AssemblyScript/assemblyscript/commit/08075c6dd531664c884a74b5d22b70e9c433e29a"
+        }
+      ]
+    },
+    {
+      "sha": "08075c6dd531664c884a74b5d22b70e9c433e29a",
+      "node_id": "MDY6Q29tbWl0MTA1MTM4MzU2OjA4MDc1YzZkZDUzMTY2NGM4ODRhNzRiNWQyMmI3MGU5YzQzM2UyOWE=",
+      "commit": {
+        "author": {
+          "name": "Daniel Wirtz",
+          "email": "dcode@dcode.io",
+          "date": "2020-03-28T21:12:27Z"
+        },
+        "committer": {
+          "name": "GitHub",
+          "email": "noreply@github.com",
+          "date": "2020-03-28T21:12:27Z"
+        },
+        "message": "Always register non-MVP types and check on actual use (#1194)",
+        "tree": {
+          "sha": "c28a3aea8e1bab14627f9f8eda536822a64c31c4",
+          "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/git/trees/c28a3aea8e1bab14627f9f8eda536822a64c31c4"
+        },
+        "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/git/commits/08075c6dd531664c884a74b5d22b70e9c433e29a",
+        "comment_count": 0,
+        "verification": {
+          "verified": true,
+          "reason": "valid",
+          "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJef727CRBK7hj4Ov3rIwAAdHIIAF+tdEdJE+JUdVBPXGmIFrTo\ni0fXKAqU08rbHzcD0PY2PYnf92Xn3buF60xhH0vn633SNadFecjw7sIHsn8/nPnp\nm3VDtnwTZ5Z5FQBVLhtcYzpDZ8iX9mmEOGRDtqkRTynf984EPKd4S/vap7QvZK5V\nL1pDrP+g+agkhuUmViPAYtRInyNaPEW42y7CvrOHYw7ZPEcDGGVyWDeAUs9zHNqQ\nBYXizMKEbOpm/wBm9/F5+CPe67917C9uVUVd4nVHCxnSFMpDe8/KHbQZbkW94kAC\nyC+CbdZT642wBMdVtbo+2bRqOdZ69SpmsLRjKF2z4//Zbq2t6GyRE6pKiYEaf0Y=\n=SsHi\n-----END PGP SIGNATURE-----\n",
+          "payload": "tree c28a3aea8e1bab14627f9f8eda536822a64c31c4\nparent 9e059061cc082766fb69ebf63cd6445a8c35be53\nauthor Daniel Wirtz <dcode@dcode.io> 1585429947 +0100\ncommitter GitHub <noreply@github.com> 1585429947 +0100\n\nAlways register non-MVP types and check on actual use (#1194)\n\n"
+        }
+      },
+      "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/commits/08075c6dd531664c884a74b5d22b70e9c433e29a",
+      "html_url": "https://github.com/AssemblyScript/assemblyscript/commit/08075c6dd531664c884a74b5d22b70e9c433e29a",
+      "comments_url": "https://api.github.com/repos/AssemblyScript/assemblyscript/commits/08075c6dd531664c884a74b5d22b70e9c433e29a/comments",
+      "author": {
+        "login": "dcodeIO",
+        "id": 1136893,
+        "node_id": "MDQ6VXNlcjExMzY4OTM=",
+        "avatar_url": "https://avatars0.githubusercontent.com/u/1136893?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/dcodeIO",
+        "html_url": "https://github.com/dcodeIO",
+        "followers_url": "https://api.github.com/users/dcodeIO/followers",
+        "following_url": "https://api.github.com/users/dcodeIO/following{/other_user}",
+        "gists_url": "https://api.github.com/users/dcodeIO/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/dcodeIO/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/dcodeIO/subscriptions",
+        "organizations_url": "https://api.github.com/users/dcodeIO/orgs",
+        "repos_url": "https://api.github.com/users/dcodeIO/repos",
+        "events_url": "https://api.github.com/users/dcodeIO/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/dcodeIO/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "committer": {
+        "login": "web-flow",
+        "id": 19864447,
+        "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+        "avatar_url": "https://avatars3.githubusercontent.com/u/19864447?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/web-flow",
+        "html_url": "https://github.com/web-flow",
+        "followers_url": "https://api.github.com/users/web-flow/followers",
+        "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+        "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+        "organizations_url": "https://api.github.com/users/web-flow/orgs",
+        "repos_url": "https://api.github.com/users/web-flow/repos",
+        "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/web-flow/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "parents": [
+        {
+          "sha": "9e059061cc082766fb69ebf63cd6445a8c35be53",
+          "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/commits/9e059061cc082766fb69ebf63cd6445a8c35be53",
+          "html_url": "https://github.com/AssemblyScript/assemblyscript/commit/9e059061cc082766fb69ebf63cd6445a8c35be53"
+        }
+      ]
+    },
+    {
+      "sha": "9e059061cc082766fb69ebf63cd6445a8c35be53",
+      "node_id": "MDY6Q29tbWl0MTA1MTM4MzU2OjllMDU5MDYxY2MwODI3NjZmYjY5ZWJmNjNjZDY0NDVhOGMzNWJlNTM=",
+      "commit": {
+        "author": {
+          "name": "jtenner",
+          "email": "tenner.joshua@gmail.com",
+          "date": "2020-03-28T06:05:55Z"
+        },
+        "committer": {
+          "name": "GitHub",
+          "email": "noreply@github.com",
+          "date": "2020-03-28T06:05:55Z"
+        },
+        "message": "Support StaticArray in loader (#1197)",
+        "tree": {
+          "sha": "9a681034a9b61bcb8e6d44c09187ecf634076105",
+          "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/git/trees/9a681034a9b61bcb8e6d44c09187ecf634076105"
+        },
+        "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/git/commits/9e059061cc082766fb69ebf63cd6445a8c35be53",
+        "comment_count": 0,
+        "verification": {
+          "verified": true,
+          "reason": "valid",
+          "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJefulDCRBK7hj4Ov3rIwAAdHIIAISVoHmHR+u5pwbMlq6wVkue\nCMpzMxM1Aq0QZA+2t3odCdiJvigzPSMfma0cfbYIuJAE+rgo3Ntu03VKR2rWL+gg\n4QPju51wzZanjjP0jA/KVJjE3xNriJC1uxuzgvI6+vydON32+zrdplXlhD1zI64J\n13UZGrubt5RU74US+crA1mQBwOwcGP3dnS6KFsVQachfL9GnqE8LUahYyRT4864a\nTZXIAGTb2lDjVAOZVtebTpQe8aUmz/lq2LCOtWQNrreQV0fdOzJrpftoEm+x45v+\npkMrN6QeJVHl6ieO0jQxGoBL5qgolGcAyIn5nfgX/s3f7SyOqwXMyLxTRKzx484=\n=VLs9\n-----END PGP SIGNATURE-----\n",
+          "payload": "tree 9a681034a9b61bcb8e6d44c09187ecf634076105\nparent 70e9b154532b228548c386de0e80e58f844318b1\nauthor jtenner <tenner.joshua@gmail.com> 1585375555 -0400\ncommitter GitHub <noreply@github.com> 1585375555 +0100\n\nSupport StaticArray in loader (#1197)\n\n"
+        }
+      },
+      "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/commits/9e059061cc082766fb69ebf63cd6445a8c35be53",
+      "html_url": "https://github.com/AssemblyScript/assemblyscript/commit/9e059061cc082766fb69ebf63cd6445a8c35be53",
+      "comments_url": "https://api.github.com/repos/AssemblyScript/assemblyscript/commits/9e059061cc082766fb69ebf63cd6445a8c35be53/comments",
+      "author": {
+        "login": "jtenner",
+        "id": 3761339,
+        "node_id": "MDQ6VXNlcjM3NjEzMzk=",
+        "avatar_url": "https://avatars1.githubusercontent.com/u/3761339?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/jtenner",
+        "html_url": "https://github.com/jtenner",
+        "followers_url": "https://api.github.com/users/jtenner/followers",
+        "following_url": "https://api.github.com/users/jtenner/following{/other_user}",
+        "gists_url": "https://api.github.com/users/jtenner/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/jtenner/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/jtenner/subscriptions",
+        "organizations_url": "https://api.github.com/users/jtenner/orgs",
+        "repos_url": "https://api.github.com/users/jtenner/repos",
+        "events_url": "https://api.github.com/users/jtenner/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/jtenner/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "committer": {
+        "login": "web-flow",
+        "id": 19864447,
+        "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+        "avatar_url": "https://avatars3.githubusercontent.com/u/19864447?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/web-flow",
+        "html_url": "https://github.com/web-flow",
+        "followers_url": "https://api.github.com/users/web-flow/followers",
+        "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+        "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+        "organizations_url": "https://api.github.com/users/web-flow/orgs",
+        "repos_url": "https://api.github.com/users/web-flow/repos",
+        "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/web-flow/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "parents": [
+        {
+          "sha": "70e9b154532b228548c386de0e80e58f844318b1",
+          "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/commits/70e9b154532b228548c386de0e80e58f844318b1",
+          "html_url": "https://github.com/AssemblyScript/assemblyscript/commit/70e9b154532b228548c386de0e80e58f844318b1"
+        }
+      ]
+    },
+    {
+      "sha": "70e9b154532b228548c386de0e80e58f844318b1",
+      "node_id": "MDY6Q29tbWl0MTA1MTM4MzU2OjcwZTliMTU0NTMyYjIyODU0OGMzODZkZTBlODBlNThmODQ0MzE4YjE=",
+      "commit": {
+        "author": {
+          "name": "Daniel Wirtz",
+          "email": "dcode@dcode.io",
+          "date": "2020-03-27T09:23:13Z"
+        },
+        "committer": {
+          "name": "GitHub",
+          "email": "noreply@github.com",
+          "date": "2020-03-27T09:23:13Z"
+        },
+        "message": "Temporarily disable casemapping checks against node/v8 (#1196)",
+        "tree": {
+          "sha": "2a179c5365e506eddaafa5792dbf8b2ee7b26675",
+          "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/git/trees/2a179c5365e506eddaafa5792dbf8b2ee7b26675"
+        },
+        "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/git/commits/70e9b154532b228548c386de0e80e58f844318b1",
+        "comment_count": 0,
+        "verification": {
+          "verified": true,
+          "reason": "valid",
+          "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJefcYBCRBK7hj4Ov3rIwAAdHIIAGLxQUER3azGsjgpmeRlJmey\nB5S3IvnWUpXcFObcnn7C3IwBDdhe94q99mFwKosKiEKPfdY+0oZR0n6Obn5yH24S\n6zNI39I1Ev9rFkZC0/aomJZ7XVRCjcOIXQfxm5HZYfQ8HTnKkkEfN2FrB6j0LKv4\n5WqdQzgpqRFeW/R2VeIOys2aJXpc7Pknj77j/RNkpvpTSgSs9u0VqSCUPLkU2EBd\nmC3IEY/dACZ8Dcu2Gu3sbW2AwnwSwv8TkpXaMLtrzkvAhyJdagWud4bmRu1yK5UZ\npSeZFlgCY/07QfAPVUltY9ZbWVrdKN6n5VsQXEG7rV+C9Q/llaQ5WXbbDfIBPjs=\n=0qWM\n-----END PGP SIGNATURE-----\n",
+          "payload": "tree 2a179c5365e506eddaafa5792dbf8b2ee7b26675\nparent e07602c6df1677649146a14b78a2f7aa603587f1\nauthor Daniel Wirtz <dcode@dcode.io> 1585300993 +0100\ncommitter GitHub <noreply@github.com> 1585300993 +0100\n\nTemporarily disable casemapping checks against node/v8 (#1196)\n\n"
+        }
+      },
+      "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/commits/70e9b154532b228548c386de0e80e58f844318b1",
+      "html_url": "https://github.com/AssemblyScript/assemblyscript/commit/70e9b154532b228548c386de0e80e58f844318b1",
+      "comments_url": "https://api.github.com/repos/AssemblyScript/assemblyscript/commits/70e9b154532b228548c386de0e80e58f844318b1/comments",
+      "author": {
+        "login": "dcodeIO",
+        "id": 1136893,
+        "node_id": "MDQ6VXNlcjExMzY4OTM=",
+        "avatar_url": "https://avatars0.githubusercontent.com/u/1136893?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/dcodeIO",
+        "html_url": "https://github.com/dcodeIO",
+        "followers_url": "https://api.github.com/users/dcodeIO/followers",
+        "following_url": "https://api.github.com/users/dcodeIO/following{/other_user}",
+        "gists_url": "https://api.github.com/users/dcodeIO/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/dcodeIO/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/dcodeIO/subscriptions",
+        "organizations_url": "https://api.github.com/users/dcodeIO/orgs",
+        "repos_url": "https://api.github.com/users/dcodeIO/repos",
+        "events_url": "https://api.github.com/users/dcodeIO/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/dcodeIO/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "committer": {
+        "login": "web-flow",
+        "id": 19864447,
+        "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+        "avatar_url": "https://avatars3.githubusercontent.com/u/19864447?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/web-flow",
+        "html_url": "https://github.com/web-flow",
+        "followers_url": "https://api.github.com/users/web-flow/followers",
+        "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+        "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+        "organizations_url": "https://api.github.com/users/web-flow/orgs",
+        "repos_url": "https://api.github.com/users/web-flow/repos",
+        "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/web-flow/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "parents": [
+        {
+          "sha": "e07602c6df1677649146a14b78a2f7aa603587f1",
+          "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/commits/e07602c6df1677649146a14b78a2f7aa603587f1",
+          "html_url": "https://github.com/AssemblyScript/assemblyscript/commit/e07602c6df1677649146a14b78a2f7aa603587f1"
+        }
+      ]
+    },
+    {
+      "sha": "e07602c6df1677649146a14b78a2f7aa603587f1",
+      "node_id": "MDY6Q29tbWl0MTA1MTM4MzU2OmUwNzYwMmM2ZGYxNjc3NjQ5MTQ2YTE0Yjc4YTJmN2FhNjAzNTg3ZjE=",
+      "commit": {
+        "author": {
+          "name": "Max Graey",
+          "email": "maxgraey@gmail.com",
+          "date": "2020-03-26T22:25:50Z"
+        },
+        "committer": {
+          "name": "GitHub",
+          "email": "noreply@github.com",
+          "date": "2020-03-26T22:25:50Z"
+        },
+        "message": "Fix loader import object definition (#1193)",
+        "tree": {
+          "sha": "39d62761303fcee5cb8cbffce170c7048ecb9541",
+          "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/git/trees/39d62761303fcee5cb8cbffce170c7048ecb9541"
+        },
+        "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/git/commits/e07602c6df1677649146a14b78a2f7aa603587f1",
+        "comment_count": 0,
+        "verification": {
+          "verified": true,
+          "reason": "valid",
+          "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJefSvuCRBK7hj4Ov3rIwAAdHIIAH8RwJU2KoFCzt6Twff78DfU\nSUYGeGr5wPP9Nn8TNt4SPrNjMex3WXLq/01a9Ypcox3E9fCt3vgzP/N9xlC+JIZV\nnHAtgnNo7XWfo5hEdx7nA5zylbKLum1aflsfM7p4+zu5XbdcenSMeY0/eDy8Ky/C\nLLsYDJlhL0MWpF8dkgEvCgSu8HfHeMJ3dZls0QWOLF9ravuNw4xoFHhFXYQRqxHa\niOXO4QpErIBUIfLmPGDp1gSsSfG5ZHAHD2EpdVoc+uYXpuqAiA7LJe7JtIGC3Lmq\nDV9W9yHTzgJZEdDJ2fz8LUSQ28dA7EKO5TG6nv1X8Ylkra4Q5xji/u0IAPW6xUk=\n=BWMk\n-----END PGP SIGNATURE-----\n",
+          "payload": "tree 39d62761303fcee5cb8cbffce170c7048ecb9541\nparent 346830eb87485b1baa07d55727bce1deb1f5b013\nauthor Max Graey <maxgraey@gmail.com> 1585261550 +0200\ncommitter GitHub <noreply@github.com> 1585261550 +0100\n\nFix loader import object definition (#1193)\n\n"
+        }
+      },
+      "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/commits/e07602c6df1677649146a14b78a2f7aa603587f1",
+      "html_url": "https://github.com/AssemblyScript/assemblyscript/commit/e07602c6df1677649146a14b78a2f7aa603587f1",
+      "comments_url": "https://api.github.com/repos/AssemblyScript/assemblyscript/commits/e07602c6df1677649146a14b78a2f7aa603587f1/comments",
+      "author": {
+        "login": "MaxGraey",
+        "id": 1301959,
+        "node_id": "MDQ6VXNlcjEzMDE5NTk=",
+        "avatar_url": "https://avatars3.githubusercontent.com/u/1301959?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/MaxGraey",
+        "html_url": "https://github.com/MaxGraey",
+        "followers_url": "https://api.github.com/users/MaxGraey/followers",
+        "following_url": "https://api.github.com/users/MaxGraey/following{/other_user}",
+        "gists_url": "https://api.github.com/users/MaxGraey/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/MaxGraey/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/MaxGraey/subscriptions",
+        "organizations_url": "https://api.github.com/users/MaxGraey/orgs",
+        "repos_url": "https://api.github.com/users/MaxGraey/repos",
+        "events_url": "https://api.github.com/users/MaxGraey/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/MaxGraey/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "committer": {
+        "login": "web-flow",
+        "id": 19864447,
+        "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+        "avatar_url": "https://avatars3.githubusercontent.com/u/19864447?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/web-flow",
+        "html_url": "https://github.com/web-flow",
+        "followers_url": "https://api.github.com/users/web-flow/followers",
+        "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+        "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+        "organizations_url": "https://api.github.com/users/web-flow/orgs",
+        "repos_url": "https://api.github.com/users/web-flow/repos",
+        "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/web-flow/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "parents": [
+        {
+          "sha": "346830eb87485b1baa07d55727bce1deb1f5b013",
+          "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/commits/346830eb87485b1baa07d55727bce1deb1f5b013",
+          "html_url": "https://github.com/AssemblyScript/assemblyscript/commit/346830eb87485b1baa07d55727bce1deb1f5b013"
+        }
+      ]
+    },
+    {
+      "sha": "346830eb87485b1baa07d55727bce1deb1f5b013",
+      "node_id": "MDY6Q29tbWl0MTA1MTM4MzU2OjM0NjgzMGViODc0ODViMWJhYTA3ZDU1NzI3YmNlMWRlYjFmNWIwMTM=",
+      "commit": {
+        "author": {
+          "name": "Daniel Wirtz",
+          "email": "dcode@dcode.io",
+          "date": "2020-03-25T02:27:41Z"
+        },
+        "committer": {
+          "name": "dcode",
+          "email": "dcode@dcode.io",
+          "date": "2020-03-25T02:30:20Z"
+        },
+        "message": "Check precondition in CI on PRs only (#1185)",
+        "tree": {
+          "sha": "66c70059f1f7287741a6225e0e5794a99e3074bf",
+          "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/git/trees/66c70059f1f7287741a6225e0e5794a99e3074bf"
+        },
+        "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/git/commits/346830eb87485b1baa07d55727bce1deb1f5b013",
+        "comment_count": 0,
+        "verification": {
+          "verified": false,
+          "reason": "unsigned",
+          "signature": null,
+          "payload": null
+        }
+      },
+      "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/commits/346830eb87485b1baa07d55727bce1deb1f5b013",
+      "html_url": "https://github.com/AssemblyScript/assemblyscript/commit/346830eb87485b1baa07d55727bce1deb1f5b013",
+      "comments_url": "https://api.github.com/repos/AssemblyScript/assemblyscript/commits/346830eb87485b1baa07d55727bce1deb1f5b013/comments",
+      "author": {
+        "login": "dcodeIO",
+        "id": 1136893,
+        "node_id": "MDQ6VXNlcjExMzY4OTM=",
+        "avatar_url": "https://avatars0.githubusercontent.com/u/1136893?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/dcodeIO",
+        "html_url": "https://github.com/dcodeIO",
+        "followers_url": "https://api.github.com/users/dcodeIO/followers",
+        "following_url": "https://api.github.com/users/dcodeIO/following{/other_user}",
+        "gists_url": "https://api.github.com/users/dcodeIO/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/dcodeIO/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/dcodeIO/subscriptions",
+        "organizations_url": "https://api.github.com/users/dcodeIO/orgs",
+        "repos_url": "https://api.github.com/users/dcodeIO/repos",
+        "events_url": "https://api.github.com/users/dcodeIO/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/dcodeIO/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "committer": {
+        "login": "dcodeIO",
+        "id": 1136893,
+        "node_id": "MDQ6VXNlcjExMzY4OTM=",
+        "avatar_url": "https://avatars0.githubusercontent.com/u/1136893?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/dcodeIO",
+        "html_url": "https://github.com/dcodeIO",
+        "followers_url": "https://api.github.com/users/dcodeIO/followers",
+        "following_url": "https://api.github.com/users/dcodeIO/following{/other_user}",
+        "gists_url": "https://api.github.com/users/dcodeIO/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/dcodeIO/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/dcodeIO/subscriptions",
+        "organizations_url": "https://api.github.com/users/dcodeIO/orgs",
+        "repos_url": "https://api.github.com/users/dcodeIO/repos",
+        "events_url": "https://api.github.com/users/dcodeIO/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/dcodeIO/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "parents": [
+        {
+          "sha": "0553d164f97125c68267361f818098ae8f417397",
+          "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/commits/0553d164f97125c68267361f818098ae8f417397",
+          "html_url": "https://github.com/AssemblyScript/assemblyscript/commit/0553d164f97125c68267361f818098ae8f417397"
+        }
+      ]
+    },
+    {
+      "sha": "0553d164f97125c68267361f818098ae8f417397",
+      "node_id": "MDY6Q29tbWl0MTA1MTM4MzU2OjA1NTNkMTY0Zjk3MTI1YzY4MjY3MzYxZjgxODA5OGFlOGY0MTczOTc=",
+      "commit": {
+        "author": {
+          "name": "Duncan",
+          "email": "duncan.uszkay@gmail.com",
+          "date": "2020-03-24T15:34:46Z"
+        },
+        "committer": {
+          "name": "GitHub",
+          "email": "noreply@github.com",
+          "date": "2020-03-24T15:34:46Z"
+        },
+        "message": "Add diagnostic when referencing a generic function without type parameters (#1182)",
+        "tree": {
+          "sha": "91f5c4d3970c1c6adc2717a61e0534f2531f27f3",
+          "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/git/trees/91f5c4d3970c1c6adc2717a61e0534f2531f27f3"
+        },
+        "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/git/commits/0553d164f97125c68267361f818098ae8f417397",
+        "comment_count": 0,
+        "verification": {
+          "verified": true,
+          "reason": "valid",
+          "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJeeiiWCRBK7hj4Ov3rIwAAdHIIAAhX7/27SdQZ9u6SEyefIvyx\nn/arewnZ9zPQ8mzfZ/IyR80wL7nNz88u6IMWHtPK9EQlHYa9FX8Leb6JeDyhItxm\n6pFkszS3q9JgfrCZQ3mQckPq8kouqgHifN5rDeELzcBKA76n5Cc57I7EROrTgfr9\nKn4eEa1M2PnlF/KYlaQaESAfk3c53Z5jap98BQ43SzDyN9e+ek9VTroDJLxQ2NFx\nTc8bPIZ858iDwXvGXnqzi5dBycju2q3O/Vnr9MO9SSWxF6v9SW7zLcD8oAKRhOUW\nKjt+MOxau9pKhKdU0/0lS7OlO+2tHFvGxD7KvE78/LqZJTZoPPlHVALS5ODrS/k=\n=Z2gy\n-----END PGP SIGNATURE-----\n",
+          "payload": "tree 91f5c4d3970c1c6adc2717a61e0534f2531f27f3\nparent 077e9f67271505ab8e573d5bbd2caa4e249e6f8d\nauthor Duncan <duncan.uszkay@gmail.com> 1585064086 -0400\ncommitter GitHub <noreply@github.com> 1585064086 +0100\n\nAdd diagnostic when referencing a generic function without type parameters (#1182)\n\n"
+        }
+      },
+      "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/commits/0553d164f97125c68267361f818098ae8f417397",
+      "html_url": "https://github.com/AssemblyScript/assemblyscript/commit/0553d164f97125c68267361f818098ae8f417397",
+      "comments_url": "https://api.github.com/repos/AssemblyScript/assemblyscript/commits/0553d164f97125c68267361f818098ae8f417397/comments",
+      "author": {
+        "login": "DuncanUszkay1",
+        "id": 8670351,
+        "node_id": "MDQ6VXNlcjg2NzAzNTE=",
+        "avatar_url": "https://avatars2.githubusercontent.com/u/8670351?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/DuncanUszkay1",
+        "html_url": "https://github.com/DuncanUszkay1",
+        "followers_url": "https://api.github.com/users/DuncanUszkay1/followers",
+        "following_url": "https://api.github.com/users/DuncanUszkay1/following{/other_user}",
+        "gists_url": "https://api.github.com/users/DuncanUszkay1/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/DuncanUszkay1/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/DuncanUszkay1/subscriptions",
+        "organizations_url": "https://api.github.com/users/DuncanUszkay1/orgs",
+        "repos_url": "https://api.github.com/users/DuncanUszkay1/repos",
+        "events_url": "https://api.github.com/users/DuncanUszkay1/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/DuncanUszkay1/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "committer": {
+        "login": "web-flow",
+        "id": 19864447,
+        "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+        "avatar_url": "https://avatars3.githubusercontent.com/u/19864447?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/web-flow",
+        "html_url": "https://github.com/web-flow",
+        "followers_url": "https://api.github.com/users/web-flow/followers",
+        "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+        "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+        "organizations_url": "https://api.github.com/users/web-flow/orgs",
+        "repos_url": "https://api.github.com/users/web-flow/repos",
+        "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/web-flow/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "parents": [
+        {
+          "sha": "077e9f67271505ab8e573d5bbd2caa4e249e6f8d",
+          "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/commits/077e9f67271505ab8e573d5bbd2caa4e249e6f8d",
+          "html_url": "https://github.com/AssemblyScript/assemblyscript/commit/077e9f67271505ab8e573d5bbd2caa4e249e6f8d"
+        }
+      ]
+    },
+    {
+      "sha": "077e9f67271505ab8e573d5bbd2caa4e249e6f8d",
+      "node_id": "MDY6Q29tbWl0MTA1MTM4MzU2OjA3N2U5ZjY3MjcxNTA1YWI4ZTU3M2Q1YmJkMmNhYTRlMjQ5ZTZmOGQ=",
+      "commit": {
+        "author": {
+          "name": "Daniel Wirtz",
+          "email": "dcode@dcode.io",
+          "date": "2020-03-22T00:14:47Z"
+        },
+        "committer": {
+          "name": "GitHub",
+          "email": "noreply@github.com",
+          "date": "2020-03-22T00:14:47Z"
+        },
+        "message": "Fix nvm CI issues (#1180)",
+        "tree": {
+          "sha": "555f0149a8b91c797fea70c91f72b4ab62291ab8",
+          "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/git/trees/555f0149a8b91c797fea70c91f72b4ab62291ab8"
+        },
+        "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/git/commits/077e9f67271505ab8e573d5bbd2caa4e249e6f8d",
+        "comment_count": 0,
+        "verification": {
+          "verified": true,
+          "reason": "valid",
+          "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJedq33CRBK7hj4Ov3rIwAAdHIIAEarFgVpvrQkMSsSONw9s0d6\n0D9GPGojX8K3zzGJoXrlIpLpF5x8H5306xpRwMZDSwqFawKHGKOZ9zxJkcrirUEw\nOUXzsn9iwQN0ybhuLkllFXetpAtMYILFLxlq8AkGaj/oSf9FLCC21DEkLj+bZAoF\nhzFGvPhP7Zsns+iXaVsU59a8E2qHQepw+8YWDWgm8TbPDeiV+W8wUZEK/cAEfVja\nbIeTxCdwcgnYh9iiCGwuqmnI+rvlxpD0/DJD51Rnaht7IyfZykfizx8AfY+RHEQL\nvwxdSuq1/BWumBwkGA+ylGibMxQQ+jyrqoK4kuLDNBe9b5YCSeHyshaeo0KR2Rk=\n=y9mf\n-----END PGP SIGNATURE-----\n",
+          "payload": "tree 555f0149a8b91c797fea70c91f72b4ab62291ab8\nparent e25078245dbb0b97937ec79594e06246225fc9d8\nauthor Daniel Wirtz <dcode@dcode.io> 1584836087 +0100\ncommitter GitHub <noreply@github.com> 1584836087 +0100\n\nFix nvm CI issues (#1180)\n\n"
+        }
+      },
+      "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/commits/077e9f67271505ab8e573d5bbd2caa4e249e6f8d",
+      "html_url": "https://github.com/AssemblyScript/assemblyscript/commit/077e9f67271505ab8e573d5bbd2caa4e249e6f8d",
+      "comments_url": "https://api.github.com/repos/AssemblyScript/assemblyscript/commits/077e9f67271505ab8e573d5bbd2caa4e249e6f8d/comments",
+      "author": {
+        "login": "dcodeIO",
+        "id": 1136893,
+        "node_id": "MDQ6VXNlcjExMzY4OTM=",
+        "avatar_url": "https://avatars0.githubusercontent.com/u/1136893?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/dcodeIO",
+        "html_url": "https://github.com/dcodeIO",
+        "followers_url": "https://api.github.com/users/dcodeIO/followers",
+        "following_url": "https://api.github.com/users/dcodeIO/following{/other_user}",
+        "gists_url": "https://api.github.com/users/dcodeIO/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/dcodeIO/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/dcodeIO/subscriptions",
+        "organizations_url": "https://api.github.com/users/dcodeIO/orgs",
+        "repos_url": "https://api.github.com/users/dcodeIO/repos",
+        "events_url": "https://api.github.com/users/dcodeIO/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/dcodeIO/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "committer": {
+        "login": "web-flow",
+        "id": 19864447,
+        "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+        "avatar_url": "https://avatars3.githubusercontent.com/u/19864447?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/web-flow",
+        "html_url": "https://github.com/web-flow",
+        "followers_url": "https://api.github.com/users/web-flow/followers",
+        "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+        "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+        "organizations_url": "https://api.github.com/users/web-flow/orgs",
+        "repos_url": "https://api.github.com/users/web-flow/repos",
+        "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/web-flow/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "parents": [
+        {
+          "sha": "e25078245dbb0b97937ec79594e06246225fc9d8",
+          "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/commits/e25078245dbb0b97937ec79594e06246225fc9d8",
+          "html_url": "https://github.com/AssemblyScript/assemblyscript/commit/e25078245dbb0b97937ec79594e06246225fc9d8"
+        }
+      ]
+    },
+    {
+      "sha": "e25078245dbb0b97937ec79594e06246225fc9d8",
+      "node_id": "MDY6Q29tbWl0MTA1MTM4MzU2OmUyNTA3ODI0NWRiYjBiOTc5MzdlYzc5NTk0ZTA2MjQ2MjI1ZmM5ZDg=",
+      "commit": {
+        "author": {
+          "name": "Max Graey",
+          "email": "maxgraey@gmail.com",
+          "date": "2020-03-17T08:25:18Z"
+        },
+        "committer": {
+          "name": "GitHub",
+          "email": "noreply@github.com",
+          "date": "2020-03-17T08:25:18Z"
+        },
+        "message": "Fix / improve loader type definitions (#1175)",
+        "tree": {
+          "sha": "7041da819a13a4929fa4be5b658826695065c17b",
+          "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/git/trees/7041da819a13a4929fa4be5b658826695065c17b"
+        },
+        "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/git/commits/e25078245dbb0b97937ec79594e06246225fc9d8",
+        "comment_count": 0,
+        "verification": {
+          "verified": true,
+          "reason": "valid",
+          "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJecIluCRBK7hj4Ov3rIwAAdHIIAFpafaS4UiXmJhqeQanDEowA\nmYHTaEPHLF1yL+rUogOJwfLcfZ0VHUy9iJ7Px2tmcP8L1qbpmQY7oDXIDevxF6Rj\nY8BDeBs1QdvPTCeJHkr2MiP9vBO9JiNv1vw4l9st7NTX58DToW2EPojaJ8Dpzf6g\nObSTxxbZUH4aJAWQPfMRVRp1RekKyOCC8CNWW+OonAgTR+fKhnPgU1Pgq6OLruTv\nyHP6qcGIgLwjUSYTbsG3u/sBmVd/k01Y83PjrIov2oWfV24fvrHMyEbRC9Bu9jgB\nBeY6S9Kg8WrZDTyOHFIf35qEoMSsug+jLl2F9FCsRlbMB/i1okLOeZ89sPzEoco=\n=c133\n-----END PGP SIGNATURE-----\n",
+          "payload": "tree 7041da819a13a4929fa4be5b658826695065c17b\nparent 13340ed5913a0c4a6c2d1474dae9260fcee68843\nauthor Max Graey <maxgraey@gmail.com> 1584433518 +0200\ncommitter GitHub <noreply@github.com> 1584433518 +0100\n\nFix / improve loader type definitions (#1175)\n\n"
+        }
+      },
+      "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/commits/e25078245dbb0b97937ec79594e06246225fc9d8",
+      "html_url": "https://github.com/AssemblyScript/assemblyscript/commit/e25078245dbb0b97937ec79594e06246225fc9d8",
+      "comments_url": "https://api.github.com/repos/AssemblyScript/assemblyscript/commits/e25078245dbb0b97937ec79594e06246225fc9d8/comments",
+      "author": {
+        "login": "MaxGraey",
+        "id": 1301959,
+        "node_id": "MDQ6VXNlcjEzMDE5NTk=",
+        "avatar_url": "https://avatars3.githubusercontent.com/u/1301959?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/MaxGraey",
+        "html_url": "https://github.com/MaxGraey",
+        "followers_url": "https://api.github.com/users/MaxGraey/followers",
+        "following_url": "https://api.github.com/users/MaxGraey/following{/other_user}",
+        "gists_url": "https://api.github.com/users/MaxGraey/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/MaxGraey/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/MaxGraey/subscriptions",
+        "organizations_url": "https://api.github.com/users/MaxGraey/orgs",
+        "repos_url": "https://api.github.com/users/MaxGraey/repos",
+        "events_url": "https://api.github.com/users/MaxGraey/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/MaxGraey/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "committer": {
+        "login": "web-flow",
+        "id": 19864447,
+        "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+        "avatar_url": "https://avatars3.githubusercontent.com/u/19864447?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/web-flow",
+        "html_url": "https://github.com/web-flow",
+        "followers_url": "https://api.github.com/users/web-flow/followers",
+        "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+        "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+        "organizations_url": "https://api.github.com/users/web-flow/orgs",
+        "repos_url": "https://api.github.com/users/web-flow/repos",
+        "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/web-flow/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "parents": [
+        {
+          "sha": "13340ed5913a0c4a6c2d1474dae9260fcee68843",
+          "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/commits/13340ed5913a0c4a6c2d1474dae9260fcee68843",
+          "html_url": "https://github.com/AssemblyScript/assemblyscript/commit/13340ed5913a0c4a6c2d1474dae9260fcee68843"
+        }
+      ]
+    },
+    {
+      "sha": "13340ed5913a0c4a6c2d1474dae9260fcee68843",
+      "node_id": "MDY6Q29tbWl0MTA1MTM4MzU2OjEzMzQwZWQ1OTEzYTBjNGE2YzJkMTQ3NGRhZTkyNjBmY2VlNjg4NDM=",
+      "commit": {
+        "author": {
+          "name": "Max Graey",
+          "email": "maxgraey@gmail.com",
+          "date": "2020-03-15T11:21:36Z"
+        },
+        "committer": {
+          "name": "GitHub",
+          "email": "noreply@github.com",
+          "date": "2020-03-15T11:21:36Z"
+        },
+        "message": "Fix isFinalSigma related non-portable type conversions (#1173)",
+        "tree": {
+          "sha": "fa339e7c0e2a8bdb02547b0c4b7005134476b9fe",
+          "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/git/trees/fa339e7c0e2a8bdb02547b0c4b7005134476b9fe"
+        },
+        "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/git/commits/13340ed5913a0c4a6c2d1474dae9260fcee68843",
+        "comment_count": 0,
+        "verification": {
+          "verified": true,
+          "reason": "valid",
+          "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJebg/ACRBK7hj4Ov3rIwAAdHIIAE2IaM44ugqM1xnxG4Gr4pmF\nP6GpPG7M3ZSnMGDijS1p8oh61M+X1OBXV+6BpfxAMxKXc5mwa8bzBtBtZddXw78+\nlhgR8BFgC7P7GNh0c8yJ3ERHlm53zRxkgLg/LIxFyPZnaRarpFUd8agOH1fBKdMW\nbQrccAdk5fML0mOLxGQ3b8Je+w5wQGUoBOH0xHpmo2hBIwGHCONX8BRxZ5MvcSxh\ng7LU3gbt1RT4Y2sphYc7FWBNeRY8ZgEO14bLuIMbzRCJAhLqjp3+tgzcuwo8zFA1\n2YgPAIzAF1rboNGHjAyY5qLFV5Hz3KCPFBMtDuSiRt84DaeX1ucYPeCQFJ3JLCs=\n=yRGe\n-----END PGP SIGNATURE-----\n",
+          "payload": "tree fa339e7c0e2a8bdb02547b0c4b7005134476b9fe\nparent 7353942de2c4a5862f0843822e7f1bf19dd176b1\nauthor Max Graey <maxgraey@gmail.com> 1584271296 +0200\ncommitter GitHub <noreply@github.com> 1584271296 +0100\n\nFix isFinalSigma related non-portable type conversions (#1173)\n\n"
+        }
+      },
+      "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/commits/13340ed5913a0c4a6c2d1474dae9260fcee68843",
+      "html_url": "https://github.com/AssemblyScript/assemblyscript/commit/13340ed5913a0c4a6c2d1474dae9260fcee68843",
+      "comments_url": "https://api.github.com/repos/AssemblyScript/assemblyscript/commits/13340ed5913a0c4a6c2d1474dae9260fcee68843/comments",
+      "author": {
+        "login": "MaxGraey",
+        "id": 1301959,
+        "node_id": "MDQ6VXNlcjEzMDE5NTk=",
+        "avatar_url": "https://avatars3.githubusercontent.com/u/1301959?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/MaxGraey",
+        "html_url": "https://github.com/MaxGraey",
+        "followers_url": "https://api.github.com/users/MaxGraey/followers",
+        "following_url": "https://api.github.com/users/MaxGraey/following{/other_user}",
+        "gists_url": "https://api.github.com/users/MaxGraey/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/MaxGraey/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/MaxGraey/subscriptions",
+        "organizations_url": "https://api.github.com/users/MaxGraey/orgs",
+        "repos_url": "https://api.github.com/users/MaxGraey/repos",
+        "events_url": "https://api.github.com/users/MaxGraey/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/MaxGraey/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "committer": {
+        "login": "web-flow",
+        "id": 19864447,
+        "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+        "avatar_url": "https://avatars3.githubusercontent.com/u/19864447?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/web-flow",
+        "html_url": "https://github.com/web-flow",
+        "followers_url": "https://api.github.com/users/web-flow/followers",
+        "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+        "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+        "organizations_url": "https://api.github.com/users/web-flow/orgs",
+        "repos_url": "https://api.github.com/users/web-flow/repos",
+        "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/web-flow/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "parents": [
+        {
+          "sha": "7353942de2c4a5862f0843822e7f1bf19dd176b1",
+          "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/commits/7353942de2c4a5862f0843822e7f1bf19dd176b1",
+          "html_url": "https://github.com/AssemblyScript/assemblyscript/commit/7353942de2c4a5862f0843822e7f1bf19dd176b1"
+        }
+      ]
+    },
+    {
+      "sha": "7353942de2c4a5862f0843822e7f1bf19dd176b1",
+      "node_id": "MDY6Q29tbWl0MTA1MTM4MzU2OjczNTM5NDJkZTJjNGE1ODYyZjA4NDM4MjJlN2YxYmYxOWRkMTc2YjE=",
+      "commit": {
+        "author": {
+          "name": "Max Graey",
+          "email": "maxgraey@gmail.com",
+          "date": "2020-03-15T11:05:09Z"
+        },
+        "committer": {
+          "name": "GitHub",
+          "email": "noreply@github.com",
+          "date": "2020-03-15T11:05:09Z"
+        },
+        "message": "Add optimize-added-constants pass for lowMemoryUnused (#1169)",
+        "tree": {
+          "sha": "2777d9f0cd3049528319164c20adad05bde3ed65",
+          "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/git/trees/2777d9f0cd3049528319164c20adad05bde3ed65"
+        },
+        "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/git/commits/7353942de2c4a5862f0843822e7f1bf19dd176b1",
+        "comment_count": 0,
+        "verification": {
+          "verified": true,
+          "reason": "valid",
+          "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJebgvlCRBK7hj4Ov3rIwAAdHIIAKqcBvKZ3s8NEqQ6d/VdME2m\n0A1V1Dg6hPzVlD7782cyZsuRf1jL1N2k2RVvyg+/cRqUnzrNkTPL+PkRFiyQ5Dhm\nKbimdS6BkFVhin217bxaaj7BiOtOx8eo/Yo6a+Z6Uiwl45GkWGKPLU7pa9SdO5VG\nio2l10vMff6SaAOwA8j8+X2zpHnF9P+regh1zhf18AYFA6VlMN05yQkELBetAiYY\nwFeqXYEHVNkxa7Ex33CVHG9uJpZW9c9R0wvSIAn8hB4dCmczpv+tMmAqfiPuY+5Z\ngEa7wdEPaeXENLoObTS3CcXsia0BHFoWRyZG9y1pENVs/xs7aDaUwuYw/+oIouI=\n=f1mt\n-----END PGP SIGNATURE-----\n",
+          "payload": "tree 2777d9f0cd3049528319164c20adad05bde3ed65\nparent 960890e958ad25262578e5cd36ccf80c22af8a05\nauthor Max Graey <maxgraey@gmail.com> 1584270309 +0200\ncommitter GitHub <noreply@github.com> 1584270309 +0100\n\nAdd optimize-added-constants pass for lowMemoryUnused (#1169)\n\n"
+        }
+      },
+      "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/commits/7353942de2c4a5862f0843822e7f1bf19dd176b1",
+      "html_url": "https://github.com/AssemblyScript/assemblyscript/commit/7353942de2c4a5862f0843822e7f1bf19dd176b1",
+      "comments_url": "https://api.github.com/repos/AssemblyScript/assemblyscript/commits/7353942de2c4a5862f0843822e7f1bf19dd176b1/comments",
+      "author": {
+        "login": "MaxGraey",
+        "id": 1301959,
+        "node_id": "MDQ6VXNlcjEzMDE5NTk=",
+        "avatar_url": "https://avatars3.githubusercontent.com/u/1301959?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/MaxGraey",
+        "html_url": "https://github.com/MaxGraey",
+        "followers_url": "https://api.github.com/users/MaxGraey/followers",
+        "following_url": "https://api.github.com/users/MaxGraey/following{/other_user}",
+        "gists_url": "https://api.github.com/users/MaxGraey/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/MaxGraey/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/MaxGraey/subscriptions",
+        "organizations_url": "https://api.github.com/users/MaxGraey/orgs",
+        "repos_url": "https://api.github.com/users/MaxGraey/repos",
+        "events_url": "https://api.github.com/users/MaxGraey/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/MaxGraey/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "committer": {
+        "login": "web-flow",
+        "id": 19864447,
+        "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+        "avatar_url": "https://avatars3.githubusercontent.com/u/19864447?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/web-flow",
+        "html_url": "https://github.com/web-flow",
+        "followers_url": "https://api.github.com/users/web-flow/followers",
+        "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+        "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+        "organizations_url": "https://api.github.com/users/web-flow/orgs",
+        "repos_url": "https://api.github.com/users/web-flow/repos",
+        "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/web-flow/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "parents": [
+        {
+          "sha": "960890e958ad25262578e5cd36ccf80c22af8a05",
+          "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/commits/960890e958ad25262578e5cd36ccf80c22af8a05",
+          "html_url": "https://github.com/AssemblyScript/assemblyscript/commit/960890e958ad25262578e5cd36ccf80c22af8a05"
+        }
+      ]
+    },
+    {
+      "sha": "960890e958ad25262578e5cd36ccf80c22af8a05",
+      "node_id": "MDY6Q29tbWl0MTA1MTM4MzU2Ojk2MDg5MGU5NThhZDI1MjYyNTc4ZTVjZDM2Y2NmODBjMjJhZjhhMDU=",
+      "commit": {
+        "author": {
+          "name": "Daniel Wirtz",
+          "email": "dcode@dcode.io",
+          "date": "2020-03-15T10:34:35Z"
+        },
+        "committer": {
+          "name": "GitHub",
+          "email": "noreply@github.com",
+          "date": "2020-03-15T10:34:35Z"
+        },
+        "message": "Fix columns being off by one / implement line cache (#1174)",
+        "tree": {
+          "sha": "084d97f90e6311aaf7e09b31567912973b08cfac",
+          "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/git/trees/084d97f90e6311aaf7e09b31567912973b08cfac"
+        },
+        "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/git/commits/960890e958ad25262578e5cd36ccf80c22af8a05",
+        "comment_count": 0,
+        "verification": {
+          "verified": true,
+          "reason": "valid",
+          "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJebgS7CRBK7hj4Ov3rIwAAdHIIACxqc48R24nn3gT1fL72mRs1\n8yjXl3bNZLoThuoBwRY9JZh/Q4a5DtSQuSWn8g/aNK0W9XBOM41wEExMVe+Ehg5n\n2tQRuf513OE818Etcl52MQ6BhDLceK99lZdvbqD/AIBN2JyNabZkh6365phriSkb\nLa6CSjvNdjOItvcMV+a8MHg0s+vH2TN8Vz4h9mhS6kZp8P4uVRBoWTNvOutZZWb/\n6u+OzU0SIkxOr/lpAFuWxP2t5Ak5UeUU+qvyP3jNG9bbTUi4z34bl+wU17Ha4YYq\n2ouwFVSY2K4ChCg/WKLlGBd5nqRlnhbi0ace+SNyDJtkUra7arANAdG5moWMqe8=\n=l1fQ\n-----END PGP SIGNATURE-----\n",
+          "payload": "tree 084d97f90e6311aaf7e09b31567912973b08cfac\nparent 0910982b5767ff9af52fadd89fa5b2cf2326abab\nauthor Daniel Wirtz <dcode@dcode.io> 1584268475 +0100\ncommitter GitHub <noreply@github.com> 1584268475 +0100\n\nFix columns being off by one / implement line cache (#1174)\n\n"
+        }
+      },
+      "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/commits/960890e958ad25262578e5cd36ccf80c22af8a05",
+      "html_url": "https://github.com/AssemblyScript/assemblyscript/commit/960890e958ad25262578e5cd36ccf80c22af8a05",
+      "comments_url": "https://api.github.com/repos/AssemblyScript/assemblyscript/commits/960890e958ad25262578e5cd36ccf80c22af8a05/comments",
+      "author": {
+        "login": "dcodeIO",
+        "id": 1136893,
+        "node_id": "MDQ6VXNlcjExMzY4OTM=",
+        "avatar_url": "https://avatars0.githubusercontent.com/u/1136893?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/dcodeIO",
+        "html_url": "https://github.com/dcodeIO",
+        "followers_url": "https://api.github.com/users/dcodeIO/followers",
+        "following_url": "https://api.github.com/users/dcodeIO/following{/other_user}",
+        "gists_url": "https://api.github.com/users/dcodeIO/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/dcodeIO/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/dcodeIO/subscriptions",
+        "organizations_url": "https://api.github.com/users/dcodeIO/orgs",
+        "repos_url": "https://api.github.com/users/dcodeIO/repos",
+        "events_url": "https://api.github.com/users/dcodeIO/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/dcodeIO/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "committer": {
+        "login": "web-flow",
+        "id": 19864447,
+        "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+        "avatar_url": "https://avatars3.githubusercontent.com/u/19864447?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/web-flow",
+        "html_url": "https://github.com/web-flow",
+        "followers_url": "https://api.github.com/users/web-flow/followers",
+        "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+        "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+        "organizations_url": "https://api.github.com/users/web-flow/orgs",
+        "repos_url": "https://api.github.com/users/web-flow/repos",
+        "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/web-flow/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "parents": [
+        {
+          "sha": "0910982b5767ff9af52fadd89fa5b2cf2326abab",
+          "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/commits/0910982b5767ff9af52fadd89fa5b2cf2326abab",
+          "html_url": "https://github.com/AssemblyScript/assemblyscript/commit/0910982b5767ff9af52fadd89fa5b2cf2326abab"
+        }
+      ]
+    },
+    {
+      "sha": "0910982b5767ff9af52fadd89fa5b2cf2326abab",
+      "node_id": "MDY6Q29tbWl0MTA1MTM4MzU2OjA5MTA5ODJiNTc2N2ZmOWFmNTJmYWRkODlmYTViMmNmMjMyNmFiYWI=",
+      "commit": {
+        "author": {
+          "name": "Daniel Wirtz",
+          "email": "dcode@dcode.io",
+          "date": "2020-03-14T15:06:40Z"
+        },
+        "committer": {
+          "name": "GitHub",
+          "email": "noreply@github.com",
+          "date": "2020-03-14T15:06:40Z"
+        },
+        "message": "Downgrade ts-node to v6 again (#1172)",
+        "tree": {
+          "sha": "41cafb0eac0571caccce1921fdbb47b6699fb977",
+          "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/git/trees/41cafb0eac0571caccce1921fdbb47b6699fb977"
+        },
+        "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/git/commits/0910982b5767ff9af52fadd89fa5b2cf2326abab",
+        "comment_count": 0,
+        "verification": {
+          "verified": true,
+          "reason": "valid",
+          "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJebPMACRBK7hj4Ov3rIwAAdHIIAEXROzlDf2pVZjyjCq4MD0+m\nA61kIezZXp8txUNl6pRQoHb3C+jxdgEvZe4kaAK95qUeR0mAF6kfi39ee0MQk563\nfRS2UNqHJGBXdCbNQLe+WVYe+c0dbKeRRPpAyhF9GcLt1tV0XwoQM0DY+2rjdypm\nebyhlMgZf5Tml88vpXf5SkvbrjTC1tVREsAI3hbiOjz1lZ9/5ZP2rEugNzEfGxnM\nS/M74kzcB5IiF4apaEvWTCO2pFYMDYiBW4lmUri5n0FMIUEwu6uaZEni1JcEnV1b\nZK3E2bg16YSQn3ofyc5lkPkXviCc+xAbV1anTRaLXQLdF0WZOP4RPv/VtOWilPs=\n=CcS7\n-----END PGP SIGNATURE-----\n",
+          "payload": "tree 41cafb0eac0571caccce1921fdbb47b6699fb977\nparent 88cc73b7d06554126ce242d5562bd811daa7c262\nauthor Daniel Wirtz <dcode@dcode.io> 1584198400 +0100\ncommitter GitHub <noreply@github.com> 1584198400 +0100\n\nDowngrade ts-node to v6 again (#1172)\n\n"
+        }
+      },
+      "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/commits/0910982b5767ff9af52fadd89fa5b2cf2326abab",
+      "html_url": "https://github.com/AssemblyScript/assemblyscript/commit/0910982b5767ff9af52fadd89fa5b2cf2326abab",
+      "comments_url": "https://api.github.com/repos/AssemblyScript/assemblyscript/commits/0910982b5767ff9af52fadd89fa5b2cf2326abab/comments",
+      "author": {
+        "login": "dcodeIO",
+        "id": 1136893,
+        "node_id": "MDQ6VXNlcjExMzY4OTM=",
+        "avatar_url": "https://avatars0.githubusercontent.com/u/1136893?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/dcodeIO",
+        "html_url": "https://github.com/dcodeIO",
+        "followers_url": "https://api.github.com/users/dcodeIO/followers",
+        "following_url": "https://api.github.com/users/dcodeIO/following{/other_user}",
+        "gists_url": "https://api.github.com/users/dcodeIO/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/dcodeIO/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/dcodeIO/subscriptions",
+        "organizations_url": "https://api.github.com/users/dcodeIO/orgs",
+        "repos_url": "https://api.github.com/users/dcodeIO/repos",
+        "events_url": "https://api.github.com/users/dcodeIO/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/dcodeIO/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "committer": {
+        "login": "web-flow",
+        "id": 19864447,
+        "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+        "avatar_url": "https://avatars3.githubusercontent.com/u/19864447?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/web-flow",
+        "html_url": "https://github.com/web-flow",
+        "followers_url": "https://api.github.com/users/web-flow/followers",
+        "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+        "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+        "organizations_url": "https://api.github.com/users/web-flow/orgs",
+        "repos_url": "https://api.github.com/users/web-flow/repos",
+        "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/web-flow/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "parents": [
+        {
+          "sha": "88cc73b7d06554126ce242d5562bd811daa7c262",
+          "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/commits/88cc73b7d06554126ce242d5562bd811daa7c262",
+          "html_url": "https://github.com/AssemblyScript/assemblyscript/commit/88cc73b7d06554126ce242d5562bd811daa7c262"
+        }
+      ]
+    },
+    {
+      "sha": "88cc73b7d06554126ce242d5562bd811daa7c262",
+      "node_id": "MDY6Q29tbWl0MTA1MTM4MzU2Ojg4Y2M3M2I3ZDA2NTU0MTI2Y2UyNDJkNTU2MmJkODExZGFhN2MyNjI=",
+      "commit": {
+        "author": {
+          "name": "Max Graey",
+          "email": "maxgraey@gmail.com",
+          "date": "2020-03-14T14:48:12Z"
+        },
+        "committer": {
+          "name": "GitHub",
+          "email": "noreply@github.com",
+          "date": "2020-03-14T14:48:12Z"
+        },
+        "message": "Closely align the loader's instantiateXY with WebAssembly's (#1143)",
+        "tree": {
+          "sha": "c3e94bcae4b5a0517fafc4924dfd9275c4386c11",
+          "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/git/trees/c3e94bcae4b5a0517fafc4924dfd9275c4386c11"
+        },
+        "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/git/commits/88cc73b7d06554126ce242d5562bd811daa7c262",
+        "comment_count": 0,
+        "verification": {
+          "verified": true,
+          "reason": "valid",
+          "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJebO6sCRBK7hj4Ov3rIwAAdHIIACeiqSe1xqCtpiavJvgDopkY\ntUn3ZNGRIZLPZBthLNzoUpUOJNZq+Dd49vN2Mc8mI28D6FgP5ZzNZlSnJ1MOE6LL\nXFWQRITIMi7XwwRPBNVq1kpZv/0lA8s/wZpvF6u19WcQ0hx7fLxLA+TeD/zDLNQn\nsuzbwk+APj7trm46s7zRIgzKGW4slW/ofVD7+pYJr+e4iPJpKNlkMtNVKpqix1Tb\nh78qjf02bpfUTwgaaQGlMJzWvdEddBKVvSP65gaW9u+k9EpJSeSNSXyKN94nwXdE\nLsEvlZgNBYRorZJ4yd5XlbRoH6mU4DrLJhpDRKOYZXiljGXc6Cc8cam8nJa2hwM=\n=3gR8\n-----END PGP SIGNATURE-----\n",
+          "payload": "tree c3e94bcae4b5a0517fafc4924dfd9275c4386c11\nparent ab71d93ddbaa18dc2b4d132f5ae13fd81b2b3d9a\nauthor Max Graey <maxgraey@gmail.com> 1584197292 +0200\ncommitter GitHub <noreply@github.com> 1584197292 +0100\n\nClosely align the loader's instantiateXY with WebAssembly's (#1143)\n\n"
+        }
+      },
+      "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/commits/88cc73b7d06554126ce242d5562bd811daa7c262",
+      "html_url": "https://github.com/AssemblyScript/assemblyscript/commit/88cc73b7d06554126ce242d5562bd811daa7c262",
+      "comments_url": "https://api.github.com/repos/AssemblyScript/assemblyscript/commits/88cc73b7d06554126ce242d5562bd811daa7c262/comments",
+      "author": {
+        "login": "MaxGraey",
+        "id": 1301959,
+        "node_id": "MDQ6VXNlcjEzMDE5NTk=",
+        "avatar_url": "https://avatars3.githubusercontent.com/u/1301959?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/MaxGraey",
+        "html_url": "https://github.com/MaxGraey",
+        "followers_url": "https://api.github.com/users/MaxGraey/followers",
+        "following_url": "https://api.github.com/users/MaxGraey/following{/other_user}",
+        "gists_url": "https://api.github.com/users/MaxGraey/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/MaxGraey/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/MaxGraey/subscriptions",
+        "organizations_url": "https://api.github.com/users/MaxGraey/orgs",
+        "repos_url": "https://api.github.com/users/MaxGraey/repos",
+        "events_url": "https://api.github.com/users/MaxGraey/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/MaxGraey/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "committer": {
+        "login": "web-flow",
+        "id": 19864447,
+        "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+        "avatar_url": "https://avatars3.githubusercontent.com/u/19864447?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/web-flow",
+        "html_url": "https://github.com/web-flow",
+        "followers_url": "https://api.github.com/users/web-flow/followers",
+        "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+        "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+        "organizations_url": "https://api.github.com/users/web-flow/orgs",
+        "repos_url": "https://api.github.com/users/web-flow/repos",
+        "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/web-flow/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "parents": [
+        {
+          "sha": "ab71d93ddbaa18dc2b4d132f5ae13fd81b2b3d9a",
+          "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/commits/ab71d93ddbaa18dc2b4d132f5ae13fd81b2b3d9a",
+          "html_url": "https://github.com/AssemblyScript/assemblyscript/commit/ab71d93ddbaa18dc2b4d132f5ae13fd81b2b3d9a"
+        }
+      ]
+    },
+    {
+      "sha": "ab71d93ddbaa18dc2b4d132f5ae13fd81b2b3d9a",
+      "node_id": "MDY6Q29tbWl0MTA1MTM4MzU2OmFiNzFkOTNkZGJhYTE4ZGMyYjRkMTMyZjVhZTEzZmQ4MWIyYjNkOWE=",
+      "commit": {
+        "author": {
+          "name": "Daniel Wirtz",
+          "email": "dcode@dcode.io",
+          "date": "2020-03-14T13:03:44Z"
+        },
+        "committer": {
+          "name": "GitHub",
+          "email": "noreply@github.com",
+          "date": "2020-03-14T13:03:44Z"
+        },
+        "message": "Add a low memory limit hint (#1090)",
+        "tree": {
+          "sha": "2ad9f358b6bfa6f2803dc0c50703231cc4ff750b",
+          "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/git/trees/2ad9f358b6bfa6f2803dc0c50703231cc4ff750b"
+        },
+        "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/git/commits/ab71d93ddbaa18dc2b4d132f5ae13fd81b2b3d9a",
+        "comment_count": 0,
+        "verification": {
+          "verified": true,
+          "reason": "valid",
+          "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJebNYwCRBK7hj4Ov3rIwAAdHIIACxzU4JViW04Qh627mtTHh4w\n/l4jGbtu/sySZYCEeajebsJGhCI1s0p8Ar7V0HhEM37MoAKLHj1+1EGqPSMSqRST\nJwDWbQy3w62PlCki76alEGlE/cxtaSMTG3DbwPRvpqc2DLtNU5B7K+w5tAMpnfVe\nhflmIlvTDXMLxzPuwapfKbMPbkRmUaaN5FQ53C+Qx6fn07N/uXy/uqLg4xC1zBJ1\nufqRoJV0WW4s6t1CZjtEV9V6fjgOoJbqz7OmAOtF9b2IJ5EzMb6DLqxhD8+lmSUa\nX3lN3JFsBPXTpqQ9K9xqHK9+AucCfXNkXCRmEmBCmkcia7yOIEugMgkgMMg8HiI=\n=1ChI\n-----END PGP SIGNATURE-----\n",
+          "payload": "tree 2ad9f358b6bfa6f2803dc0c50703231cc4ff750b\nparent 58e7fd3eec6fb5e4d4d5e35b84efed15590c35ba\nauthor Daniel Wirtz <dcode@dcode.io> 1584191024 +0100\ncommitter GitHub <noreply@github.com> 1584191024 +0100\n\nAdd a low memory limit hint (#1090)\n\n"
+        }
+      },
+      "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/commits/ab71d93ddbaa18dc2b4d132f5ae13fd81b2b3d9a",
+      "html_url": "https://github.com/AssemblyScript/assemblyscript/commit/ab71d93ddbaa18dc2b4d132f5ae13fd81b2b3d9a",
+      "comments_url": "https://api.github.com/repos/AssemblyScript/assemblyscript/commits/ab71d93ddbaa18dc2b4d132f5ae13fd81b2b3d9a/comments",
+      "author": {
+        "login": "dcodeIO",
+        "id": 1136893,
+        "node_id": "MDQ6VXNlcjExMzY4OTM=",
+        "avatar_url": "https://avatars0.githubusercontent.com/u/1136893?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/dcodeIO",
+        "html_url": "https://github.com/dcodeIO",
+        "followers_url": "https://api.github.com/users/dcodeIO/followers",
+        "following_url": "https://api.github.com/users/dcodeIO/following{/other_user}",
+        "gists_url": "https://api.github.com/users/dcodeIO/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/dcodeIO/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/dcodeIO/subscriptions",
+        "organizations_url": "https://api.github.com/users/dcodeIO/orgs",
+        "repos_url": "https://api.github.com/users/dcodeIO/repos",
+        "events_url": "https://api.github.com/users/dcodeIO/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/dcodeIO/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "committer": {
+        "login": "web-flow",
+        "id": 19864447,
+        "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+        "avatar_url": "https://avatars3.githubusercontent.com/u/19864447?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/web-flow",
+        "html_url": "https://github.com/web-flow",
+        "followers_url": "https://api.github.com/users/web-flow/followers",
+        "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+        "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+        "organizations_url": "https://api.github.com/users/web-flow/orgs",
+        "repos_url": "https://api.github.com/users/web-flow/repos",
+        "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/web-flow/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "parents": [
+        {
+          "sha": "58e7fd3eec6fb5e4d4d5e35b84efed15590c35ba",
+          "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/commits/58e7fd3eec6fb5e4d4d5e35b84efed15590c35ba",
+          "html_url": "https://github.com/AssemblyScript/assemblyscript/commit/58e7fd3eec6fb5e4d4d5e35b84efed15590c35ba"
+        }
+      ]
+    },
+    {
+      "sha": "58e7fd3eec6fb5e4d4d5e35b84efed15590c35ba",
+      "node_id": "MDY6Q29tbWl0MTA1MTM4MzU2OjU4ZTdmZDNlZWM2ZmI1ZTRkNGQ1ZTM1Yjg0ZWZlZDE1NTkwYzM1YmE=",
+      "commit": {
+        "author": {
+          "name": "Daniel Wirtz",
+          "email": "dcode@dcode.io",
+          "date": "2020-03-14T10:28:24Z"
+        },
+        "committer": {
+          "name": "GitHub",
+          "email": "noreply@github.com",
+          "date": "2020-03-14T10:28:24Z"
+        },
+        "message": "Update dependencies (#1170)",
+        "tree": {
+          "sha": "eefe02b9f9adf63386f6a0547827fa41055a9f14",
+          "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/git/trees/eefe02b9f9adf63386f6a0547827fa41055a9f14"
+        },
+        "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/git/commits/58e7fd3eec6fb5e4d4d5e35b84efed15590c35ba",
+        "comment_count": 0,
+        "verification": {
+          "verified": true,
+          "reason": "valid",
+          "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJebLHJCRBK7hj4Ov3rIwAAdHIIAJgSB0ods2VuIUCFxQjAeJXZ\ngeU6CMEvECwsAdHPBznR8MeVldWCP/cuncZCgtH8RrcYDCxekbw6j5FhHaArUU3L\nNNW2kwoWQfzPxWdIUYCE/c562lnx0Asg5z9J8z/gY5Bu1CiPK4z/UdYzmdAygRB7\nC6bTJsWn+GD1yIQ8FxWPq1R2Tc3z7iavoMKHs/TBoeb2gqZYp3Cji7YX92kqeCWg\nUg9GJrO76DFQCoJpFpPA4/pVLEztolpoLikHNYlC7ha+xG50mzsIWr6KVey+H3TB\nyg+1VLJfMTUG+3N5p7k5WA6WyR284DehPL9/giYtKbG2OktKd61O4Oqh8OG6uFw=\n=E1LW\n-----END PGP SIGNATURE-----\n",
+          "payload": "tree eefe02b9f9adf63386f6a0547827fa41055a9f14\nparent b794620951b1886cb30b06b9a39f872582ee796c\nauthor Daniel Wirtz <dcode@dcode.io> 1584181704 +0100\ncommitter GitHub <noreply@github.com> 1584181704 +0100\n\nUpdate dependencies (#1170)\n\n"
+        }
+      },
+      "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/commits/58e7fd3eec6fb5e4d4d5e35b84efed15590c35ba",
+      "html_url": "https://github.com/AssemblyScript/assemblyscript/commit/58e7fd3eec6fb5e4d4d5e35b84efed15590c35ba",
+      "comments_url": "https://api.github.com/repos/AssemblyScript/assemblyscript/commits/58e7fd3eec6fb5e4d4d5e35b84efed15590c35ba/comments",
+      "author": {
+        "login": "dcodeIO",
+        "id": 1136893,
+        "node_id": "MDQ6VXNlcjExMzY4OTM=",
+        "avatar_url": "https://avatars0.githubusercontent.com/u/1136893?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/dcodeIO",
+        "html_url": "https://github.com/dcodeIO",
+        "followers_url": "https://api.github.com/users/dcodeIO/followers",
+        "following_url": "https://api.github.com/users/dcodeIO/following{/other_user}",
+        "gists_url": "https://api.github.com/users/dcodeIO/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/dcodeIO/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/dcodeIO/subscriptions",
+        "organizations_url": "https://api.github.com/users/dcodeIO/orgs",
+        "repos_url": "https://api.github.com/users/dcodeIO/repos",
+        "events_url": "https://api.github.com/users/dcodeIO/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/dcodeIO/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "committer": {
+        "login": "web-flow",
+        "id": 19864447,
+        "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+        "avatar_url": "https://avatars3.githubusercontent.com/u/19864447?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/web-flow",
+        "html_url": "https://github.com/web-flow",
+        "followers_url": "https://api.github.com/users/web-flow/followers",
+        "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+        "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+        "organizations_url": "https://api.github.com/users/web-flow/orgs",
+        "repos_url": "https://api.github.com/users/web-flow/repos",
+        "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/web-flow/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "parents": [
+        {
+          "sha": "b794620951b1886cb30b06b9a39f872582ee796c",
+          "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/commits/b794620951b1886cb30b06b9a39f872582ee796c",
+          "html_url": "https://github.com/AssemblyScript/assemblyscript/commit/b794620951b1886cb30b06b9a39f872582ee796c"
+        }
+      ]
+    },
+    {
+      "sha": "b794620951b1886cb30b06b9a39f872582ee796c",
+      "node_id": "MDY6Q29tbWl0MTA1MTM4MzU2OmI3OTQ2MjA5NTFiMTg4NmNiMzBiMDZiOWEzOWY4NzI1ODJlZTc5NmM=",
+      "commit": {
+        "author": {
+          "name": "Daniel Wirtz",
+          "email": "dcode@dcode.io",
+          "date": "2020-03-14T09:47:45Z"
+        },
+        "committer": {
+          "name": "GitHub",
+          "email": "noreply@github.com",
+          "date": "2020-03-14T09:47:45Z"
+        },
+        "message": "Decouple Array<T> from ArrayBufferView (#1121)",
+        "tree": {
+          "sha": "6f2055083614845e3d81503e39ea93a116c80a18",
+          "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/git/trees/6f2055083614845e3d81503e39ea93a116c80a18"
+        },
+        "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/git/commits/b794620951b1886cb30b06b9a39f872582ee796c",
+        "comment_count": 0,
+        "verification": {
+          "verified": true,
+          "reason": "valid",
+          "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJebKhBCRBK7hj4Ov3rIwAAdHIIAGQuB4HHoV5GMoDZaB3i4Bxh\nhBjSF+5V+eh1Rp/9dKyv0VUPIyloKtlqlsYGeiNYJvMABqArTm8MYyya/JEi9kU5\nF1NwC6SE6ME+U3FCEi2kTjGQd73ULl5JUJS16javJRqCzWT6Z6UQvc0dnoaVcKmF\n2dL92zyWmPVa6RR47WaXHy/rZYEKg+iJSUWqZRlp2FssKa+I9ynLeUQmzRXzrsRX\n7bQMfWGQagIb6PjpNr6KMZ21c54h42/nY+TuDr0unQrktt00f3sqWkafMa6iXOmX\n9fZT1iDlE07bI1LVDMpbvkBq3IkaP0HOpQxvmcuyUQXi4QtSmz3qDiTK2UdWMK8=\n=QeD1\n-----END PGP SIGNATURE-----\n",
+          "payload": "tree 6f2055083614845e3d81503e39ea93a116c80a18\nparent 9876c3f5dbe1bb3c55ce42305d8869dc3628a998\nauthor Daniel Wirtz <dcode@dcode.io> 1584179265 +0100\ncommitter GitHub <noreply@github.com> 1584179265 +0100\n\nDecouple Array<T> from ArrayBufferView (#1121)\n\n"
+        }
+      },
+      "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/commits/b794620951b1886cb30b06b9a39f872582ee796c",
+      "html_url": "https://github.com/AssemblyScript/assemblyscript/commit/b794620951b1886cb30b06b9a39f872582ee796c",
+      "comments_url": "https://api.github.com/repos/AssemblyScript/assemblyscript/commits/b794620951b1886cb30b06b9a39f872582ee796c/comments",
+      "author": {
+        "login": "dcodeIO",
+        "id": 1136893,
+        "node_id": "MDQ6VXNlcjExMzY4OTM=",
+        "avatar_url": "https://avatars0.githubusercontent.com/u/1136893?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/dcodeIO",
+        "html_url": "https://github.com/dcodeIO",
+        "followers_url": "https://api.github.com/users/dcodeIO/followers",
+        "following_url": "https://api.github.com/users/dcodeIO/following{/other_user}",
+        "gists_url": "https://api.github.com/users/dcodeIO/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/dcodeIO/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/dcodeIO/subscriptions",
+        "organizations_url": "https://api.github.com/users/dcodeIO/orgs",
+        "repos_url": "https://api.github.com/users/dcodeIO/repos",
+        "events_url": "https://api.github.com/users/dcodeIO/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/dcodeIO/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "committer": {
+        "login": "web-flow",
+        "id": 19864447,
+        "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+        "avatar_url": "https://avatars3.githubusercontent.com/u/19864447?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/web-flow",
+        "html_url": "https://github.com/web-flow",
+        "followers_url": "https://api.github.com/users/web-flow/followers",
+        "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+        "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+        "organizations_url": "https://api.github.com/users/web-flow/orgs",
+        "repos_url": "https://api.github.com/users/web-flow/repos",
+        "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/web-flow/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "parents": [
+        {
+          "sha": "9876c3f5dbe1bb3c55ce42305d8869dc3628a998",
+          "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/commits/9876c3f5dbe1bb3c55ce42305d8869dc3628a998",
+          "html_url": "https://github.com/AssemblyScript/assemblyscript/commit/9876c3f5dbe1bb3c55ce42305d8869dc3628a998"
+        }
+      ]
+    },
+    {
+      "sha": "9876c3f5dbe1bb3c55ce42305d8869dc3628a998",
+      "node_id": "MDY6Q29tbWl0MTA1MTM4MzU2Ojk4NzZjM2Y1ZGJlMWJiM2M1NWNlNDIzMDVkODg2OWRjMzYyOGE5OTg=",
+      "commit": {
+        "author": {
+          "name": "Daniel Wirtz",
+          "email": "dcode@dcode.io",
+          "date": "2020-03-13T22:00:10Z"
+        },
+        "committer": {
+          "name": "GitHub",
+          "email": "noreply@github.com",
+          "date": "2020-03-13T22:00:10Z"
+        },
+        "message": "Add WASI abort, trace and seed implementations (#1159)",
+        "tree": {
+          "sha": "1a98faf77bd2479db7dfc1f4cfa131434955340c",
+          "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/git/trees/1a98faf77bd2479db7dfc1f4cfa131434955340c"
+        },
+        "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/git/commits/9876c3f5dbe1bb3c55ce42305d8869dc3628a998",
+        "comment_count": 0,
+        "verification": {
+          "verified": true,
+          "reason": "valid",
+          "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJebAJqCRBK7hj4Ov3rIwAAdHIIAIhQ6EFw/o8iko5z3bUrrHKC\noMft92lgH3qHjk6RR3LS6yfmmSMKwZCh+K8GALtNfGzF/60TnZneLNHoskMgGO4W\nK34LFxU/BtUkpHCoEipCVZtLufBsx/bOfpisQEbyMt91AbrNtapWRmxLy+S6oThW\nMrqgEnDbKWqNZ4gXKj3zhPRWO+FSiXX8vm2uvWAChKScfX+CH8jh4T3e9GRcn2md\n99/Lubh95ekHqW7Hm1ZwxdnlCSp0emH6mLhfh5DIGFxmJBGToEr6KnxG6nXXrl7d\nImddlu0Wtz2spLpFbhdqlejgROJ+5OTjZCYxj6o1O2SQsN2MFCyvnAH4ZKt7InQ=\n=Mjdi\n-----END PGP SIGNATURE-----\n",
+          "payload": "tree 1a98faf77bd2479db7dfc1f4cfa131434955340c\nparent b7df27ccc0fb970845915ecd6690ea3ea8335ff1\nauthor Daniel Wirtz <dcode@dcode.io> 1584136810 +0100\ncommitter GitHub <noreply@github.com> 1584136810 +0100\n\nAdd WASI abort, trace and seed implementations (#1159)\n\n"
+        }
+      },
+      "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/commits/9876c3f5dbe1bb3c55ce42305d8869dc3628a998",
+      "html_url": "https://github.com/AssemblyScript/assemblyscript/commit/9876c3f5dbe1bb3c55ce42305d8869dc3628a998",
+      "comments_url": "https://api.github.com/repos/AssemblyScript/assemblyscript/commits/9876c3f5dbe1bb3c55ce42305d8869dc3628a998/comments",
+      "author": {
+        "login": "dcodeIO",
+        "id": 1136893,
+        "node_id": "MDQ6VXNlcjExMzY4OTM=",
+        "avatar_url": "https://avatars0.githubusercontent.com/u/1136893?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/dcodeIO",
+        "html_url": "https://github.com/dcodeIO",
+        "followers_url": "https://api.github.com/users/dcodeIO/followers",
+        "following_url": "https://api.github.com/users/dcodeIO/following{/other_user}",
+        "gists_url": "https://api.github.com/users/dcodeIO/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/dcodeIO/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/dcodeIO/subscriptions",
+        "organizations_url": "https://api.github.com/users/dcodeIO/orgs",
+        "repos_url": "https://api.github.com/users/dcodeIO/repos",
+        "events_url": "https://api.github.com/users/dcodeIO/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/dcodeIO/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "committer": {
+        "login": "web-flow",
+        "id": 19864447,
+        "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+        "avatar_url": "https://avatars3.githubusercontent.com/u/19864447?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/web-flow",
+        "html_url": "https://github.com/web-flow",
+        "followers_url": "https://api.github.com/users/web-flow/followers",
+        "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+        "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+        "organizations_url": "https://api.github.com/users/web-flow/orgs",
+        "repos_url": "https://api.github.com/users/web-flow/repos",
+        "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/web-flow/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "parents": [
+        {
+          "sha": "b7df27ccc0fb970845915ecd6690ea3ea8335ff1",
+          "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/commits/b7df27ccc0fb970845915ecd6690ea3ea8335ff1",
+          "html_url": "https://github.com/AssemblyScript/assemblyscript/commit/b7df27ccc0fb970845915ecd6690ea3ea8335ff1"
+        }
+      ]
+    },
+    {
+      "sha": "b7df27ccc0fb970845915ecd6690ea3ea8335ff1",
+      "node_id": "MDY6Q29tbWl0MTA1MTM4MzU2OmI3ZGYyN2NjYzBmYjk3MDg0NTkxNWVjZDY2OTBlYTNlYTgzMzVmZjE=",
+      "commit": {
+        "author": {
+          "name": "Daniel Wirtz",
+          "email": "dcode@dcode.io",
+          "date": "2020-03-13T18:28:30Z"
+        },
+        "committer": {
+          "name": "GitHub",
+          "email": "noreply@github.com",
+          "date": "2020-03-13T18:28:30Z"
+        },
+        "message": "Utilize lowMemoryUnused (#1103)",
+        "tree": {
+          "sha": "13f6f4ac632f9966cc521b6682c8bb98ab52e03d",
+          "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/git/trees/13f6f4ac632f9966cc521b6682c8bb98ab52e03d"
+        },
+        "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/git/commits/b7df27ccc0fb970845915ecd6690ea3ea8335ff1",
+        "comment_count": 0,
+        "verification": {
+          "verified": true,
+          "reason": "valid",
+          "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJea9DOCRBK7hj4Ov3rIwAAdHIIABljUoVRRQ90T5OPCZWZDmgv\nmYRpockQI8/4QKYNNafjwFlV00JTM/mL/vRFgy2UQ6hlGxHok4Av956NAt+wWoAY\n5AfkHZjIEeSyZvHYe1XRpbPrHbPdzptM5tywDtBqRtYDbKTp8lgqAYZ0cREdF/7U\n+l5JORX/nqHQfWi3gtiFjJLP0xU3dtUAzqHBXNs8nbscItNLhvaCOeqXJql4VXPN\nbexmcwOMMBnMryHyiTLbo1VChgYHNKV4BYH0e8yryQ5TxBu/QKQbrw3i08x27wqg\ngkA5H41iX+DViG6JOdWDeSX3utOD2kRaJfsxobD+8aNS9ZEPXatbE/RrkDk9T5g=\n=xRD5\n-----END PGP SIGNATURE-----\n",
+          "payload": "tree 13f6f4ac632f9966cc521b6682c8bb98ab52e03d\nparent c771461333f8fda6ea0e04dd2066a618becfb904\nauthor Daniel Wirtz <dcode@dcode.io> 1584124110 +0100\ncommitter GitHub <noreply@github.com> 1584124110 +0100\n\nUtilize lowMemoryUnused (#1103)\n\n"
+        }
+      },
+      "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/commits/b7df27ccc0fb970845915ecd6690ea3ea8335ff1",
+      "html_url": "https://github.com/AssemblyScript/assemblyscript/commit/b7df27ccc0fb970845915ecd6690ea3ea8335ff1",
+      "comments_url": "https://api.github.com/repos/AssemblyScript/assemblyscript/commits/b7df27ccc0fb970845915ecd6690ea3ea8335ff1/comments",
+      "author": {
+        "login": "dcodeIO",
+        "id": 1136893,
+        "node_id": "MDQ6VXNlcjExMzY4OTM=",
+        "avatar_url": "https://avatars0.githubusercontent.com/u/1136893?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/dcodeIO",
+        "html_url": "https://github.com/dcodeIO",
+        "followers_url": "https://api.github.com/users/dcodeIO/followers",
+        "following_url": "https://api.github.com/users/dcodeIO/following{/other_user}",
+        "gists_url": "https://api.github.com/users/dcodeIO/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/dcodeIO/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/dcodeIO/subscriptions",
+        "organizations_url": "https://api.github.com/users/dcodeIO/orgs",
+        "repos_url": "https://api.github.com/users/dcodeIO/repos",
+        "events_url": "https://api.github.com/users/dcodeIO/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/dcodeIO/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "committer": {
+        "login": "web-flow",
+        "id": 19864447,
+        "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+        "avatar_url": "https://avatars3.githubusercontent.com/u/19864447?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/web-flow",
+        "html_url": "https://github.com/web-flow",
+        "followers_url": "https://api.github.com/users/web-flow/followers",
+        "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+        "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+        "organizations_url": "https://api.github.com/users/web-flow/orgs",
+        "repos_url": "https://api.github.com/users/web-flow/repos",
+        "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/web-flow/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "parents": [
+        {
+          "sha": "c771461333f8fda6ea0e04dd2066a618becfb904",
+          "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/commits/c771461333f8fda6ea0e04dd2066a618becfb904",
+          "html_url": "https://github.com/AssemblyScript/assemblyscript/commit/c771461333f8fda6ea0e04dd2066a618becfb904"
+        }
+      ]
+    },
+    {
+      "sha": "c771461333f8fda6ea0e04dd2066a618becfb904",
+      "node_id": "MDY6Q29tbWl0MTA1MTM4MzU2OmM3NzE0NjEzMzNmOGZkYTZlYTBlMDRkZDIwNjZhNjE4YmVjZmI5MDQ=",
+      "commit": {
+        "author": {
+          "name": "Max Graey",
+          "email": "maxgraey@gmail.com",
+          "date": "2020-03-13T12:12:34Z"
+        },
+        "committer": {
+          "name": "GitHub",
+          "email": "noreply@github.com",
+          "date": "2020-03-13T12:12:34Z"
+        },
+        "message": "More aggressive inlining / reworked pass pipeline (#1135)",
+        "tree": {
+          "sha": "2a043e72f4497e84f3000a1d9828f96565a4ae97",
+          "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/git/trees/2a043e72f4497e84f3000a1d9828f96565a4ae97"
+        },
+        "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/git/commits/c771461333f8fda6ea0e04dd2066a618becfb904",
+        "comment_count": 0,
+        "verification": {
+          "verified": true,
+          "reason": "valid",
+          "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJea3iyCRBK7hj4Ov3rIwAAdHIIAFqWlkMurXQTmVB/LqL2BBsw\nD2LxQYHKtbCnxRZdf4h1vH8DY6BGLHLk0tr0EOgq2kZbEV3tBlhJ9Lq8PMfLOJPg\nqzpvAhfUKe6J8oXN2RcobBH/dsqebWhSg/DOWNgT8YJ/PJKRvAxCgVUxcH8MjGA5\nntoB4nzbYq6pnIyJo1HBYzSFNzw3jjopXf0cg7vSDHXr+2uQ718SRRKdHVyTopJQ\nxFmorWfcpoLfK3P3+NBkejfxtFjMbGd9S+aNr0ahpkTZ7As8GbwbAM5kd3WaJbxV\nOsBCo4HOPzgoQRYNLo3st7khw3SQ1CA2Z86eTkIK6USbmFKXDByJNwcc+tFan1w=\n=wZG3\n-----END PGP SIGNATURE-----\n",
+          "payload": "tree 2a043e72f4497e84f3000a1d9828f96565a4ae97\nparent 2c16369cae7ae5e5b0fbad13af69c82dc91ac5ff\nauthor Max Graey <maxgraey@gmail.com> 1584101554 +0200\ncommitter GitHub <noreply@github.com> 1584101554 +0100\n\nMore aggressive inlining / reworked pass pipeline (#1135)\n\n"
+        }
+      },
+      "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/commits/c771461333f8fda6ea0e04dd2066a618becfb904",
+      "html_url": "https://github.com/AssemblyScript/assemblyscript/commit/c771461333f8fda6ea0e04dd2066a618becfb904",
+      "comments_url": "https://api.github.com/repos/AssemblyScript/assemblyscript/commits/c771461333f8fda6ea0e04dd2066a618becfb904/comments",
+      "author": {
+        "login": "MaxGraey",
+        "id": 1301959,
+        "node_id": "MDQ6VXNlcjEzMDE5NTk=",
+        "avatar_url": "https://avatars3.githubusercontent.com/u/1301959?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/MaxGraey",
+        "html_url": "https://github.com/MaxGraey",
+        "followers_url": "https://api.github.com/users/MaxGraey/followers",
+        "following_url": "https://api.github.com/users/MaxGraey/following{/other_user}",
+        "gists_url": "https://api.github.com/users/MaxGraey/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/MaxGraey/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/MaxGraey/subscriptions",
+        "organizations_url": "https://api.github.com/users/MaxGraey/orgs",
+        "repos_url": "https://api.github.com/users/MaxGraey/repos",
+        "events_url": "https://api.github.com/users/MaxGraey/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/MaxGraey/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "committer": {
+        "login": "web-flow",
+        "id": 19864447,
+        "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+        "avatar_url": "https://avatars3.githubusercontent.com/u/19864447?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/web-flow",
+        "html_url": "https://github.com/web-flow",
+        "followers_url": "https://api.github.com/users/web-flow/followers",
+        "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+        "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+        "organizations_url": "https://api.github.com/users/web-flow/orgs",
+        "repos_url": "https://api.github.com/users/web-flow/repos",
+        "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/web-flow/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "parents": [
+        {
+          "sha": "2c16369cae7ae5e5b0fbad13af69c82dc91ac5ff",
+          "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/commits/2c16369cae7ae5e5b0fbad13af69c82dc91ac5ff",
+          "html_url": "https://github.com/AssemblyScript/assemblyscript/commit/2c16369cae7ae5e5b0fbad13af69c82dc91ac5ff"
+        }
+      ]
+    },
+    {
+      "sha": "2c16369cae7ae5e5b0fbad13af69c82dc91ac5ff",
+      "node_id": "MDY6Q29tbWl0MTA1MTM4MzU2OjJjMTYzNjljYWU3YWU1ZTViMGZiYWQxM2FmNjljODJkYzkxYWM1ZmY=",
+      "commit": {
+        "author": {
+          "name": "jtenner",
+          "email": "tenner.joshua@gmail.com",
+          "date": "2020-03-13T10:27:54Z"
+        },
+        "committer": {
+          "name": "GitHub",
+          "email": "noreply@github.com",
+          "date": "2020-03-13T10:27:54Z"
+        },
+        "message": "Fix StaticArray definition in types file (#1161)",
+        "tree": {
+          "sha": "03eabdc7108036e76113ca93fe9cc3a7df08f50d",
+          "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/git/trees/03eabdc7108036e76113ca93fe9cc3a7df08f50d"
+        },
+        "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/git/commits/2c16369cae7ae5e5b0fbad13af69c82dc91ac5ff",
+        "comment_count": 0,
+        "verification": {
+          "verified": true,
+          "reason": "valid",
+          "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJea2AqCRBK7hj4Ov3rIwAAdHIIAGlRKGVhyBU1xZLJKfNTqT4N\nLlmsnGA33WT1TZ2lYsAUnXl40Q2SMsKtL3NvAQ/mYtoHjCXvggocc6KuuONRaxbe\nV2g7FzSde4GC2AjpqQug/iDp2yWlvu3rGSi20ARz+HShPrd66xvsGh20XybT6rr6\nZqg47KsxcNUi7cnBd+jU+aDRYybIje2wzp1HLT9O7ACO00dRbug3/Um1lSN+FU/y\nKzvZ8aRub+uBlhqCi9V5WZMi5AL+yDOUGMXBKS16S9wGXDzIPWAYKPeUM3ADv1/s\npqTJ9UJt5OmBFk86Kh6MvHhFryZNnY6O8fWyAlpcskORxU71gsO9BIlLO4Nja+I=\n=QVdg\n-----END PGP SIGNATURE-----\n",
+          "payload": "tree 03eabdc7108036e76113ca93fe9cc3a7df08f50d\nparent c9d74265bac4ddd4683dc677269fde277f539535\nauthor jtenner <tenner.joshua@gmail.com> 1584095274 -0400\ncommitter GitHub <noreply@github.com> 1584095274 +0100\n\nFix StaticArray definition in types file (#1161)\n\n"
+        }
+      },
+      "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/commits/2c16369cae7ae5e5b0fbad13af69c82dc91ac5ff",
+      "html_url": "https://github.com/AssemblyScript/assemblyscript/commit/2c16369cae7ae5e5b0fbad13af69c82dc91ac5ff",
+      "comments_url": "https://api.github.com/repos/AssemblyScript/assemblyscript/commits/2c16369cae7ae5e5b0fbad13af69c82dc91ac5ff/comments",
+      "author": {
+        "login": "jtenner",
+        "id": 3761339,
+        "node_id": "MDQ6VXNlcjM3NjEzMzk=",
+        "avatar_url": "https://avatars1.githubusercontent.com/u/3761339?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/jtenner",
+        "html_url": "https://github.com/jtenner",
+        "followers_url": "https://api.github.com/users/jtenner/followers",
+        "following_url": "https://api.github.com/users/jtenner/following{/other_user}",
+        "gists_url": "https://api.github.com/users/jtenner/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/jtenner/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/jtenner/subscriptions",
+        "organizations_url": "https://api.github.com/users/jtenner/orgs",
+        "repos_url": "https://api.github.com/users/jtenner/repos",
+        "events_url": "https://api.github.com/users/jtenner/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/jtenner/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "committer": {
+        "login": "web-flow",
+        "id": 19864447,
+        "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+        "avatar_url": "https://avatars3.githubusercontent.com/u/19864447?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/web-flow",
+        "html_url": "https://github.com/web-flow",
+        "followers_url": "https://api.github.com/users/web-flow/followers",
+        "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+        "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+        "organizations_url": "https://api.github.com/users/web-flow/orgs",
+        "repos_url": "https://api.github.com/users/web-flow/repos",
+        "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/web-flow/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "parents": [
+        {
+          "sha": "c9d74265bac4ddd4683dc677269fde277f539535",
+          "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/commits/c9d74265bac4ddd4683dc677269fde277f539535",
+          "html_url": "https://github.com/AssemblyScript/assemblyscript/commit/c9d74265bac4ddd4683dc677269fde277f539535"
+        }
+      ]
+    },
+    {
+      "sha": "c9d74265bac4ddd4683dc677269fde277f539535",
+      "node_id": "MDY6Q29tbWl0MTA1MTM4MzU2OmM5ZDc0MjY1YmFjNGRkZDQ2ODNkYzY3NzI2OWZkZTI3N2Y1Mzk1MzU=",
+      "commit": {
+        "author": {
+          "name": "Max Graey",
+          "email": "maxgraey@gmail.com",
+          "date": "2020-03-13T10:15:42Z"
+        },
+        "committer": {
+          "name": "GitHub",
+          "email": "noreply@github.com",
+          "date": "2020-03-13T10:15:42Z"
+        },
+        "message": "Optimize decimalCount32/64 & minor refactoring (#1160)",
+        "tree": {
+          "sha": "cfa02fd06d0d8d8eb2d8594aaea88f1d2b78df13",
+          "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/git/trees/cfa02fd06d0d8d8eb2d8594aaea88f1d2b78df13"
+        },
+        "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/git/commits/c9d74265bac4ddd4683dc677269fde277f539535",
+        "comment_count": 0,
+        "verification": {
+          "verified": true,
+          "reason": "valid",
+          "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJea11OCRBK7hj4Ov3rIwAAdHIIAJ0WaOePDwAYSiu9K0re2+Xy\nTY687jJrnH1Hpk9jVzZEcgYhSHcFKvlqvX/WIauBEtFbjPCic2VYjxpwV5LlQ5dz\nO7RK9b+D6nk0zoo5NPPTciFN4nIk8VhvJQ3QveIomBkeSMwwFs7UkXLRCcyyeJ7B\n75/h340lndH4csR03bxn/EGiIl0dG7JRifvZBhGz5BOF0f3NPvRmLsFScEKdsU2c\nGBvvjaUo69bZyCAtk33v1DD2aDtbGSnQBgdp7G0dRIVFWnrh43NzpqzF3rmlrjIX\nkcYnJtKsCAkIvhzDvlJiKM4tFc9i8o6VC3cr+OjWufhiDqp2QLXMDgM5gGJdoUY=\n=zkrC\n-----END PGP SIGNATURE-----\n",
+          "payload": "tree cfa02fd06d0d8d8eb2d8594aaea88f1d2b78df13\nparent 03aff6e87a7d7a52308de50206c6358c8e1e59b8\nauthor Max Graey <maxgraey@gmail.com> 1584094542 +0200\ncommitter GitHub <noreply@github.com> 1584094542 +0100\n\nOptimize decimalCount32/64 & minor refactoring (#1160)\n\n"
+        }
+      },
+      "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/commits/c9d74265bac4ddd4683dc677269fde277f539535",
+      "html_url": "https://github.com/AssemblyScript/assemblyscript/commit/c9d74265bac4ddd4683dc677269fde277f539535",
+      "comments_url": "https://api.github.com/repos/AssemblyScript/assemblyscript/commits/c9d74265bac4ddd4683dc677269fde277f539535/comments",
+      "author": {
+        "login": "MaxGraey",
+        "id": 1301959,
+        "node_id": "MDQ6VXNlcjEzMDE5NTk=",
+        "avatar_url": "https://avatars3.githubusercontent.com/u/1301959?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/MaxGraey",
+        "html_url": "https://github.com/MaxGraey",
+        "followers_url": "https://api.github.com/users/MaxGraey/followers",
+        "following_url": "https://api.github.com/users/MaxGraey/following{/other_user}",
+        "gists_url": "https://api.github.com/users/MaxGraey/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/MaxGraey/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/MaxGraey/subscriptions",
+        "organizations_url": "https://api.github.com/users/MaxGraey/orgs",
+        "repos_url": "https://api.github.com/users/MaxGraey/repos",
+        "events_url": "https://api.github.com/users/MaxGraey/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/MaxGraey/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "committer": {
+        "login": "web-flow",
+        "id": 19864447,
+        "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+        "avatar_url": "https://avatars3.githubusercontent.com/u/19864447?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/web-flow",
+        "html_url": "https://github.com/web-flow",
+        "followers_url": "https://api.github.com/users/web-flow/followers",
+        "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+        "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+        "organizations_url": "https://api.github.com/users/web-flow/orgs",
+        "repos_url": "https://api.github.com/users/web-flow/repos",
+        "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/web-flow/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "parents": [
+        {
+          "sha": "03aff6e87a7d7a52308de50206c6358c8e1e59b8",
+          "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/commits/03aff6e87a7d7a52308de50206c6358c8e1e59b8",
+          "html_url": "https://github.com/AssemblyScript/assemblyscript/commit/03aff6e87a7d7a52308de50206c6358c8e1e59b8"
+        }
+      ]
+    },
+    {
+      "sha": "03aff6e87a7d7a52308de50206c6358c8e1e59b8",
+      "node_id": "MDY6Q29tbWl0MTA1MTM4MzU2OjAzYWZmNmU4N2E3ZDdhNTIzMDhkZTUwMjA2YzYzNThjOGUxZTU5Yjg=",
+      "commit": {
+        "author": {
+          "name": "Daniel Wirtz",
+          "email": "dcode@dcode.io",
+          "date": "2020-03-11T21:08:08Z"
+        },
+        "committer": {
+          "name": "GitHub",
+          "email": "noreply@github.com",
+          "date": "2020-03-11T21:08:08Z"
+        },
+        "message": "Eliminate redundant type assertions (#1156)",
+        "tree": {
+          "sha": "9f15804f93c8828a354ecc77c99965c073e7ddb3",
+          "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/git/trees/9f15804f93c8828a354ecc77c99965c073e7ddb3"
+        },
+        "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/git/commits/03aff6e87a7d7a52308de50206c6358c8e1e59b8",
+        "comment_count": 0,
+        "verification": {
+          "verified": true,
+          "reason": "valid",
+          "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJeaVM4CRBK7hj4Ov3rIwAAdHIIAKWYKFq9pl/WBV7JGDJOlbkp\njVV3Zb06+ShrxfQf+oRd2r7SfN8unDChxYaLQpyOeb2l0L812luts6Lc6rXIBvLb\nXR5P48K78kXk5+HVJUS0E+jTMOKLGlkoI7EiY9E/hT3VcUhX62rLQ/f+h888pLur\nc5OEqZ8DmIlMI3b/XgFRaDBzNve/I4+ZYogrn+H61RTp+fJJxaVkQiY4cLivxB0n\n5M/AYVf0Eu06thGWq7j3sfpSUHyYG69CVPdXwqz2uXGBn3BLO9Ut68H42+gZIh9k\nhzVUMOq9vnM4WDYLNKDlfnre7dk3cjAV60BxyPRN+B4EfAAZC4x5Ye5Y/JQNUIc=\n=5j44\n-----END PGP SIGNATURE-----\n",
+          "payload": "tree 9f15804f93c8828a354ecc77c99965c073e7ddb3\nparent a28c5336497c4fdcd7ead68f7aae125c1703fb54\nauthor Daniel Wirtz <dcode@dcode.io> 1583960888 +0100\ncommitter GitHub <noreply@github.com> 1583960888 +0100\n\nEliminate redundant type assertions (#1156)\n\n"
+        }
+      },
+      "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/commits/03aff6e87a7d7a52308de50206c6358c8e1e59b8",
+      "html_url": "https://github.com/AssemblyScript/assemblyscript/commit/03aff6e87a7d7a52308de50206c6358c8e1e59b8",
+      "comments_url": "https://api.github.com/repos/AssemblyScript/assemblyscript/commits/03aff6e87a7d7a52308de50206c6358c8e1e59b8/comments",
+      "author": {
+        "login": "dcodeIO",
+        "id": 1136893,
+        "node_id": "MDQ6VXNlcjExMzY4OTM=",
+        "avatar_url": "https://avatars0.githubusercontent.com/u/1136893?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/dcodeIO",
+        "html_url": "https://github.com/dcodeIO",
+        "followers_url": "https://api.github.com/users/dcodeIO/followers",
+        "following_url": "https://api.github.com/users/dcodeIO/following{/other_user}",
+        "gists_url": "https://api.github.com/users/dcodeIO/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/dcodeIO/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/dcodeIO/subscriptions",
+        "organizations_url": "https://api.github.com/users/dcodeIO/orgs",
+        "repos_url": "https://api.github.com/users/dcodeIO/repos",
+        "events_url": "https://api.github.com/users/dcodeIO/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/dcodeIO/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "committer": {
+        "login": "web-flow",
+        "id": 19864447,
+        "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+        "avatar_url": "https://avatars3.githubusercontent.com/u/19864447?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/web-flow",
+        "html_url": "https://github.com/web-flow",
+        "followers_url": "https://api.github.com/users/web-flow/followers",
+        "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+        "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+        "organizations_url": "https://api.github.com/users/web-flow/orgs",
+        "repos_url": "https://api.github.com/users/web-flow/repos",
+        "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/web-flow/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "parents": [
+        {
+          "sha": "a28c5336497c4fdcd7ead68f7aae125c1703fb54",
+          "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/commits/a28c5336497c4fdcd7ead68f7aae125c1703fb54",
+          "html_url": "https://github.com/AssemblyScript/assemblyscript/commit/a28c5336497c4fdcd7ead68f7aae125c1703fb54"
+        }
+      ]
+    },
+    {
+      "sha": "a28c5336497c4fdcd7ead68f7aae125c1703fb54",
+      "node_id": "MDY6Q29tbWl0MTA1MTM4MzU2OmEyOGM1MzM2NDk3YzRmZGNkN2VhZDY4ZjdhYWUxMjVjMTcwM2ZiNTQ=",
+      "commit": {
+        "author": {
+          "name": "Daniel Wirtz",
+          "email": "dcode@dcode.io",
+          "date": "2020-03-11T18:29:16Z"
+        },
+        "committer": {
+          "name": "GitHub",
+          "email": "noreply@github.com",
+          "date": "2020-03-11T18:29:16Z"
+        },
+        "message": "Fix unintentional breaking change and slice v0.9.4 (#1158)",
+        "tree": {
+          "sha": "01e038759f00f0bb328296efbe39dce48a5dd5f1",
+          "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/git/trees/01e038759f00f0bb328296efbe39dce48a5dd5f1"
+        },
+        "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/git/commits/a28c5336497c4fdcd7ead68f7aae125c1703fb54",
+        "comment_count": 0,
+        "verification": {
+          "verified": true,
+          "reason": "valid",
+          "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJeaS38CRBK7hj4Ov3rIwAAdHIIABl7wV2+3qUnl51h/AKT2aKO\n2SB1wo5iQIff8QuRhE3vImrbdgUAli+wIM1OR4i4TmIYKyVowuty2p+lMCOe8Iqh\npfCSkEBwMj56KDclgeWSc4M1HnigVVFot4ULqMxqJ7GnJiwc/wZwjOpaZFY45Frm\nh7Wwkom4l7k2RJPSlEYWqAiy6D5M+nvAm9Wr/NLpNc8KT6ynEt75DktYrgH7zkv4\niZrqXsKHlJo3NF9+1/wLo0tuwVzpeqAto9R0M9SXgZ8mGVvIqiQEV+dt0z/44Ajy\n4whFhrqTXN2SCZdzg+jggPob9jXlAGs8Au2h6N17Igof0Milequie9qarFb9AWQ=\n=0Zlf\n-----END PGP SIGNATURE-----\n",
+          "payload": "tree 01e038759f00f0bb328296efbe39dce48a5dd5f1\nparent 5e61ec35acf6e782e74fb4eb4cc27545d172895e\nauthor Daniel Wirtz <dcode@dcode.io> 1583951356 +0100\ncommitter GitHub <noreply@github.com> 1583951356 +0100\n\nFix unintentional breaking change and slice v0.9.4 (#1158)\n\n"
+        }
+      },
+      "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/commits/a28c5336497c4fdcd7ead68f7aae125c1703fb54",
+      "html_url": "https://github.com/AssemblyScript/assemblyscript/commit/a28c5336497c4fdcd7ead68f7aae125c1703fb54",
+      "comments_url": "https://api.github.com/repos/AssemblyScript/assemblyscript/commits/a28c5336497c4fdcd7ead68f7aae125c1703fb54/comments",
+      "author": {
+        "login": "dcodeIO",
+        "id": 1136893,
+        "node_id": "MDQ6VXNlcjExMzY4OTM=",
+        "avatar_url": "https://avatars0.githubusercontent.com/u/1136893?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/dcodeIO",
+        "html_url": "https://github.com/dcodeIO",
+        "followers_url": "https://api.github.com/users/dcodeIO/followers",
+        "following_url": "https://api.github.com/users/dcodeIO/following{/other_user}",
+        "gists_url": "https://api.github.com/users/dcodeIO/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/dcodeIO/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/dcodeIO/subscriptions",
+        "organizations_url": "https://api.github.com/users/dcodeIO/orgs",
+        "repos_url": "https://api.github.com/users/dcodeIO/repos",
+        "events_url": "https://api.github.com/users/dcodeIO/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/dcodeIO/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "committer": {
+        "login": "web-flow",
+        "id": 19864447,
+        "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+        "avatar_url": "https://avatars3.githubusercontent.com/u/19864447?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/web-flow",
+        "html_url": "https://github.com/web-flow",
+        "followers_url": "https://api.github.com/users/web-flow/followers",
+        "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+        "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+        "organizations_url": "https://api.github.com/users/web-flow/orgs",
+        "repos_url": "https://api.github.com/users/web-flow/repos",
+        "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/web-flow/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "parents": [
+        {
+          "sha": "5e61ec35acf6e782e74fb4eb4cc27545d172895e",
+          "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/commits/5e61ec35acf6e782e74fb4eb4cc27545d172895e",
+          "html_url": "https://github.com/AssemblyScript/assemblyscript/commit/5e61ec35acf6e782e74fb4eb4cc27545d172895e"
+        }
+      ]
+    },
+    {
+      "sha": "5e61ec35acf6e782e74fb4eb4cc27545d172895e",
+      "node_id": "MDY6Q29tbWl0MTA1MTM4MzU2OjVlNjFlYzM1YWNmNmU3ODJlNzRmYjRlYjRjYzI3NTQ1ZDE3Mjg5NWU=",
+      "commit": {
+        "author": {
+          "name": "Daniel Wirtz",
+          "email": "dcode@dcode.io",
+          "date": "2020-03-10T16:11:13Z"
+        },
+        "committer": {
+          "name": "GitHub",
+          "email": "noreply@github.com",
+          "date": "2020-03-10T16:11:13Z"
+        },
+        "message": "Slice v0.9.3 (#1153)",
+        "tree": {
+          "sha": "227165e88de2d1102ca1bc39c241ce6092ce5de1",
+          "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/git/trees/227165e88de2d1102ca1bc39c241ce6092ce5de1"
+        },
+        "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/git/commits/5e61ec35acf6e782e74fb4eb4cc27545d172895e",
+        "comment_count": 0,
+        "verification": {
+          "verified": true,
+          "reason": "valid",
+          "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJeZ7whCRBK7hj4Ov3rIwAAdHIIAB6TuQxEQJrIE5ki5ucWu8eZ\neMh7zGbCKOKszrsdEdSbscSj6CN708gJ96foKvCRHKrOuXPYtrIJdOCfleKDhR2c\n3w87iD1nz6pRYbn4+waxcKiFkCIBL+DoBvKJOiEzh66O1QGjtUdmQHBBO2Ek9hXL\nK51nMuwRjgbdFALkYwKBq3ZpcI8t8MeHwPA8/VKck/TY7BFQBu9fA3TD8waA5Rv2\nSjws5Dk/Xjd2q49e96pKEoubOC5vFRo9GK7K+prbCmq05nG6n0rr9YX82QoE9GLl\nkHNBRFpRDpjY9tB8iSf9iwHDYHvYO8ZLIcqhdD8cShh5fcj1UuWGMXD1OobnGMk=\n=We4Q\n-----END PGP SIGNATURE-----\n",
+          "payload": "tree 227165e88de2d1102ca1bc39c241ce6092ce5de1\nparent ca6e3192f1640e6634ca81c6f0ef82b3ba31ca1f\nauthor Daniel Wirtz <dcode@dcode.io> 1583856673 +0100\ncommitter GitHub <noreply@github.com> 1583856673 +0100\n\nSlice v0.9.3 (#1153)\n\n"
+        }
+      },
+      "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/commits/5e61ec35acf6e782e74fb4eb4cc27545d172895e",
+      "html_url": "https://github.com/AssemblyScript/assemblyscript/commit/5e61ec35acf6e782e74fb4eb4cc27545d172895e",
+      "comments_url": "https://api.github.com/repos/AssemblyScript/assemblyscript/commits/5e61ec35acf6e782e74fb4eb4cc27545d172895e/comments",
+      "author": {
+        "login": "dcodeIO",
+        "id": 1136893,
+        "node_id": "MDQ6VXNlcjExMzY4OTM=",
+        "avatar_url": "https://avatars0.githubusercontent.com/u/1136893?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/dcodeIO",
+        "html_url": "https://github.com/dcodeIO",
+        "followers_url": "https://api.github.com/users/dcodeIO/followers",
+        "following_url": "https://api.github.com/users/dcodeIO/following{/other_user}",
+        "gists_url": "https://api.github.com/users/dcodeIO/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/dcodeIO/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/dcodeIO/subscriptions",
+        "organizations_url": "https://api.github.com/users/dcodeIO/orgs",
+        "repos_url": "https://api.github.com/users/dcodeIO/repos",
+        "events_url": "https://api.github.com/users/dcodeIO/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/dcodeIO/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "committer": {
+        "login": "web-flow",
+        "id": 19864447,
+        "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+        "avatar_url": "https://avatars3.githubusercontent.com/u/19864447?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/web-flow",
+        "html_url": "https://github.com/web-flow",
+        "followers_url": "https://api.github.com/users/web-flow/followers",
+        "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+        "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+        "organizations_url": "https://api.github.com/users/web-flow/orgs",
+        "repos_url": "https://api.github.com/users/web-flow/repos",
+        "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/web-flow/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "parents": [
+        {
+          "sha": "ca6e3192f1640e6634ca81c6f0ef82b3ba31ca1f",
+          "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/commits/ca6e3192f1640e6634ca81c6f0ef82b3ba31ca1f",
+          "html_url": "https://github.com/AssemblyScript/assemblyscript/commit/ca6e3192f1640e6634ca81c6f0ef82b3ba31ca1f"
+        }
+      ]
+    },
+    {
+      "sha": "ca6e3192f1640e6634ca81c6f0ef82b3ba31ca1f",
+      "node_id": "MDY6Q29tbWl0MTA1MTM4MzU2OmNhNmUzMTkyZjE2NDBlNjYzNGNhODFjNmYwZWY4MmIzYmEzMWNhMWY=",
+      "commit": {
+        "author": {
+          "name": "Daniel Wirtz",
+          "email": "dcode@dcode.io",
+          "date": "2020-03-10T13:10:28Z"
+        },
+        "committer": {
+          "name": "GitHub",
+          "email": "noreply@github.com",
+          "date": "2020-03-10T13:10:28Z"
+        },
+        "message": "Ensure constructors of exported classes (#1154)",
+        "tree": {
+          "sha": "b6d57c22ebe816c07cbb8bf68ec31f1e47fa3403",
+          "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/git/trees/b6d57c22ebe816c07cbb8bf68ec31f1e47fa3403"
+        },
+        "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/git/commits/ca6e3192f1640e6634ca81c6f0ef82b3ba31ca1f",
+        "comment_count": 0,
+        "verification": {
+          "verified": true,
+          "reason": "valid",
+          "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJeZ5HECRBK7hj4Ov3rIwAAdHIIAK5FSLEP6OekDh0S13eIq0SU\nwWB4l8gBVrCkNwK2LO/8Wzrn15swqm8CJdtblilOWyJJdDvJqAQvQHtXEolQGP0g\nOe+ZKTPcidZ0uKu+q4M4rRDkt7RqxEtRZba1OKzDgUf4QwNVpoL0Pm14Z8VIRde0\nIzL+W6rdhbPU4kzH6x39Cq3kjo9EMEEpRTL5du7XQUkzIN/l070Z931MxqnUu0LA\nsCgT2erb0Zg7KNUQf+iCi/iumtSnJ7lQ37eYEhKOVCd7dhSPpYq3VTsTG9o92bqZ\ntAFzbnsEcGonP9INAOUz0IUTudXTKu3zamhR5qkGwvwvH+hMpJZYZy9cXzMABME=\n=f1eq\n-----END PGP SIGNATURE-----\n",
+          "payload": "tree b6d57c22ebe816c07cbb8bf68ec31f1e47fa3403\nparent fb521c9964482a133989f89e442f032db3e10528\nauthor Daniel Wirtz <dcode@dcode.io> 1583845828 +0100\ncommitter GitHub <noreply@github.com> 1583845828 +0100\n\nEnsure constructors of exported classes (#1154)\n\n"
+        }
+      },
+      "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/commits/ca6e3192f1640e6634ca81c6f0ef82b3ba31ca1f",
+      "html_url": "https://github.com/AssemblyScript/assemblyscript/commit/ca6e3192f1640e6634ca81c6f0ef82b3ba31ca1f",
+      "comments_url": "https://api.github.com/repos/AssemblyScript/assemblyscript/commits/ca6e3192f1640e6634ca81c6f0ef82b3ba31ca1f/comments",
+      "author": {
+        "login": "dcodeIO",
+        "id": 1136893,
+        "node_id": "MDQ6VXNlcjExMzY4OTM=",
+        "avatar_url": "https://avatars0.githubusercontent.com/u/1136893?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/dcodeIO",
+        "html_url": "https://github.com/dcodeIO",
+        "followers_url": "https://api.github.com/users/dcodeIO/followers",
+        "following_url": "https://api.github.com/users/dcodeIO/following{/other_user}",
+        "gists_url": "https://api.github.com/users/dcodeIO/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/dcodeIO/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/dcodeIO/subscriptions",
+        "organizations_url": "https://api.github.com/users/dcodeIO/orgs",
+        "repos_url": "https://api.github.com/users/dcodeIO/repos",
+        "events_url": "https://api.github.com/users/dcodeIO/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/dcodeIO/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "committer": {
+        "login": "web-flow",
+        "id": 19864447,
+        "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+        "avatar_url": "https://avatars3.githubusercontent.com/u/19864447?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/web-flow",
+        "html_url": "https://github.com/web-flow",
+        "followers_url": "https://api.github.com/users/web-flow/followers",
+        "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+        "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+        "organizations_url": "https://api.github.com/users/web-flow/orgs",
+        "repos_url": "https://api.github.com/users/web-flow/repos",
+        "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/web-flow/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "parents": [
+        {
+          "sha": "fb521c9964482a133989f89e442f032db3e10528",
+          "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/commits/fb521c9964482a133989f89e442f032db3e10528",
+          "html_url": "https://github.com/AssemblyScript/assemblyscript/commit/fb521c9964482a133989f89e442f032db3e10528"
+        }
+      ]
+    },
+    {
+      "sha": "fb521c9964482a133989f89e442f032db3e10528",
+      "node_id": "MDY6Q29tbWl0MTA1MTM4MzU2OmZiNTIxYzk5NjQ0ODJhMTMzOTg5Zjg5ZTQ0MmYwMzJkYjNlMTA1Mjg=",
+      "commit": {
+        "author": {
+          "name": "Max Graey",
+          "email": "maxgraey@gmail.com",
+          "date": "2020-03-10T06:29:18Z"
+        },
+        "committer": {
+          "name": "GitHub",
+          "email": "noreply@github.com",
+          "date": "2020-03-10T06:29:18Z"
+        },
+        "message": "Refactor n-body example for Rust & unify build process (#1148)",
+        "tree": {
+          "sha": "8d353f68bbdccc6e63eeb6f6a759c29348403073",
+          "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/git/trees/8d353f68bbdccc6e63eeb6f6a759c29348403073"
+        },
+        "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/git/commits/fb521c9964482a133989f89e442f032db3e10528",
+        "comment_count": 0,
+        "verification": {
+          "verified": true,
+          "reason": "valid",
+          "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJeZzO+CRBK7hj4Ov3rIwAAdHIIAF5ob5BqFB957g52n0B0t2xz\naOP0IyEDVklNTAspbyrorjTNtVbBrxqg5Atq8iFrzRx4q+ghqtUS5GZZeOuIYZHH\n8kQ1R82yYQ8d5uHfHR6inh2Du7gn7aJdrut6CZVD/arFDpWkWGjOZ4+4xh221WxB\nk9LF2IcAZ0Jfpl+NtwcXGH9m5Kg9OutwsRGlFuhMaEcGDQTStpVQiHN93dvdP7e9\nboKvsZq/bufGrRmGjPcGZYhFuOnnqVbqtCg30WwXeWKSP9vLUkyoTJxSqahRndAh\nZpW7qSKqbBl4/rjRpHq4mxJAqoj20dElkO3jLrAg0QMx/nfsXDOUB3sekPVdEjU=\n=J8Wq\n-----END PGP SIGNATURE-----\n",
+          "payload": "tree 8d353f68bbdccc6e63eeb6f6a759c29348403073\nparent 996bff518d10a9f6883ff12850c3fe4568b7f729\nauthor Max Graey <maxgraey@gmail.com> 1583821758 +0200\ncommitter GitHub <noreply@github.com> 1583821758 +0100\n\nRefactor n-body example for Rust & unify build process (#1148)\n\n"
+        }
+      },
+      "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/commits/fb521c9964482a133989f89e442f032db3e10528",
+      "html_url": "https://github.com/AssemblyScript/assemblyscript/commit/fb521c9964482a133989f89e442f032db3e10528",
+      "comments_url": "https://api.github.com/repos/AssemblyScript/assemblyscript/commits/fb521c9964482a133989f89e442f032db3e10528/comments",
+      "author": {
+        "login": "MaxGraey",
+        "id": 1301959,
+        "node_id": "MDQ6VXNlcjEzMDE5NTk=",
+        "avatar_url": "https://avatars3.githubusercontent.com/u/1301959?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/MaxGraey",
+        "html_url": "https://github.com/MaxGraey",
+        "followers_url": "https://api.github.com/users/MaxGraey/followers",
+        "following_url": "https://api.github.com/users/MaxGraey/following{/other_user}",
+        "gists_url": "https://api.github.com/users/MaxGraey/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/MaxGraey/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/MaxGraey/subscriptions",
+        "organizations_url": "https://api.github.com/users/MaxGraey/orgs",
+        "repos_url": "https://api.github.com/users/MaxGraey/repos",
+        "events_url": "https://api.github.com/users/MaxGraey/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/MaxGraey/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "committer": {
+        "login": "web-flow",
+        "id": 19864447,
+        "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+        "avatar_url": "https://avatars3.githubusercontent.com/u/19864447?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/web-flow",
+        "html_url": "https://github.com/web-flow",
+        "followers_url": "https://api.github.com/users/web-flow/followers",
+        "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+        "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+        "organizations_url": "https://api.github.com/users/web-flow/orgs",
+        "repos_url": "https://api.github.com/users/web-flow/repos",
+        "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/web-flow/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "parents": [
+        {
+          "sha": "996bff518d10a9f6883ff12850c3fe4568b7f729",
+          "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/commits/996bff518d10a9f6883ff12850c3fe4568b7f729",
+          "html_url": "https://github.com/AssemblyScript/assemblyscript/commit/996bff518d10a9f6883ff12850c3fe4568b7f729"
+        }
+      ]
+    },
+    {
+      "sha": "996bff518d10a9f6883ff12850c3fe4568b7f729",
+      "node_id": "MDY6Q29tbWl0MTA1MTM4MzU2Ojk5NmJmZjUxOGQxMGE5ZjY4ODNmZjEyODUwYzNmZTQ1NjhiN2Y3Mjk=",
+      "commit": {
+        "author": {
+          "name": "Daniel Wirtz",
+          "email": "dcode@dcode.io",
+          "date": "2020-03-10T05:50:55Z"
+        },
+        "committer": {
+          "name": "GitHub",
+          "email": "noreply@github.com",
+          "date": "2020-03-10T05:50:55Z"
+        },
+        "message": "Use base index signature if inherited (#1152)",
+        "tree": {
+          "sha": "37dac1a9ecf63b9cb52010438d9327d44fd2feb7",
+          "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/git/trees/37dac1a9ecf63b9cb52010438d9327d44fd2feb7"
+        },
+        "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/git/commits/996bff518d10a9f6883ff12850c3fe4568b7f729",
+        "comment_count": 0,
+        "verification": {
+          "verified": true,
+          "reason": "valid",
+          "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJeZyq/CRBK7hj4Ov3rIwAAdHIIAH7CeSg5+KjfQRYhawGg4uBZ\nT+Q5D1I5BFdn0CJyuls01yWlz4b1G7i4q++UUIiRrCDP/OENsaDO4XHBTbpZLcnZ\nGwNKG4odkQnApj5/rJQTArjslMlBclEn4rHcqukPpzZDBVk4ULJjv5G35fWNy+xo\nIBpW7GcGSRcXl9WOyHpZm2FDurxoCOvnaY9nCZ87ZXNfZSoj89QQcHPvw7VbtOOo\nPlN2ohhxokewAN+cSXp14zxoc1dZQK8gwRvAg9/LV3yXETTNw3UtSesJZzruVg/3\nE7MNLFxTVi8f2LjMEz2A36AviRuMY+zW4EgMhaniTt/uMRy9A1AGhc6t+px9BIg=\n=IKqi\n-----END PGP SIGNATURE-----\n",
+          "payload": "tree 37dac1a9ecf63b9cb52010438d9327d44fd2feb7\nparent 1d2505177bdae619b029e4966464d2c85427041a\nauthor Daniel Wirtz <dcode@dcode.io> 1583819455 +0100\ncommitter GitHub <noreply@github.com> 1583819455 +0100\n\nUse base index signature if inherited (#1152)\n\n"
+        }
+      },
+      "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/commits/996bff518d10a9f6883ff12850c3fe4568b7f729",
+      "html_url": "https://github.com/AssemblyScript/assemblyscript/commit/996bff518d10a9f6883ff12850c3fe4568b7f729",
+      "comments_url": "https://api.github.com/repos/AssemblyScript/assemblyscript/commits/996bff518d10a9f6883ff12850c3fe4568b7f729/comments",
+      "author": {
+        "login": "dcodeIO",
+        "id": 1136893,
+        "node_id": "MDQ6VXNlcjExMzY4OTM=",
+        "avatar_url": "https://avatars0.githubusercontent.com/u/1136893?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/dcodeIO",
+        "html_url": "https://github.com/dcodeIO",
+        "followers_url": "https://api.github.com/users/dcodeIO/followers",
+        "following_url": "https://api.github.com/users/dcodeIO/following{/other_user}",
+        "gists_url": "https://api.github.com/users/dcodeIO/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/dcodeIO/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/dcodeIO/subscriptions",
+        "organizations_url": "https://api.github.com/users/dcodeIO/orgs",
+        "repos_url": "https://api.github.com/users/dcodeIO/repos",
+        "events_url": "https://api.github.com/users/dcodeIO/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/dcodeIO/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "committer": {
+        "login": "web-flow",
+        "id": 19864447,
+        "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+        "avatar_url": "https://avatars3.githubusercontent.com/u/19864447?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/web-flow",
+        "html_url": "https://github.com/web-flow",
+        "followers_url": "https://api.github.com/users/web-flow/followers",
+        "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+        "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+        "organizations_url": "https://api.github.com/users/web-flow/orgs",
+        "repos_url": "https://api.github.com/users/web-flow/repos",
+        "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/web-flow/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "parents": [
+        {
+          "sha": "1d2505177bdae619b029e4966464d2c85427041a",
+          "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/commits/1d2505177bdae619b029e4966464d2c85427041a",
+          "html_url": "https://github.com/AssemblyScript/assemblyscript/commit/1d2505177bdae619b029e4966464d2c85427041a"
+        }
+      ]
+    },
+    {
+      "sha": "1d2505177bdae619b029e4966464d2c85427041a",
+      "node_id": "MDY6Q29tbWl0MTA1MTM4MzU2OjFkMjUwNTE3N2JkYWU2MTliMDI5ZTQ5NjY0NjRkMmM4NTQyNzA0MWE=",
+      "commit": {
+        "author": {
+          "name": "Daniel Wirtz",
+          "email": "dcode@dcode.io",
+          "date": "2020-03-09T20:28:46Z"
+        },
+        "committer": {
+          "name": "GitHub",
+          "email": "noreply@github.com",
+          "date": "2020-03-09T20:28:46Z"
+        },
+        "message": "Fix failing non-null checks (#1151)",
+        "tree": {
+          "sha": "457e635a6d728ee99b73f5ff4d2bf159969d769f",
+          "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/git/trees/457e635a6d728ee99b73f5ff4d2bf159969d769f"
+        },
+        "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/git/commits/1d2505177bdae619b029e4966464d2c85427041a",
+        "comment_count": 0,
+        "verification": {
+          "verified": true,
+          "reason": "valid",
+          "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJeZqb+CRBK7hj4Ov3rIwAAdHIIAFQWhHb0kJt/+ezzi0dZlelw\neAo1UJiLCrkdCCpBhsN9ujdrTbKhG2SiXH7RMj4ki2PQJ383dWxI7v2PKvhLGzBn\nJVZb7Ibjv0vt5/Acbwj6PVpiwFwEMYZ90p+v6ac5aetUW0LK4/yzb8v0HYZD5k+W\nJqo2oUmrRModZnRCrEIhXzjsZOCpcu4wq4XReFjzdbqOkb1dJglDEHItcesWXt0y\nLFzRy5wc3Wyj9t6JJ+Z5aBSU8isRtGMqvvJKDj4ELZmXonxer5zdHmzzZVmt4kvC\ndDjaXW+Na5uB00v3Jv/L5JJPAhA5s5SKilavA3x9gMhp9VlEAkJu6f6Z2wOhd1s=\n=QVNZ\n-----END PGP SIGNATURE-----\n",
+          "payload": "tree 457e635a6d728ee99b73f5ff4d2bf159969d769f\nparent ccb1296e52f20f2e7eb80d66e7e79e974a1db49d\nauthor Daniel Wirtz <dcode@dcode.io> 1583785726 +0100\ncommitter GitHub <noreply@github.com> 1583785726 +0100\n\nFix failing non-null checks (#1151)\n\n"
+        }
+      },
+      "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/commits/1d2505177bdae619b029e4966464d2c85427041a",
+      "html_url": "https://github.com/AssemblyScript/assemblyscript/commit/1d2505177bdae619b029e4966464d2c85427041a",
+      "comments_url": "https://api.github.com/repos/AssemblyScript/assemblyscript/commits/1d2505177bdae619b029e4966464d2c85427041a/comments",
+      "author": {
+        "login": "dcodeIO",
+        "id": 1136893,
+        "node_id": "MDQ6VXNlcjExMzY4OTM=",
+        "avatar_url": "https://avatars0.githubusercontent.com/u/1136893?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/dcodeIO",
+        "html_url": "https://github.com/dcodeIO",
+        "followers_url": "https://api.github.com/users/dcodeIO/followers",
+        "following_url": "https://api.github.com/users/dcodeIO/following{/other_user}",
+        "gists_url": "https://api.github.com/users/dcodeIO/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/dcodeIO/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/dcodeIO/subscriptions",
+        "organizations_url": "https://api.github.com/users/dcodeIO/orgs",
+        "repos_url": "https://api.github.com/users/dcodeIO/repos",
+        "events_url": "https://api.github.com/users/dcodeIO/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/dcodeIO/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "committer": {
+        "login": "web-flow",
+        "id": 19864447,
+        "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+        "avatar_url": "https://avatars3.githubusercontent.com/u/19864447?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/web-flow",
+        "html_url": "https://github.com/web-flow",
+        "followers_url": "https://api.github.com/users/web-flow/followers",
+        "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+        "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+        "organizations_url": "https://api.github.com/users/web-flow/orgs",
+        "repos_url": "https://api.github.com/users/web-flow/repos",
+        "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/web-flow/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "parents": [
+        {
+          "sha": "ccb1296e52f20f2e7eb80d66e7e79e974a1db49d",
+          "url": "https://api.github.com/repos/AssemblyScript/assemblyscript/commits/ccb1296e52f20f2e7eb80d66e7e79e974a1db49d",
+          "html_url": "https://github.com/AssemblyScript/assemblyscript/commit/ccb1296e52f20f2e7eb80d66e7e79e974a1db49d"
+        }
+      ]
+    }
+  ]

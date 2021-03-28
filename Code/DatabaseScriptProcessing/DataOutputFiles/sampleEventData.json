@@ -1,0 +1,35 @@
+{
+	"author" : {
+		"date" : "2020-01-05T00:15:30Z",
+		"email" : "maxgraey@gmail.com",
+		"name" : "MaxGraey"
+	},
+	"committer" : {
+		"date" : "2020-01-05T00:15:30Z",
+		"email" : "maxgraey@gmail.com",
+		"name" : "MaxGraey"
+	},
+	"event" : "committed",
+	"html_url" : "https://github.com/AssemblyScript/assemblyscript/commit/12ba66bfca6d73193735b4ffd3550ba13e764139",
+	"message" : "Split get typed array methods to safe and unsafe",
+	"node_id" : "MDY6Q29tbWl0MTA1MTM4MzU2OjEyYmE2NmJmY2E2ZDczMTkzNzM1YjRmZmQzNTUwYmExM2U3NjQxMzk=",
+	"parents" : [
+		{
+			"html_url" : "https://github.com/AssemblyScript/assemblyscript/commit/dec4790ed070107d0da2087546e7901bbf839e63",
+			"sha" : "dec4790ed070107d0da2087546e7901bbf839e63",
+			"url" : "https://api.github.com/repos/AssemblyScript/assemblyscript/git/commits/dec4790ed070107d0da2087546e7901bbf839e63"
+		}
+	],
+	"sha" : "12ba66bfca6d73193735b4ffd3550ba13e764139",
+	"tree" : {
+		"sha" : "1c6ae467ae1b3eface4eb880a1b965962a7482cc",
+		"url" : "https://api.github.com/repos/AssemblyScript/assemblyscript/git/trees/1c6ae467ae1b3eface4eb880a1b965962a7482cc"
+	},
+	"url" : "https://api.github.com/repos/AssemblyScript/assemblyscript/git/commits/12ba66bfca6d73193735b4ffd3550ba13e764139",
+	"verification" : {
+		"payload" : null,
+		"reason" : "unsigned",
+		"signature" : null,
+		"verified" : false
+	}
+}

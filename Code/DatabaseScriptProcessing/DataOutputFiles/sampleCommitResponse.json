@@ -1,0 +1,98 @@
+{
+	"author" : {
+		"avatar_url" : "https://avatars3.githubusercontent.com/u/1301959?v=4",
+		"events_url" : "https://api.github.com/users/MaxGraey/events{/privacy}",
+		"followers_url" : "https://api.github.com/users/MaxGraey/followers",
+		"following_url" : "https://api.github.com/users/MaxGraey/following{/other_user}",
+		"gists_url" : "https://api.github.com/users/MaxGraey/gists{/gist_id}",
+		"gravatar_id" : "",
+		"html_url" : "https://github.com/MaxGraey",
+		"id" : 1301959,
+		"login" : "MaxGraey",
+		"node_id" : "MDQ6VXNlcjEzMDE5NTk=",
+		"organizations_url" : "https://api.github.com/users/MaxGraey/orgs",
+		"received_events_url" : "https://api.github.com/users/MaxGraey/received_events",
+		"repos_url" : "https://api.github.com/users/MaxGraey/repos",
+		"site_admin" : false,
+		"starred_url" : "https://api.github.com/users/MaxGraey/starred{/owner}{/repo}",
+		"subscriptions_url" : "https://api.github.com/users/MaxGraey/subscriptions",
+		"type" : "User",
+		"url" : "https://api.github.com/users/MaxGraey"
+	},
+	"comments_url" : "https://api.github.com/repos/AssemblyScript/assemblyscript/commits/8348c24999c669c686d34c464f07b78985e7331f/comments",
+	"commit" : {
+		"author" : {
+			"date" : "2020-01-05T00:30:14Z",
+			"email" : "maxgraey@gmail.com",
+			"name" : "MaxGraey"
+		},
+		"comment_count" : 0,
+		"committer" : {
+			"date" : "2020-01-05T00:30:14Z",
+			"email" : "maxgraey@gmail.com",
+			"name" : "MaxGraey"
+		},
+		"message" : "update comments",
+		"tree" : {
+			"sha" : "ede500a56c4cef26d26f9ab7ac922ad7a4684770",
+			"url" : "https://api.github.com/repos/AssemblyScript/assemblyscript/git/trees/ede500a56c4cef26d26f9ab7ac922ad7a4684770"
+		},
+		"url" : "https://api.github.com/repos/AssemblyScript/assemblyscript/git/commits/8348c24999c669c686d34c464f07b78985e7331f",
+		"verification" : {
+			"payload" : null,
+			"reason" : "unsigned",
+			"signature" : null,
+			"verified" : false
+		}
+	},
+	"committer" : {
+		"avatar_url" : "https://avatars3.githubusercontent.com/u/1301959?v=4",
+		"events_url" : "https://api.github.com/users/MaxGraey/events{/privacy}",
+		"followers_url" : "https://api.github.com/users/MaxGraey/followers",
+		"following_url" : "https://api.github.com/users/MaxGraey/following{/other_user}",
+		"gists_url" : "https://api.github.com/users/MaxGraey/gists{/gist_id}",
+		"gravatar_id" : "",
+		"html_url" : "https://github.com/MaxGraey",
+		"id" : 1301959,
+		"login" : "MaxGraey",
+		"node_id" : "MDQ6VXNlcjEzMDE5NTk=",
+		"organizations_url" : "https://api.github.com/users/MaxGraey/orgs",
+		"received_events_url" : "https://api.github.com/users/MaxGraey/received_events",
+		"repos_url" : "https://api.github.com/users/MaxGraey/repos",
+		"site_admin" : false,
+		"starred_url" : "https://api.github.com/users/MaxGraey/starred{/owner}{/repo}",
+		"subscriptions_url" : "https://api.github.com/users/MaxGraey/subscriptions",
+		"type" : "User",
+		"url" : "https://api.github.com/users/MaxGraey"
+	},
+	"files" : [
+		{
+			"additions" : 12,
+			"blob_url" : "https://github.com/AssemblyScript/assemblyscript/blob/8348c24999c669c686d34c464f07b78985e7331f/lib/loader/index.d.ts",
+			"changes" : 24,
+			"contents_url" : "https://api.github.com/repos/AssemblyScript/assemblyscript/contents/lib/loader/index.d.ts?ref=8348c24999c669c686d34c464f07b78985e7331f",
+			"deletions" : 12,
+			"filename" : "lib/loader/index.d.ts",
+			"patch" : "@@ -29,27 +29,27 @@ interface ASUtil {\n   /** Gets a view on the values of an array in the module's memory. */\n   __getArrayView(ptr: number): ArrayBufferView;\n \n-  /** Reads the values of Int8Array from the module's memory. */\n+  /** Reads (copies) the values of Int8Array from the module's memory. */\n   __getInt8Array(ptr: number): Int8Array;\n-  /** Reads the values of Uint8Array from the module's memory. */\n+  /** Reads (copies) the values of Uint8Array from the module's memory. */\n   __getUint8Array(ptr: number): Uint8Array;\n-  /** Reads the values of Uint8Array from the module's memory. */\n+  /** Reads (copies) the values of Uint8Array from the module's memory. */\n   __getUint8ClampedArray(ptr: number): Uint8ClampedArray;\n-  /** Reads the values of Int16Array from the module's memory. */\n+  /** Reads (copies) the values of Int16Array from the module's memory. */\n   __getInt16Array(ptr: number): Int16Array;\n-  /** Reads the values of Uint16Array from the module's memory. */\n+  /** Reads (copies) the values of Uint16Array from the module's memory. */\n   __getUint16Array(ptr: number): Uint16Array;\n-  /** Reads the values of Int32Array from the module's memory. */\n+  /** Reads (copies) the values of Int32Array from the module's memory. */\n   __getInt32Array(ptr: number): Int32Array;\n-  /** Reads the values of Uint32Array from the module's memory. */\n+  /** Reads (copies) the values of Uint32Array from the module's memory. */\n   __getUint32Array(ptr: number): Uint32Array;\n-  /** Reads the values of Int32Array from the module's memory. */\n+  /** Reads (copies) the values of Int32Array from the module's memory. */\n   __getInt64Array?(ptr: number): BigInt64Array;\n-  /** Reads the values of Uint32Array from the module's memory. */\n+  /** Reads (copies) the values of Uint32Array from the module's memory. */\n   __getUint64Array?(ptr: number): BigUint64Array;\n-  /** Reads the values of Float32Array from the module's memory. */\n+  /** Reads (copies) the values of Float32Array from the module's memory. */\n   __getFloat32Array(ptr: number): Float32Array;\n-    /** Reads the values of Float64Array from the module's memory. */\n+  /** Reads (copies) the values of Float64Array from the module's memory. */\n   __getFloat64Array(ptr: number): Float64Array;\n \n   /** Reads the values of Int8Array from the module's memory. */\n@@ -72,7 +72,7 @@ interface ASUtil {\n   __getUint64ArrayUnsafe?(ptr: number): BigUint64Array;\n   /** Reads the values of Float32Array from the module's memory. */\n   __getFloat32ArrayUnsafe(ptr: number): Float32Array;\n-    /** Reads the values of Float64Array from the module's memory. */\n+  /** Reads the values of Float64Array from the module's memory. */\n   __getFloat64ArrayUnsafe(ptr: number): Float64Array;\n \n   /** Reads (copies) the data of an ArrayBuffer from the module's memory. */",
+			"raw_url" : "https://github.com/AssemblyScript/assemblyscript/raw/8348c24999c669c686d34c464f07b78985e7331f/lib/loader/index.d.ts",
+			"sha" : "236e07e1b57e565b2e83bd3400f98aeca531793c",
+			"status" : "modified"
+		}
+	],
+	"html_url" : "https://github.com/AssemblyScript/assemblyscript/commit/8348c24999c669c686d34c464f07b78985e7331f",
+	"node_id" : "MDY6Q29tbWl0MTA1MTM4MzU2OjgzNDhjMjQ5OTljNjY5YzY4NmQzNGM0NjRmMDdiNzg5ODVlNzMzMWY=",
+	"parents" : [
+		{
+			"html_url" : "https://github.com/AssemblyScript/assemblyscript/commit/12ba66bfca6d73193735b4ffd3550ba13e764139",
+			"sha" : "12ba66bfca6d73193735b4ffd3550ba13e764139",
+			"url" : "https://api.github.com/repos/AssemblyScript/assemblyscript/commits/12ba66bfca6d73193735b4ffd3550ba13e764139"
+		}
+	],
+	"sha" : "8348c24999c669c686d34c464f07b78985e7331f",
+	"stats" : {
+		"additions" : 12,
+		"deletions" : 12,
+		"total" : 24
+	},
+	"url" : "https://api.github.com/repos/AssemblyScript/assemblyscript/commits/8348c24999c669c686d34c464f07b78985e7331f"
+}

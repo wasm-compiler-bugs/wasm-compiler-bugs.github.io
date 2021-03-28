@@ -1,0 +1,44 @@
+{
+  "name": "databasescriptprocessing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "GitHubAPIManager.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "start": "npm run build && node build/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/adm-zip": "^0.4.33",
+    "@types/axios": "^0.14.0",
+    "@types/mysql": "^2.15.10",
+    "@types/node": "^13.13.6",
+    "@types/yargs": "^15.0.5",
+    "rimraf": "^3.0.2",
+    "tslint": "^6.1.2",
+    "typescript": "^3.9.2"
+  },
+  "dependencies": {
+    "@types/cheerio": "^0.22.18",
+    "@types/node-fetch": "^2.5.7",
+    "@types/node-gzip": "^1.1.0",
+    "@types/sloc": "^0.2.0",
+    "@types/tar-stream": "^2.1.0",
+    "adm-zip": "^0.4.14",
+    "binaryen": "^97.0.0",
+    "chalk": "^4.0.0",
+    "cheerio": "^1.0.0-rc.3",
+    "get-urls": "^9.2.0",
+    "list-github-dir-content": "^3.0.0",
+    "mysql": "^2.18.1",
+    "node-fetch": "^2.6.0",
+    "node-gzip": "^1.1.2",
+    "sloc": "^0.2.1",
+    "tar-stream": "^2.1.2",
+    "wabt": "^1.0.15",
+    "wabt-legacy": "npm:wabt@^1.0.12",
+    "yargs": "^15.3.1"
+  }
+}

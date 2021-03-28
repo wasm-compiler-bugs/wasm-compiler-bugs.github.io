@@ -35,6 +35,9 @@ This folder contains some of the signatures collected for the compilers in our s
 ### [Data](https://github.com/wasm-compiler-bugs/wasm-compiler-bugs.github.io/tree/master/Data)
 This folder contains the samples collected from the qualitative study,  [quantitative_dataset.csv](https://github.com/wasm-compiler-bugs/wasm-compiler-bugs.github.io/tree/master/Data/qualitative_dataset.csv), and the quantitative dataset, [quantitative_dataset.csv](https://github.com/wasm-compiler-bugs/wasm-compiler-bugs.github.io/tree/master/Data/quantitative_dataset.csv).
 
+### [Code](https://github.com/wasm-compiler-bugs/wasm-compiler-bugs.github.io/tree/master/Code)
+This folder contains the source code used to crawl GitHub for the bug samples and the script used to build the visualizations for it. 
+
 ## Qualitative Study
 We perform a qualitative analysis on 142 bugs.
 

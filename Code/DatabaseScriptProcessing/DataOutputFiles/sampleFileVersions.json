@@ -1,0 +1,615 @@
+[
+    {
+        "sha": "7ab5f2a869008bdc123cbe979acc190d17df2719",
+        "node_id": "MDY6Q29tbWl0MTAxNzY3NzcyOjdhYjVmMmE4NjkwMDhiZGMxMjNjYmU5NzlhY2MxOTBkMTdkZjI3MTk=",
+        "commit": {
+            "author": {
+                "name": "Maciej Woś",
+                "email": "maciej.wos@gmail.com",
+                "date": "2020-06-08T17:33:28Z"
+            },
+            "committer": {
+                "name": "GitHub",
+                "email": "noreply@github.com",
+                "date": "2020-06-08T17:33:28Z"
+            },
+            "message": "Remove custom signal handler restrictions (#1843)\n\n* remove custom signal handler origin restriction\r\n\r\n* add a test for handling signals from a hostcall\r\n\r\n* cargo fmt",
+            "tree": {
+                "sha": "f1b4705a81e4a0c391dff6d01690c42510c2e376",
+                "url": "https://api.github.com/repos/bytecodealliance/wasmtime/git/trees/f1b4705a81e4a0c391dff6d01690c42510c2e376"
+            },
+            "url": "https://api.github.com/repos/bytecodealliance/wasmtime/git/commits/7ab5f2a869008bdc123cbe979acc190d17df2719",
+            "comment_count": 0,
+            "verification": {
+                "verified": true,
+                "reason": "valid",
+                "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJe3nZoCRBK7hj4Ov3rIwAAdHIIADFKpJfMdanV5WTuTQJ568I6\nu5uONoJlRPofZXv9VLCTZ3j60X9XyswgbwMtXteap2bvQeSeFpY7QPQWUjnE36Hw\n3n8AsFU2rvigi8Io8IfC3squ/43r6RTzpEgfEdgKX4JySrB0/4JVzKgWyXLM3vJL\nhrsamEKPtKeBIVlToJctjm3qgMNPYJOppcScbzCXU3cNLDLyDklNYeX7sm6KP4/C\nB9DlcqZdK84INSHohM2zTl5FXwxPwGWGPNAmPY63wv3ikRvwj607xvUTPvODaW1n\nCeZ07WWQcUafYM+xN2peeUTs7sill3ThSQ1fSbV4NmAAS7f7DwqxdkFTfzCcTF8=\n=MrMA\n-----END PGP SIGNATURE-----\n",
+                "payload": "tree f1b4705a81e4a0c391dff6d01690c42510c2e376\nparent 4bb58940c74c37bdba8630810645cbd41dd0ff7e\nauthor Maciej Woś <maciej.wos@gmail.com> 1591637608 +0900\ncommitter GitHub <noreply@github.com> 1591637608 -0500\n\nRemove custom signal handler restrictions (#1843)\n\n* remove custom signal handler origin restriction\r\n\r\n* add a test for handling signals from a hostcall\r\n\r\n* cargo fmt"
+            }
+        },
+        "url": "https://api.github.com/repos/bytecodealliance/wasmtime/commits/7ab5f2a869008bdc123cbe979acc190d17df2719",
+        "html_url": "https://github.com/bytecodealliance/wasmtime/commit/7ab5f2a869008bdc123cbe979acc190d17df2719",
+        "comments_url": "https://api.github.com/repos/bytecodealliance/wasmtime/commits/7ab5f2a869008bdc123cbe979acc190d17df2719/comments",
+        "author": {
+            "login": "lostman",
+            "id": 1270689,
+            "node_id": "MDQ6VXNlcjEyNzA2ODk=",
+            "avatar_url": "https://avatars1.githubusercontent.com/u/1270689?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/lostman",
+            "html_url": "https://github.com/lostman",
+            "followers_url": "https://api.github.com/users/lostman/followers",
+            "following_url": "https://api.github.com/users/lostman/following{/other_user}",
+            "gists_url": "https://api.github.com/users/lostman/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/lostman/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/lostman/subscriptions",
+            "organizations_url": "https://api.github.com/users/lostman/orgs",
+            "repos_url": "https://api.github.com/users/lostman/repos",
+            "events_url": "https://api.github.com/users/lostman/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/lostman/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "web-flow",
+            "id": 19864447,
+            "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+            "avatar_url": "https://avatars3.githubusercontent.com/u/19864447?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/web-flow",
+            "html_url": "https://github.com/web-flow",
+            "followers_url": "https://api.github.com/users/web-flow/followers",
+            "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+            "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+            "organizations_url": "https://api.github.com/users/web-flow/orgs",
+            "repos_url": "https://api.github.com/users/web-flow/repos",
+            "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/web-flow/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "4bb58940c74c37bdba8630810645cbd41dd0ff7e",
+                "url": "https://api.github.com/repos/bytecodealliance/wasmtime/commits/4bb58940c74c37bdba8630810645cbd41dd0ff7e",
+                "html_url": "https://github.com/bytecodealliance/wasmtime/commit/4bb58940c74c37bdba8630810645cbd41dd0ff7e"
+            }
+        ]
+    },
+    {
+        "sha": "15c68f2cc15709c65a7838c3c3641f716373d01c",
+        "node_id": "MDY6Q29tbWl0MTAxNzY3NzcyOjE1YzY4ZjJjYzE1NzA5YzY1YTc4MzhjM2MzNjQxZjcxNjM3M2QwMWM=",
+        "commit": {
+            "author": {
+                "name": "Yury Delendik",
+                "email": "ydelendik@mozilla.com",
+                "date": "2020-06-02T18:44:39Z"
+            },
+            "committer": {
+                "name": "GitHub",
+                "email": "noreply@github.com",
+                "date": "2020-06-02T18:44:39Z"
+            },
+            "message": "Disconnects `Store` state fields from `Compiler` (#1761)\n\n*  Moves CodeMemory, VMInterrupts and SignatureRegistry from Compiler\r\n*  CompiledModule holds CodeMemory and GdbJitImageRegistration\r\n*  Store keeps track of its JIT code\r\n*  Makes \"jit_int.rs\" stuff Send+Sync\r\n*  Adds the threads example.",
+            "tree": {
+                "sha": "b3cc76bdbf22d461c147477c8d7a4481c79f9450",
+                "url": "https://api.github.com/repos/bytecodealliance/wasmtime/git/trees/b3cc76bdbf22d461c147477c8d7a4481c79f9450"
+            },
+            "url": "https://api.github.com/repos/bytecodealliance/wasmtime/git/commits/15c68f2cc15709c65a7838c3c3641f716373d01c",
+            "comment_count": 0,
+            "verification": {
+                "verified": true,
+                "reason": "valid",
+                "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJe1p4XCRBK7hj4Ov3rIwAAdHIIAALd4PNe4r4Htnp5sutT2FHX\niMcIN6H2BgeA5J9/9ltDkWoK6pYNYvnsmvyhuy6xXSHXntG7fnGLZEot7Lb3cThh\ngB2x1nWiT9yZP53dlI4gEdDYe1b0KRw7J1WErW65i/3H85wYF+BKoGhXwP1KeCL8\nLdgkYYW5C0yRcx5LZzRcZ7qx0TiozsKOpgHKg/6pIbOoYkRsyDkKjv6BsPDdTI1U\nBYhoCYUa0aYP0I3k3h19sfSG7VGh92LUqDEv9/UMVg+OUMXOcHi2hyDxfpsDEoOj\n2vtzFn0q4Gw2jMcE0s2AgPny06Vx+P3QQQp1+l9hWqBmEVg/Xvu9MN2N6X+PT2A=\n=pxuI\n-----END PGP SIGNATURE-----\n",
+                "payload": "tree b3cc76bdbf22d461c147477c8d7a4481c79f9450\nparent b41330393dda4b93c02e7af5f4d2e67b3a2bccc2\nauthor Yury Delendik <ydelendik@mozilla.com> 1591123479 -0500\ncommitter GitHub <noreply@github.com> 1591123479 -0500\n\nDisconnects `Store` state fields from `Compiler` (#1761)\n\n*  Moves CodeMemory, VMInterrupts and SignatureRegistry from Compiler\r\n*  CompiledModule holds CodeMemory and GdbJitImageRegistration\r\n*  Store keeps track of its JIT code\r\n*  Makes \"jit_int.rs\" stuff Send+Sync\r\n*  Adds the threads example.\r\n"
+            }
+        },
+        "url": "https://api.github.com/repos/bytecodealliance/wasmtime/commits/15c68f2cc15709c65a7838c3c3641f716373d01c",
+        "html_url": "https://github.com/bytecodealliance/wasmtime/commit/15c68f2cc15709c65a7838c3c3641f716373d01c",
+        "comments_url": "https://api.github.com/repos/bytecodealliance/wasmtime/commits/15c68f2cc15709c65a7838c3c3641f716373d01c/comments",
+        "author": {
+            "login": "yurydelendik",
+            "id": 1523410,
+            "node_id": "MDQ6VXNlcjE1MjM0MTA=",
+            "avatar_url": "https://avatars0.githubusercontent.com/u/1523410?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/yurydelendik",
+            "html_url": "https://github.com/yurydelendik",
+            "followers_url": "https://api.github.com/users/yurydelendik/followers",
+            "following_url": "https://api.github.com/users/yurydelendik/following{/other_user}",
+            "gists_url": "https://api.github.com/users/yurydelendik/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/yurydelendik/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/yurydelendik/subscriptions",
+            "organizations_url": "https://api.github.com/users/yurydelendik/orgs",
+            "repos_url": "https://api.github.com/users/yurydelendik/repos",
+            "events_url": "https://api.github.com/users/yurydelendik/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/yurydelendik/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "web-flow",
+            "id": 19864447,
+            "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+            "avatar_url": "https://avatars3.githubusercontent.com/u/19864447?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/web-flow",
+            "html_url": "https://github.com/web-flow",
+            "followers_url": "https://api.github.com/users/web-flow/followers",
+            "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+            "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+            "organizations_url": "https://api.github.com/users/web-flow/orgs",
+            "repos_url": "https://api.github.com/users/web-flow/repos",
+            "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/web-flow/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "b41330393dda4b93c02e7af5f4d2e67b3a2bccc2",
+                "url": "https://api.github.com/repos/bytecodealliance/wasmtime/commits/b41330393dda4b93c02e7af5f4d2e67b3a2bccc2",
+                "html_url": "https://github.com/bytecodealliance/wasmtime/commit/b41330393dda4b93c02e7af5f4d2e67b3a2bccc2"
+            }
+        ]
+    },
+    {
+        "sha": "0b3b9c298ef8709ef97686fd7ebeeb1f4802b6b7",
+        "node_id": "MDY6Q29tbWl0MTAxNzY3NzcyOjBiM2I5YzI5OGVmODcwOWVmOTc2ODZmZDdlYmVlYjFmNDgwMmI2Yjc=",
+        "commit": {
+            "author": {
+                "name": "Leonardo Yvens",
+                "email": "leoyvens@gmail.com",
+                "date": "2020-05-29T20:24:12Z"
+            },
+            "committer": {
+                "name": "GitHub",
+                "email": "noreply@github.com",
+                "date": "2020-05-29T20:24:12Z"
+            },
+            "message": "impl From<anyhow::Error> for Trap (#1753)\n\n* From<anyhow::Error> for Trap\r\n\r\n* Add TrapReason::Error\r\n\r\n* wasmtime: Improve Error to Trap conversion\r\n\r\n* Remove Trap::message",
+            "tree": {
+                "sha": "6c7db7906b43793f08eb638088807e229878988b",
+                "url": "https://api.github.com/repos/bytecodealliance/wasmtime/git/trees/6c7db7906b43793f08eb638088807e229878988b"
+            },
+            "url": "https://api.github.com/repos/bytecodealliance/wasmtime/git/commits/0b3b9c298ef8709ef97686fd7ebeeb1f4802b6b7",
+            "comment_count": 0,
+            "verification": {
+                "verified": true,
+                "reason": "valid",
+                "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJe0W9sCRBK7hj4Ov3rIwAAdHIIABh4Jpm/978j3Itr3Eh6ZpiU\n0uyUV7a3bbODKZqczwnPF+pAQmM7lccvTPIGdudm4yz7stlxKlRst1UkFD5CAxC8\nDeqJIwfPRGGQeHlBq70dXVT6dVhzA1Z0Uq7nwEQtSoA2qDKfcLuG1z6FIDEaBv30\nC7kHiO5jH96UKw9DGIbe3koYViqILxYiJ1AQ8eQAVUwq6YFJfs0UB1BhIHp1UAM9\nB8HvErOZ7peix9bq33XULiawuHtQarq2C5z2SkvAK0HtLIwOj57eAHsNNoj+AEn3\n8/u2yyRhK1wZktvikKOBna4ArknmgTSqp7kqCFDvRAsN7Se1Qh9kKLbphz5vjMA=\n=z3+y\n-----END PGP SIGNATURE-----\n",
+                "payload": "tree 6c7db7906b43793f08eb638088807e229878988b\nparent 8fce8ddefc975a6cff2d6bdef57665582f620376\nauthor Leonardo Yvens <leoyvens@gmail.com> 1590783852 -0300\ncommitter GitHub <noreply@github.com> 1590783852 -0500\n\nimpl From<anyhow::Error> for Trap (#1753)\n\n* From<anyhow::Error> for Trap\r\n\r\n* Add TrapReason::Error\r\n\r\n* wasmtime: Improve Error to Trap conversion\r\n\r\n* Remove Trap::message"
+            }
+        },
+        "url": "https://api.github.com/repos/bytecodealliance/wasmtime/commits/0b3b9c298ef8709ef97686fd7ebeeb1f4802b6b7",
+        "html_url": "https://github.com/bytecodealliance/wasmtime/commit/0b3b9c298ef8709ef97686fd7ebeeb1f4802b6b7",
+        "comments_url": "https://api.github.com/repos/bytecodealliance/wasmtime/commits/0b3b9c298ef8709ef97686fd7ebeeb1f4802b6b7/comments",
+        "author": {
+            "login": "leoyvens",
+            "id": 9885558,
+            "node_id": "MDQ6VXNlcjk4ODU1NTg=",
+            "avatar_url": "https://avatars3.githubusercontent.com/u/9885558?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/leoyvens",
+            "html_url": "https://github.com/leoyvens",
+            "followers_url": "https://api.github.com/users/leoyvens/followers",
+            "following_url": "https://api.github.com/users/leoyvens/following{/other_user}",
+            "gists_url": "https://api.github.com/users/leoyvens/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/leoyvens/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/leoyvens/subscriptions",
+            "organizations_url": "https://api.github.com/users/leoyvens/orgs",
+            "repos_url": "https://api.github.com/users/leoyvens/repos",
+            "events_url": "https://api.github.com/users/leoyvens/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/leoyvens/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "web-flow",
+            "id": 19864447,
+            "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+            "avatar_url": "https://avatars3.githubusercontent.com/u/19864447?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/web-flow",
+            "html_url": "https://github.com/web-flow",
+            "followers_url": "https://api.github.com/users/web-flow/followers",
+            "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+            "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+            "organizations_url": "https://api.github.com/users/web-flow/orgs",
+            "repos_url": "https://api.github.com/users/web-flow/repos",
+            "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/web-flow/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "8fce8ddefc975a6cff2d6bdef57665582f620376",
+                "url": "https://api.github.com/repos/bytecodealliance/wasmtime/commits/8fce8ddefc975a6cff2d6bdef57665582f620376",
+                "html_url": "https://github.com/bytecodealliance/wasmtime/commit/8fce8ddefc975a6cff2d6bdef57665582f620376"
+            }
+        ]
+    },
+    {
+        "sha": "db92dcd990561de1f192f1a8dd73572b0798f525",
+        "node_id": "MDY6Q29tbWl0MTAxNzY3NzcyOmRiOTJkY2Q5OTA1NjFkZTFmMTkyZjFhOGRkNzM1NzJiMDc5OGY1MjU=",
+        "commit": {
+            "author": {
+                "name": "Alex Crichton",
+                "email": "alex@alexcrichton.com",
+                "date": "2020-05-01T16:24:53Z"
+            },
+            "committer": {
+                "name": "GitHub",
+                "email": "noreply@github.com",
+                "date": "2020-05-01T16:24:53Z"
+            },
+            "message": "Update test ignore annotations for aarch64 (#1643)\n\nLooks like everything is in general passing now so it's probably time to\r\nclose #1521 and all other remaining tests that are failing are\r\nclassified under new more focused issues.\r\n\r\nCloses #1521",
+            "tree": {
+                "sha": "805209c24677fe7c7070fb3d793dd79e7b84a23b",
+                "url": "https://api.github.com/repos/bytecodealliance/wasmtime/git/trees/805209c24677fe7c7070fb3d793dd79e7b84a23b"
+            },
+            "url": "https://api.github.com/repos/bytecodealliance/wasmtime/git/commits/db92dcd990561de1f192f1a8dd73572b0798f525",
+            "comment_count": 0,
+            "verification": {
+                "verified": true,
+                "reason": "valid",
+                "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJerE1VCRBK7hj4Ov3rIwAAdHIIAIKpr2vWc1o/msvRog89iF91\nkZdENPgys+HM5bkAobhP/oyPa0bOJdEE337PUb6UKKFj0TlW48dSMS/y7SHSlKcD\nUGizlqoqv6DhlRJixHyaYULWjlHDeNGYy+ObSk5E29bAaOenUWIpKz3w1FFrCO4q\n9ta/c8bi+ieAAFtUOpEdvGFKa4DZvQKRdt7CMybVc99m+UpPrGytyM6d/3+FoUzg\nedi/68VtOcKw6FZb2F1MGe+9oHqaNFt+Y/fZDWGBOV/bhKXhJO4KcQ1N2iqMtuuj\nVp2D26+AsfnjU4bfvexOWdxxO8DJQyaw/Vfo687RPDfHJtM/9Cq4ZXGWZ8m84OM=\n=Dzpz\n-----END PGP SIGNATURE-----\n",
+                "payload": "tree 805209c24677fe7c7070fb3d793dd79e7b84a23b\nparent 1ec6e6e0eb6951dda771fd0c8c997ef099a9859d\nauthor Alex Crichton <alex@alexcrichton.com> 1588350293 -0500\ncommitter GitHub <noreply@github.com> 1588350293 -0500\n\nUpdate test ignore annotations for aarch64 (#1643)\n\nLooks like everything is in general passing now so it's probably time to\r\nclose #1521 and all other remaining tests that are failing are\r\nclassified under new more focused issues.\r\n\r\nCloses #1521"
+            }
+        },
+        "url": "https://api.github.com/repos/bytecodealliance/wasmtime/commits/db92dcd990561de1f192f1a8dd73572b0798f525",
+        "html_url": "https://github.com/bytecodealliance/wasmtime/commit/db92dcd990561de1f192f1a8dd73572b0798f525",
+        "comments_url": "https://api.github.com/repos/bytecodealliance/wasmtime/commits/db92dcd990561de1f192f1a8dd73572b0798f525/comments",
+        "author": {
+            "login": "alexcrichton",
+            "id": 64996,
+            "node_id": "MDQ6VXNlcjY0OTk2",
+            "avatar_url": "https://avatars1.githubusercontent.com/u/64996?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/alexcrichton",
+            "html_url": "https://github.com/alexcrichton",
+            "followers_url": "https://api.github.com/users/alexcrichton/followers",
+            "following_url": "https://api.github.com/users/alexcrichton/following{/other_user}",
+            "gists_url": "https://api.github.com/users/alexcrichton/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/alexcrichton/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/alexcrichton/subscriptions",
+            "organizations_url": "https://api.github.com/users/alexcrichton/orgs",
+            "repos_url": "https://api.github.com/users/alexcrichton/repos",
+            "events_url": "https://api.github.com/users/alexcrichton/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/alexcrichton/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "web-flow",
+            "id": 19864447,
+            "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+            "avatar_url": "https://avatars3.githubusercontent.com/u/19864447?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/web-flow",
+            "html_url": "https://github.com/web-flow",
+            "followers_url": "https://api.github.com/users/web-flow/followers",
+            "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+            "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+            "organizations_url": "https://api.github.com/users/web-flow/orgs",
+            "repos_url": "https://api.github.com/users/web-flow/repos",
+            "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/web-flow/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "1ec6e6e0eb6951dda771fd0c8c997ef099a9859d",
+                "url": "https://api.github.com/repos/bytecodealliance/wasmtime/commits/1ec6e6e0eb6951dda771fd0c8c997ef099a9859d",
+                "html_url": "https://github.com/bytecodealliance/wasmtime/commit/1ec6e6e0eb6951dda771fd0c8c997ef099a9859d"
+            }
+        ]
+    },
+    {
+        "sha": "d719ec7e1cea5e3751d065c3ab9fa5813dffeee2",
+        "node_id": "MDY6Q29tbWl0MTAxNzY3NzcyOmQ3MTllYzdlMWNlYTVlMzc1MWQwNjVjM2FiOWZhNTgxM2RmZmVlZTI=",
+        "commit": {
+            "author": {
+                "name": "Alex Crichton",
+                "email": "alex@alexcrichton.com",
+                "date": "2020-04-29T19:24:54Z"
+            },
+            "committer": {
+                "name": "GitHub",
+                "email": "noreply@github.com",
+                "date": "2020-04-29T19:24:54Z"
+            },
+            "message": "Don't try to handle non-wasmtime segfaults (#1577)\n\nThis commit fixes an issue in Wasmtime where Wasmtime would accidentally\r\n\"handle\" non-wasm segfaults while executing host imports of wasm\r\nmodules. If a host import segfaulted then Wasmtime would recognize that\r\nwasm code is on the stack, so it'd longjmp out of the wasm code. This\r\npapers over real bugs though in host code and erroneously classified\r\nsegfaults as wasm traps.\r\n\r\nThe fix here was to add a check to our wasm signal handler for if the\r\nfaulting address falls in JIT code itself. Actually threading through\r\nall the right information for that check to happen is a bit tricky,\r\nthough, so this involved some refactoring:\r\n\r\n* A closure parameter to `catch_traps` was added. This closure is\r\n  responsible for classifying addresses as whether or not they fall in\r\n  JIT code. Anything returning `false` means that the trap won't get\r\n  handled and we'll forward to the next signal handler.\r\n\r\n* To avoid passing tons of context all over the place, the start\r\n  function is now no longer automatically invoked by `InstanceHandle`.\r\n  This avoids the need for passing all sorts of trap-handling contextual\r\n  information like the maximum stack size and \"is this a jit address\"\r\n  closure. Instead creators of `InstanceHandle` (like wasmtime) are now\r\n  responsible for invoking the start function.\r\n\r\n* To avoid excessive use of `transmute` with lifetimes since the\r\n  traphandler state now has a lifetime the per-instance custom signal\r\n  handler is now replaced with a per-store custom signal handler. I'm\r\n  not entirely certain the purpose of the custom signal handler, though,\r\n  so I'd look for feedback on this part.\r\n\r\nA new test has been added which ensures that if a host function\r\nsegfaults we don't accidentally try to handle it, and instead we\r\ncorrectly report the segfault.",
+            "tree": {
+                "sha": "9919439ea21853067faf507901bc7e9aaf1d4b0f",
+                "url": "https://api.github.com/repos/bytecodealliance/wasmtime/git/trees/9919439ea21853067faf507901bc7e9aaf1d4b0f"
+            },
+            "url": "https://api.github.com/repos/bytecodealliance/wasmtime/git/commits/d719ec7e1cea5e3751d065c3ab9fa5813dffeee2",
+            "comment_count": 0,
+            "verification": {
+                "verified": true,
+                "reason": "valid",
+                "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJeqdSGCRBK7hj4Ov3rIwAAdHIIAFaLf6xhVEbaQlfKacdzvV3q\n0BbGHgrJ3hIT9+ZLo6960vd6naoTgrGIhTu0Zq8fx7v8ztiuKCbtu1yXYnwI+s6R\niHTCyM5MPGOPEosywSwQXGWq/52Tb1GTl787BUmm7s01nzcovRaCO+u1d2D21IiD\nSW0G7UWRaE5+XWINryA/4lzdhQrkFV5Vt43nVrbSLByeo/6b7qRJryGhhQvPUeIM\nYUI9i+1VLBRtDhstTLI21mOgthzf4yRB66qHFbRfHT5Wx0bImh7QTSRaOViv0PFu\ncEDJCBPFl3VWVsary2ufKMedMtbp8dkCzXT6/9W3KvcAvjKpK/iQoQo7zqVJHcM=\n=fUUT\n-----END PGP SIGNATURE-----\n",
+                "payload": "tree 9919439ea21853067faf507901bc7e9aaf1d4b0f\nparent 8ee8c322ae5a47fae3204785d5c7f9a307a0a68c\nauthor Alex Crichton <alex@alexcrichton.com> 1588188294 -0500\ncommitter GitHub <noreply@github.com> 1588188294 -0500\n\nDon't try to handle non-wasmtime segfaults (#1577)\n\nThis commit fixes an issue in Wasmtime where Wasmtime would accidentally\r\n\"handle\" non-wasm segfaults while executing host imports of wasm\r\nmodules. If a host import segfaulted then Wasmtime would recognize that\r\nwasm code is on the stack, so it'd longjmp out of the wasm code. This\r\npapers over real bugs though in host code and erroneously classified\r\nsegfaults as wasm traps.\r\n\r\nThe fix here was to add a check to our wasm signal handler for if the\r\nfaulting address falls in JIT code itself. Actually threading through\r\nall the right information for that check to happen is a bit tricky,\r\nthough, so this involved some refactoring:\r\n\r\n* A closure parameter to `catch_traps` was added. This closure is\r\n  responsible for classifying addresses as whether or not they fall in\r\n  JIT code. Anything returning `false` means that the trap won't get\r\n  handled and we'll forward to the next signal handler.\r\n\r\n* To avoid passing tons of context all over the place, the start\r\n  function is now no longer automatically invoked by `InstanceHandle`.\r\n  This avoids the need for passing all sorts of trap-handling contextual\r\n  information like the maximum stack size and \"is this a jit address\"\r\n  closure. Instead creators of `InstanceHandle` (like wasmtime) are now\r\n  responsible for invoking the start function.\r\n\r\n* To avoid excessive use of `transmute` with lifetimes since the\r\n  traphandler state now has a lifetime the per-instance custom signal\r\n  handler is now replaced with a per-store custom signal handler. I'm\r\n  not entirely certain the purpose of the custom signal handler, though,\r\n  so I'd look for feedback on this part.\r\n\r\nA new test has been added which ensures that if a host function\r\nsegfaults we don't accidentally try to handle it, and instead we\r\ncorrectly report the segfault."
+            }
+        },
+        "url": "https://api.github.com/repos/bytecodealliance/wasmtime/commits/d719ec7e1cea5e3751d065c3ab9fa5813dffeee2",
+        "html_url": "https://github.com/bytecodealliance/wasmtime/commit/d719ec7e1cea5e3751d065c3ab9fa5813dffeee2",
+        "comments_url": "https://api.github.com/repos/bytecodealliance/wasmtime/commits/d719ec7e1cea5e3751d065c3ab9fa5813dffeee2/comments",
+        "author": {
+            "login": "alexcrichton",
+            "id": 64996,
+            "node_id": "MDQ6VXNlcjY0OTk2",
+            "avatar_url": "https://avatars1.githubusercontent.com/u/64996?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/alexcrichton",
+            "html_url": "https://github.com/alexcrichton",
+            "followers_url": "https://api.github.com/users/alexcrichton/followers",
+            "following_url": "https://api.github.com/users/alexcrichton/following{/other_user}",
+            "gists_url": "https://api.github.com/users/alexcrichton/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/alexcrichton/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/alexcrichton/subscriptions",
+            "organizations_url": "https://api.github.com/users/alexcrichton/orgs",
+            "repos_url": "https://api.github.com/users/alexcrichton/repos",
+            "events_url": "https://api.github.com/users/alexcrichton/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/alexcrichton/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "web-flow",
+            "id": 19864447,
+            "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+            "avatar_url": "https://avatars3.githubusercontent.com/u/19864447?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/web-flow",
+            "html_url": "https://github.com/web-flow",
+            "followers_url": "https://api.github.com/users/web-flow/followers",
+            "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+            "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+            "organizations_url": "https://api.github.com/users/web-flow/orgs",
+            "repos_url": "https://api.github.com/users/web-flow/repos",
+            "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/web-flow/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "8ee8c322ae5a47fae3204785d5c7f9a307a0a68c",
+                "url": "https://api.github.com/repos/bytecodealliance/wasmtime/commits/8ee8c322ae5a47fae3204785d5c7f9a307a0a68c",
+                "html_url": "https://github.com/bytecodealliance/wasmtime/commit/8ee8c322ae5a47fae3204785d5c7f9a307a0a68c"
+            }
+        ]
+    },
+    {
+        "sha": "d1aa86f91a4e7b6d1663cd9b4a1f749fdbb83dfd",
+        "node_id": "MDY6Q29tbWl0MTAxNzY3NzcyOmQxYWE4NmY5MWE0ZTdiNmQxNjYzY2Q5YjRhMWY3NDlmZGJiODNkZmQ=",
+        "commit": {
+            "author": {
+                "name": "Alex Crichton",
+                "email": "alex@alexcrichton.com",
+                "date": "2020-04-22T17:56:54Z"
+            },
+            "committer": {
+                "name": "GitHub",
+                "email": "noreply@github.com",
+                "date": "2020-04-22T17:56:54Z"
+            },
+            "message": "Add AArch64 tests to CI (#1526)\n\n* Add AArch64 tests to CI\r\n\r\nThis commit enhances our CI with an AArch64 builder. Currently we have\r\nno physical hardware to run on so for now we run all tests in an\r\nemulator. The AArch64 build is cross-compiled from x86_64 from Linux.\r\nTests all happen in release mode with a recent version of QEMU (recent\r\nversion because it's so much faster, and in release mode because debug\r\nmode tests take quite a long time in an emulator).\r\n\r\nThe goal here was not to get all tests passing on CI, but rather to get\r\nAArch64 running on CI and get it green at the same time. To achieve that\r\ngoal many tests are now ignored on aarch64 platforms. Many tests fail\r\ndue to unimplemented functionality in the aarch64 backend (#1521), and\r\nall wasmtime tests involving compilation are also disabled due to\r\npanicking attempting to generate generate instruction offset information\r\nfor trap symbolication (#1523).\r\n\r\nDespite this, though, all Cranelift tests and other wasmtime tests\r\nshould be runnin on AArch64 through QEMU with this PR. Additionally\r\nwe'll have an AArch64 binary release of Wasmtime for Linux, although it\r\nwon't be too useful just yet since it will panic on almost all wasm\r\nmodules.\r\n\r\n* Review comments",
+            "tree": {
+                "sha": "7f8a8ebc998975d96d7e4a3a80821e7c4aea8769",
+                "url": "https://api.github.com/repos/bytecodealliance/wasmtime/git/trees/7f8a8ebc998975d96d7e4a3a80821e7c4aea8769"
+            },
+            "url": "https://api.github.com/repos/bytecodealliance/wasmtime/git/commits/d1aa86f91a4e7b6d1663cd9b4a1f749fdbb83dfd",
+            "comment_count": 0,
+            "verification": {
+                "verified": true,
+                "reason": "valid",
+                "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJeoIVmCRBK7hj4Ov3rIwAAdHIIAHPDqcDgScu0uUoNIHUpJ/aD\n3c7eZMAwl/oRoGIo0xwncWQAwkc9wsVYJ/ZAv9+TK+RICW/I5KNPRPV4AWhWTyLr\nkPEfFlIzE43+67dKtWlJnxf1cKklFXwzf6UwM0r4l2sam9P1gfb8jj4inUw+2kje\n93SW9MSorMtMp6fhqvoOkJuPU4dop36+SyB8DGhivnP5gvNznGJpx2bgobVoaUSr\n7oq0JfxuadFn9nS3faBVJQRtw+EQTo1fPjE/QaiY9OYCD/jS4LxbVeJvy0dIXB8W\ne2vOAMfpA+Lx/1XjluMsy50+XFh/Ez3VDlNDjh4t0rCrdBRQhwbuXML6wZUw60o=\n=OKK8\n-----END PGP SIGNATURE-----\n",
+                "payload": "tree 7f8a8ebc998975d96d7e4a3a80821e7c4aea8769\nparent 25cbd8b5911a05d49af695d0962b4e0d383cc5b2\nauthor Alex Crichton <alex@alexcrichton.com> 1587578214 -0500\ncommitter GitHub <noreply@github.com> 1587578214 -0500\n\nAdd AArch64 tests to CI (#1526)\n\n* Add AArch64 tests to CI\r\n\r\nThis commit enhances our CI with an AArch64 builder. Currently we have\r\nno physical hardware to run on so for now we run all tests in an\r\nemulator. The AArch64 build is cross-compiled from x86_64 from Linux.\r\nTests all happen in release mode with a recent version of QEMU (recent\r\nversion because it's so much faster, and in release mode because debug\r\nmode tests take quite a long time in an emulator).\r\n\r\nThe goal here was not to get all tests passing on CI, but rather to get\r\nAArch64 running on CI and get it green at the same time. To achieve that\r\ngoal many tests are now ignored on aarch64 platforms. Many tests fail\r\ndue to unimplemented functionality in the aarch64 backend (#1521), and\r\nall wasmtime tests involving compilation are also disabled due to\r\npanicking attempting to generate generate instruction offset information\r\nfor trap symbolication (#1523).\r\n\r\nDespite this, though, all Cranelift tests and other wasmtime tests\r\nshould be runnin on AArch64 through QEMU with this PR. Additionally\r\nwe'll have an AArch64 binary release of Wasmtime for Linux, although it\r\nwon't be too useful just yet since it will panic on almost all wasm\r\nmodules.\r\n\r\n* Review comments"
+            }
+        },
+        "url": "https://api.github.com/repos/bytecodealliance/wasmtime/commits/d1aa86f91a4e7b6d1663cd9b4a1f749fdbb83dfd",
+        "html_url": "https://github.com/bytecodealliance/wasmtime/commit/d1aa86f91a4e7b6d1663cd9b4a1f749fdbb83dfd",
+        "comments_url": "https://api.github.com/repos/bytecodealliance/wasmtime/commits/d1aa86f91a4e7b6d1663cd9b4a1f749fdbb83dfd/comments",
+        "author": {
+            "login": "alexcrichton",
+            "id": 64996,
+            "node_id": "MDQ6VXNlcjY0OTk2",
+            "avatar_url": "https://avatars1.githubusercontent.com/u/64996?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/alexcrichton",
+            "html_url": "https://github.com/alexcrichton",
+            "followers_url": "https://api.github.com/users/alexcrichton/followers",
+            "following_url": "https://api.github.com/users/alexcrichton/following{/other_user}",
+            "gists_url": "https://api.github.com/users/alexcrichton/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/alexcrichton/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/alexcrichton/subscriptions",
+            "organizations_url": "https://api.github.com/users/alexcrichton/orgs",
+            "repos_url": "https://api.github.com/users/alexcrichton/repos",
+            "events_url": "https://api.github.com/users/alexcrichton/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/alexcrichton/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "web-flow",
+            "id": 19864447,
+            "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+            "avatar_url": "https://avatars3.githubusercontent.com/u/19864447?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/web-flow",
+            "html_url": "https://github.com/web-flow",
+            "followers_url": "https://api.github.com/users/web-flow/followers",
+            "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+            "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+            "organizations_url": "https://api.github.com/users/web-flow/orgs",
+            "repos_url": "https://api.github.com/users/web-flow/repos",
+            "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/web-flow/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "25cbd8b5911a05d49af695d0962b4e0d383cc5b2",
+                "url": "https://api.github.com/repos/bytecodealliance/wasmtime/commits/25cbd8b5911a05d49af695d0962b4e0d383cc5b2",
+                "html_url": "https://github.com/bytecodealliance/wasmtime/commit/25cbd8b5911a05d49af695d0962b4e0d383cc5b2"
+            }
+        ]
+    },
+    {
+        "sha": "9364eb1d98d4b82d30ce72ec1e46ee72a1ea6a0c",
+        "node_id": "MDY6Q29tbWl0MTAxNzY3NzcyOjkzNjRlYjFkOThkNGI4MmQzMGNlNzJlYzFlNDZlZTcyYTFlYTZhMGM=",
+        "commit": {
+            "author": {
+                "name": "Dan Gohman",
+                "email": "sunfish@mozilla.com",
+                "date": "2020-04-20T20:55:33Z"
+            },
+            "committer": {
+                "name": "GitHub",
+                "email": "noreply@github.com",
+                "date": "2020-04-20T20:55:33Z"
+            },
+            "message": "Refactor (#1524)\n\n* Compute instance exports on demand.\r\n\r\nInstead having instances eagerly compute a Vec of Externs, and bumping\r\nthe refcount for each Extern, compute Externs on demand.\r\n\r\nThis also enables `Instance::get_export` to avoid doing a linear search.\r\n\r\nThis also means that the closure returned by `get0` and friends now\r\nholds an `InstanceHandle` to dynamically hold the instance live rather\r\nthan being scoped to a lifetime.\r\n\r\n* Compute module imports and exports on demand too.\r\n\r\nAnd compute Extern::ty on demand too.\r\n\r\n* Add a utility function for computing an ExternType.\r\n\r\n* Add a utility function for looking up a function's signature.\r\n\r\n* Add a utility function for computing the ValType of a Global.\r\n\r\n* Rename wasmtime_environ::Export to EntityIndex.\r\n\r\nThis helps differentiate it from other Export types in the tree, and\r\ndescribes what it is.\r\n\r\n* Fix a typo in a comment.\r\n\r\n* Simplify module imports and exports.\r\n\r\n* Make `Instance::exports` return the export names.\r\n\r\nThis significantly simplifies the public API, as it's relatively common\r\nto need the names, and this avoids the need to do a zip with\r\n`Module::exports`.\r\n\r\nThis also changes `ImportType` and `ExportType` to have public members\r\ninstead of private members and accessors, as I find that simplifies the\r\nusage particularly in cases where there are temporary instances.\r\n\r\n* Remove `Instance::module`.\r\n\r\nThis doesn't quite remove `Instance`'s `module` member, it gets a step\r\ncloser.\r\n\r\n* Use a InstanceHandle utility function.\r\n\r\n* Don't consume self in the `Func::get*` methods.\r\n\r\nInstead, just create a closure containing the instance handle and the\r\nexport for them to call.\r\n\r\n* Use `ExactSizeIterator` to avoid needing separate `num_*` methods.\r\n\r\n* Rename `Extern::func()` etc. to `into_func()` etc.\r\n\r\n* Revise examples to avoid using `nth`.\r\n\r\n* Add convenience methods to instance for getting specific extern types.\r\n\r\n* Use the convenience functions in more tests and examples.\r\n\r\n* Avoid cloning strings for `ImportType` and `ExportType`.\r\n\r\n* Remove more obviated clone() calls.\r\n\r\n* Simplify `Func`'s closure state.\r\n\r\n* Make wasmtime::Export's fields private.\r\n\r\nThis makes them more consistent with ExportType.\r\n\r\n* Fix compilation error.\r\n\r\n* Make a lifetime parameter explicit, and use better lifetime names.\r\n\r\nInstead of 'me, use 'instance and 'module to make it clear what the\r\nlifetime is.\r\n\r\n* More lifetime cleanups.",
+            "tree": {
+                "sha": "f8af2719d65258b8a1f0dd61d21af745a0bc6a9d",
+                "url": "https://api.github.com/repos/bytecodealliance/wasmtime/git/trees/f8af2719d65258b8a1f0dd61d21af745a0bc6a9d"
+            },
+            "url": "https://api.github.com/repos/bytecodealliance/wasmtime/git/commits/9364eb1d98d4b82d30ce72ec1e46ee72a1ea6a0c",
+            "comment_count": 0,
+            "verification": {
+                "verified": true,
+                "reason": "valid",
+                "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJengxFCRBK7hj4Ov3rIwAAdHIIACOPQzeBPlIl33daaFxmpb3I\nNRU08KNyvIzXCz1Djao/KGl72GEJqqIGX1gC9vhQe0mT933wpR0xndMQvdpX798J\nudXiPAdd5WrPZUiu7u4i6GSV6qvSgAG00WTFoTWzYdJN/xRIoII3AKFRZNF1bd+S\n1unIDZ7NicxNFuPGtjJmtoo2RyRXBHA4QXCMFozGwF4v4tWZbuQ9RSLoDOK1l7HB\nvXL8HSuWxcKLYG9UdiQmcdVnuTINt0UbIkkuyX41RH29uXMalSmkpwLwSuspLwiT\n6qkrjL3X3/kq4pOWIGhgr9cxvUCZE6JiMBdeS72+vNjwHJAnVHkOxCodM3ltP/4=\n=HG4D\n-----END PGP SIGNATURE-----\n",
+                "payload": "tree f8af2719d65258b8a1f0dd61d21af745a0bc6a9d\nparent 967827f4b518aa17cebf997d9e90e2fc2e9693fc\nauthor Dan Gohman <sunfish@mozilla.com> 1587416133 -0700\ncommitter GitHub <noreply@github.com> 1587416133 -0500\n\nRefactor (#1524)\n\n* Compute instance exports on demand.\r\n\r\nInstead having instances eagerly compute a Vec of Externs, and bumping\r\nthe refcount for each Extern, compute Externs on demand.\r\n\r\nThis also enables `Instance::get_export` to avoid doing a linear search.\r\n\r\nThis also means that the closure returned by `get0` and friends now\r\nholds an `InstanceHandle` to dynamically hold the instance live rather\r\nthan being scoped to a lifetime.\r\n\r\n* Compute module imports and exports on demand too.\r\n\r\nAnd compute Extern::ty on demand too.\r\n\r\n* Add a utility function for computing an ExternType.\r\n\r\n* Add a utility function for looking up a function's signature.\r\n\r\n* Add a utility function for computing the ValType of a Global.\r\n\r\n* Rename wasmtime_environ::Export to EntityIndex.\r\n\r\nThis helps differentiate it from other Export types in the tree, and\r\ndescribes what it is.\r\n\r\n* Fix a typo in a comment.\r\n\r\n* Simplify module imports and exports.\r\n\r\n* Make `Instance::exports` return the export names.\r\n\r\nThis significantly simplifies the public API, as it's relatively common\r\nto need the names, and this avoids the need to do a zip with\r\n`Module::exports`.\r\n\r\nThis also changes `ImportType` and `ExportType` to have public members\r\ninstead of private members and accessors, as I find that simplifies the\r\nusage particularly in cases where there are temporary instances.\r\n\r\n* Remove `Instance::module`.\r\n\r\nThis doesn't quite remove `Instance`'s `module` member, it gets a step\r\ncloser.\r\n\r\n* Use a InstanceHandle utility function.\r\n\r\n* Don't consume self in the `Func::get*` methods.\r\n\r\nInstead, just create a closure containing the instance handle and the\r\nexport for them to call.\r\n\r\n* Use `ExactSizeIterator` to avoid needing separate `num_*` methods.\r\n\r\n* Rename `Extern::func()` etc. to `into_func()` etc.\r\n\r\n* Revise examples to avoid using `nth`.\r\n\r\n* Add convenience methods to instance for getting specific extern types.\r\n\r\n* Use the convenience functions in more tests and examples.\r\n\r\n* Avoid cloning strings for `ImportType` and `ExportType`.\r\n\r\n* Remove more obviated clone() calls.\r\n\r\n* Simplify `Func`'s closure state.\r\n\r\n* Make wasmtime::Export's fields private.\r\n\r\nThis makes them more consistent with ExportType.\r\n\r\n* Fix compilation error.\r\n\r\n* Make a lifetime parameter explicit, and use better lifetime names.\r\n\r\nInstead of 'me, use 'instance and 'module to make it clear what the\r\nlifetime is.\r\n\r\n* More lifetime cleanups."
+            }
+        },
+        "url": "https://api.github.com/repos/bytecodealliance/wasmtime/commits/9364eb1d98d4b82d30ce72ec1e46ee72a1ea6a0c",
+        "html_url": "https://github.com/bytecodealliance/wasmtime/commit/9364eb1d98d4b82d30ce72ec1e46ee72a1ea6a0c",
+        "comments_url": "https://api.github.com/repos/bytecodealliance/wasmtime/commits/9364eb1d98d4b82d30ce72ec1e46ee72a1ea6a0c/comments",
+        "author": null,
+        "committer": {
+            "login": "web-flow",
+            "id": 19864447,
+            "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+            "avatar_url": "https://avatars3.githubusercontent.com/u/19864447?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/web-flow",
+            "html_url": "https://github.com/web-flow",
+            "followers_url": "https://api.github.com/users/web-flow/followers",
+            "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+            "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+            "organizations_url": "https://api.github.com/users/web-flow/orgs",
+            "repos_url": "https://api.github.com/users/web-flow/repos",
+            "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/web-flow/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "967827f4b518aa17cebf997d9e90e2fc2e9693fc",
+                "url": "https://api.github.com/repos/bytecodealliance/wasmtime/commits/967827f4b518aa17cebf997d9e90e2fc2e9693fc",
+                "html_url": "https://github.com/bytecodealliance/wasmtime/commit/967827f4b518aa17cebf997d9e90e2fc2e9693fc"
+            }
+        ]
+    },
+    {
+        "sha": "4c82da440a4b114be969522b7eba8e73d1f12c4a",
+        "node_id": "MDY6Q29tbWl0MTAxNzY3NzcyOjRjODJkYTQ0MGE0YjExNGJlOTY5NTIyYjdlYmE4ZTczZDFmMTJjNGE=",
+        "commit": {
+            "author": {
+                "name": "Alex Crichton",
+                "email": "alex@alexcrichton.com",
+                "date": "2020-04-17T22:22:12Z"
+            },
+            "committer": {
+                "name": "GitHub",
+                "email": "noreply@github.com",
+                "date": "2020-04-17T22:22:12Z"
+            },
+            "message": "Move most wasmtime tests into one test suite (#1544)\n\n* Move most wasmtime tests into one test suite\r\n\r\nThis commit moves most wasmtime tests into a single test suite which\r\ngets compiled into one executable instead of having lots of test\r\nexecutables. The goal here is to reduce disk space on CI, and this\r\nshould be achieved by having fewer executables which means fewer copies\r\nof `libwasmtime.rlib` linked across binaries on the system. More\r\nimportantly though this means that DWARF debug information should only\r\nbe in one executable rather than duplicated across many.\r\n\r\n* Share more build caches\r\n\r\nGlobally set `RUSTFLAGS` to `-Dwarnings` instead of individually so all\r\nbuild steps share the same value.\r\n\r\n* Allow some dead code in cranelift-codegen\r\n\r\nPrevents having to fix all warnings for all possible feature\r\ncombinations, only the main ones which come up.\r\n\r\n* Update some debug file paths",
+            "tree": {
+                "sha": "a66e15f65432367dfd9a5669feafade0f65b0de4",
+                "url": "https://api.github.com/repos/bytecodealliance/wasmtime/git/trees/a66e15f65432367dfd9a5669feafade0f65b0de4"
+            },
+            "url": "https://api.github.com/repos/bytecodealliance/wasmtime/git/commits/4c82da440a4b114be969522b7eba8e73d1f12c4a",
+            "comment_count": 0,
+            "verification": {
+                "verified": true,
+                "reason": "valid",
+                "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJemiwUCRBK7hj4Ov3rIwAAdHIIAEb5xCpIB0w2CvBF4p+CXuI8\nhwZa7UspAoAcj0lAthwkIrMt6xCCg0hzQaNEfo1DiGV6QxBFWi5csm8HsywkDdaD\nsPHh+fUa16kPOIjDFufYwaxlFO5hzctEJQy/xopHt395AdxEPkJFBBNc587MOgSF\nZs/5WbMgjvdS7Jn68FGFr15da4QIcv1L8c4/Yz8Uyl86ErWfsYpBlk3WZw+wYKyo\nckid8ATYNtqWmmgI5koKW6STTWYK9QDbKjPJu9xnhNaSU144qtDWVXlXEMB6LUrG\nwoUFxF3K5cYCUYY+I0QAlr9CvOp0kSuWPZfQudY+RrI9A1uCzbb0uNuSRvYKuUg=\n=aXRH\n-----END PGP SIGNATURE-----\n",
+                "payload": "tree a66e15f65432367dfd9a5669feafade0f65b0de4\nparent a524f58dfec17fde9a0cbad4591eefa6de14abde\nauthor Alex Crichton <alex@alexcrichton.com> 1587162132 -0500\ncommitter GitHub <noreply@github.com> 1587162132 -0500\n\nMove most wasmtime tests into one test suite (#1544)\n\n* Move most wasmtime tests into one test suite\r\n\r\nThis commit moves most wasmtime tests into a single test suite which\r\ngets compiled into one executable instead of having lots of test\r\nexecutables. The goal here is to reduce disk space on CI, and this\r\nshould be achieved by having fewer executables which means fewer copies\r\nof `libwasmtime.rlib` linked across binaries on the system. More\r\nimportantly though this means that DWARF debug information should only\r\nbe in one executable rather than duplicated across many.\r\n\r\n* Share more build caches\r\n\r\nGlobally set `RUSTFLAGS` to `-Dwarnings` instead of individually so all\r\nbuild steps share the same value.\r\n\r\n* Allow some dead code in cranelift-codegen\r\n\r\nPrevents having to fix all warnings for all possible feature\r\ncombinations, only the main ones which come up.\r\n\r\n* Update some debug file paths"
+            }
+        },
+        "url": "https://api.github.com/repos/bytecodealliance/wasmtime/commits/4c82da440a4b114be969522b7eba8e73d1f12c4a",
+        "html_url": "https://github.com/bytecodealliance/wasmtime/commit/4c82da440a4b114be969522b7eba8e73d1f12c4a",
+        "comments_url": "https://api.github.com/repos/bytecodealliance/wasmtime/commits/4c82da440a4b114be969522b7eba8e73d1f12c4a/comments",
+        "author": {
+            "login": "alexcrichton",
+            "id": 64996,
+            "node_id": "MDQ6VXNlcjY0OTk2",
+            "avatar_url": "https://avatars1.githubusercontent.com/u/64996?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/alexcrichton",
+            "html_url": "https://github.com/alexcrichton",
+            "followers_url": "https://api.github.com/users/alexcrichton/followers",
+            "following_url": "https://api.github.com/users/alexcrichton/following{/other_user}",
+            "gists_url": "https://api.github.com/users/alexcrichton/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/alexcrichton/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/alexcrichton/subscriptions",
+            "organizations_url": "https://api.github.com/users/alexcrichton/orgs",
+            "repos_url": "https://api.github.com/users/alexcrichton/repos",
+            "events_url": "https://api.github.com/users/alexcrichton/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/alexcrichton/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "web-flow",
+            "id": 19864447,
+            "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+            "avatar_url": "https://avatars3.githubusercontent.com/u/19864447?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/web-flow",
+            "html_url": "https://github.com/web-flow",
+            "followers_url": "https://api.github.com/users/web-flow/followers",
+            "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+            "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+            "organizations_url": "https://api.github.com/users/web-flow/orgs",
+            "repos_url": "https://api.github.com/users/web-flow/repos",
+            "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/web-flow/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "a524f58dfec17fde9a0cbad4591eefa6de14abde",
+                "url": "https://api.github.com/repos/bytecodealliance/wasmtime/commits/a524f58dfec17fde9a0cbad4591eefa6de14abde",
+                "html_url": "https://github.com/bytecodealliance/wasmtime/commit/a524f58dfec17fde9a0cbad4591eefa6de14abde"
+            }
+        ]
+    }
+]

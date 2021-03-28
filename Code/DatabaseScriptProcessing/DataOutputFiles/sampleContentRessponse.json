@@ -1,0 +1,18 @@
+{
+    "name": "wasm.js",
+    "path": "src/examples/wasm/wasm.js",
+    "sha": "81b53b1192c9e788bb3566b70ae46320139bbfa7",
+    "size": 757,
+    "url": "https://api.github.com/repos/tinygo-org/tinygo/contents/src/examples/wasm/wasm.js?ref=5ae3b7482050d7a7e75faba4a59bb8ade749d2b6",
+    "html_url": "https://github.com/tinygo-org/tinygo/blob/5ae3b7482050d7a7e75faba4a59bb8ade749d2b6/src/examples/wasm/wasm.js",
+    "git_url": "https://api.github.com/repos/tinygo-org/tinygo/git/blobs/81b53b1192c9e788bb3566b70ae46320139bbfa7",
+    "download_url": "https://raw.githubusercontent.com/tinygo-org/tinygo/5ae3b7482050d7a7e75faba4a59bb8ade749d2b6/src/examples/wasm/wasm.js",
+    "type": "file",
+    "content": "J3VzZSBzdHJpY3QnOwoKY29uc3QgV0FTTV9VUkwgPSAnLi4vLi4vLi4vd2Fz\nbS53YXNtJzsKCnZhciB3YXNtOwoKZnVuY3Rpb24gdXBkYXRlUmVzdWx0KCkg\newogIHdhc20uZXhwb3J0cy51cGRhdGUoKTsKfQoKZnVuY3Rpb24gaW5pdCgp\nIHsKICBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKCcjYScpLm9uaW5wdXQgPSB1\ncGRhdGVSZXN1bHQ7CiAgZG9jdW1lbnQucXVlcnlTZWxlY3RvcignI2InKS5v\nbmlucHV0ID0gdXBkYXRlUmVzdWx0OwoKICBjb25zdCBnbyA9IG5ldyBHbygp\nOwogIGlmICgnaW5zdGFudGlhdGVTdHJlYW1pbmcnIGluIFdlYkFzc2VtYmx5\nKSB7CiAgICBXZWJBc3NlbWJseS5pbnN0YW50aWF0ZVN0cmVhbWluZyhmZXRj\naChXQVNNX1VSTCksIGdvLmltcG9ydE9iamVjdCkudGhlbihmdW5jdGlvbihv\nYmopIHsKICAgICAgd2FzbSA9IG9iai5pbnN0YW5jZTsKICAgICAgZ28ucnVu\nKHdhc20pOwogICAgICB1cGRhdGVSZXN1bHQoKTsKICAgIH0pCiAgfSBlbHNl\nIHsKICAgIGZldGNoKFdBU01fVVJMKS50aGVuKHJlc3AgPT4gCiAgICAgIHJl\nc3AuYXJyYXlCdWZmZXIoKQogICAgKS50aGVuKGJ5dGVzID0+CiAgICAgIFdl\nYkFzc2VtYmx5Lmluc3RhbnRpYXRlKGJ5dGVzLCBnby5pbXBvcnRPYmplY3Qp\nLnRoZW4oZnVuY3Rpb24ob2JqKSB7CiAgICAgICAgd2FzbSA9IG9iai5pbnN0\nYW5jZTsKICAgICAgICBnby5ydW4od2FzbSk7CiAgICAgICAgdXBkYXRlUmVz\ndWx0KCk7CiAgICAgIH0pCiAgICApCiAgfQp9Cgppbml0KCk7Cg==\n",
+    "encoding": "base64",
+    "_links": {
+      "self": "https://api.github.com/repos/tinygo-org/tinygo/contents/src/examples/wasm/wasm.js?ref=5ae3b7482050d7a7e75faba4a59bb8ade749d2b6",
+      "git": "https://api.github.com/repos/tinygo-org/tinygo/git/blobs/81b53b1192c9e788bb3566b70ae46320139bbfa7",
+      "html": "https://github.com/tinygo-org/tinygo/blob/5ae3b7482050d7a7e75faba4a59bb8ade749d2b6/src/examples/wasm/wasm.js"
+    }
+  }
