@@ -39,7 +39,15 @@ This folder contains the samples collected from the qualitative study,  [quantit
 This folder contains the source code used to crawl GitHub for the bug samples and the script used to build the visualizations for it. 
 
 ## Qualitative Study
-We perform a qualitative analysis on 142 bugs.
+We perform a qualitative analysis on 142 bugs. We obtain these bugs by filtering the dataset used in the quanititative study (1,400 samples) to those that belong to Emsscripten (432 samples) and contain a bug-inducing input (142 samples). We collect the information in the qualitative study through the following steps: 
+1. Beginning with the Columns *ID* and *URL*, we first visit the issue page through the link in *URL*.
+2. We identify bug-inducing code snippet in the page by reading the initial post and, if need, a few of the following posts. We record the source code language of the bug-inducing input in the *Language* column and the link to the post containing the bug-inducing input in the *Bug Inducing Input Location* column.
+3. We identify the intended functionality that the code snippet is trying to trigger and record in the column *Purpose*. We list the indicative API/keyword that helps us identify the purpose of the code snippet in the *Tested API* column.
+4. We read through all the posts in the issue conversation to find what the compiler developers and/or reporting user found the root cause to be. We summarize the root cause and record it in the *Root Cause* column. 
+5. We read through all the posts to find out how the bug was fixed or resolved. We summarize the bug fix and record it in the *Bug Fix* column.
+6. After performing Steps 1-5 on all the samples, we look at the root cause summaries in the *Root Cause* column to group similar ones together. We distinguish the causes by where they occur in the compiler infrastructure (e.g. frontend, linker, lirbaries, etc.. ) or by differences in the languages, platforms, or infrastructures involved (e.g C-to-WebAssembly, WebAssembly-to-JS,...). We record the final categories created in the *Root Cause Category* column.
+
+
 
 ### Sample [Emscripten Bug #9562](https://github.com/emscripten-core/emscripten/issues/9562)
 ```
@@ -73,7 +81,12 @@ function when legalization is not required.
 ## Quantitative Study
 ![Table 4: Bug Dataset](https://github.com/wasm-compiler-bugs/wasm-compiler-bugs.github.io/raw/master/Tables/Table4.PNG)
 
-In the second study, we perform a quantitative study on 1,400 bugs among six WebAssembly compilers, namely AssemblyScript, Asterius, Binaryen, Emscripten, TinyGo, and Wasm-Bindgen. This study focuses on four dimensions: (a) We study the lifecycle of the bugs and find that the average duration of the bugs is 118 days, with 26.4% of all bugs being fixed within 1 day.(b) We categorize these bugs based on their impacts and observe many runtime errors (37.8%), including crash (9.6%), instantiation failure (1.2%), and performance drop (0.8%). (c) We study the locations of the bugs and find that most bugs are concentrated to a few files in the projects. 47 bugs are found in the component sof existing compiler infrastructures. (d) We compute the lines of code (LOC) of the bug-inducing inputs and bug fixes. We find that majority of bug-inducing inputs (76.1%) have 10 LOC or less. 51.4% of the bugs have bug fixes with less than 10 LOC, and 78% are fixedby changing at most 10 functions.
+In the second study, we perform a quantitative study on 1,400 bugs among six WebAssembly compilers, namely AssemblyScript, Asterius, Binaryen, Emscripten, TinyGo, and Wasm-Bindgen. These bugs are obtained by scanning the repositories of the six compilers listed above, which where obtained form [this list](https://github.com/mbasso/awesome-wasm). We first use the GitHub Search API to collect all the closed issues that had a label indiciating the issue was a bug, including "bug", "good first bug", "breaking change", etc... This produced a total of 243 issues. 
+
+In order to find more samples, we also used the GitHub REST API to collect all the issues from the six compilers, ariving at a total of 96,186 issues.  We limit these bugs to closed issues in order to reliably obtain information on the bug fix and root cause, which reduces the number to 88,037 issues. We restrict the bugs to those after the year 2015 as this is when the initial versions of WebAssembly were introduced, bringing the number to 64,673. Next we search for keywords in the title and body of the issue to include, such as "bug", "error", "defect", and "fault", and to excude, such as "feature" and "install". This reduces the number of issues to 19,335. We apply more keywords to search for issues that are particularly relevant to WebAsembly using "wasm", "wat", and "WebAssembly". This brings the number down to 1,752 issues. These issues are combined with the 243 issues obtained using the bug labels, and finally the issues are manually inspected to verify that they are closed issues related to WebAssembly with a bug fix. This brings the number of issues to the final number of 1,400.
+
+
+This study focuses on four dimensions: (a) We study the lifecycle of the bugs and find that the average duration of the bugs is 118 days, with 26.4% of all bugs being fixed within 1 day.(b) We categorize these bugs based on their impacts and observe many runtime errors (37.8%), including crash (9.6%), instantiation failure (1.2%), and performance drop (0.8%). (c) We study the locations of the bugs and find that most bugs are concentrated to a few files in the projects. 47 bugs are found in the component sof existing compiler infrastructures. (d) We compute the lines of code (LOC) of the bug-inducing inputs and bug fixes. We find that majority of bug-inducing inputs (76.1%) have 10 LOC or less. 51.4% of the bugs have bug fixes with less than 10 LOC, and 78% are fixedby changing at most 10 functions.
 
 ## Real-World WebAssembly Adoption Study
 
