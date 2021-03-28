@@ -31,7 +31,7 @@ All of the tables used in the paper can be found in the [Tables](https://github.
 This folder contains some of the signatures collected for the compilers in our study on WebAssembly samples in the wild. The compiler signatures are presented for Emscripten, Binaryen, and Wasm-Bindgen, as well as for samples whose compiler could not be determined.
 
 ### [Data](https://github.com/wasm-compiler-bugs/wasm-compiler-bugs.github.io/tree/master/Data)
-This folder contains a sample of the manually inspected Emscripten bugs. We provide a sample of 10 bugs in the file [sample_dataset.csv](https://github.com/wasm-compiler-bugs/wasm-compiler-bugs.github.io/tree/master/Data/sample_dataset.csv).
+This folder contains the samples collected from the qualitative study,  [quantitative_dataset.csv](https://github.com/wasm-compiler-bugs/wasm-compiler-bugs.github.io/tree/master/Data/qualitative_dataset.csv), and the quantitative dataset, [quantitative_dataset.csv](https://github.com/wasm-compiler-bugs/wasm-compiler-bugs.github.io/tree/master/Data/quantitative_dataset.csv).
 
 ## Qualitative Study
 We perform a qualitative analysis on 142 bugs.
