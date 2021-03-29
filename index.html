@@ -30,18 +30,19 @@ layout: default
  </tr>
  <tr>
  <td>1</td>
- <td>Data type incompatibilities are a distinct challenge posed to WebAssembly compilers and account for 14.1% of the bugs investigated.</td>
- <td>Testing the interfaces that pass values among WebAssembly, JavaScript, and C/C++ contexts should be done exhaustively as these interfaces are used to implement other compiler-provided runtime libraries (e.g., Filesystem, Exception Handling, Indirect Calls).</td>
+ <td>Data type incompatibilities bugs account for 32.8% of the 61 bugs.</td>
+ <td>Interfaces passing values among WebAssembly, JavaScript, and C/C++ contexts should be tested exhaustively as they support compiler-provided runtime libraries (e.g., Filesystem, Exception Handling).</td>
  </tr>
  <tr>
  <td>2</td>
- <td>Porting synchronous C/C++ paradigm to asynchronous event-loop paradigm is a unique challenge.</td>
- <td>Automated tools supporting this conversion, such as Asyncify and Emterpreter, should be more thoroughly tested. In addition, libraries that rely on these should perform additional testing as Asyncify and Emterpreter may expose buggy behavior when changing the execution paradigm.</td>
+ <td>Porting synchronous C/C++ paradigm to event-loop paradigm is uniquely challenging.</td>
+ <td>Automated tools supporting this conversion (e.g.,&nbsp;<a href="https://emscripten.org/docs/porting/asyncify.html">Asyncify</a>) require thorough testing. Libraries relying on them may suffer from incorrect event ordering as described in Section 3.2 (e.g.,&nbsp;<a href="https://github.com/emscripten-core/emscripten/issues/9823">Emscripten-#9823</a>).</td>
  </tr>
  <tr>
  <td>3</td>
- <td>Handling the differences in memory management models is a unique challenge to WebAssembly compilers.</td>
- <td>For the libraries that utilize the linear memory, such as the Filesystem API, the compiler developers should test the functionalities more rigorously under different memory conditions, such as after memory growth and shrinkage.</td>
+ <td>Handling the differences in memory management models is challenging.
+</td>
+ <td>Libraries utilizing linear memory, such as the Filesystem API, should be tested rigorously under diverse memory conditions (e.g., workloads requiring memory growth and shrinkage).</td>
  </tr>
  <tr>
  <td>4</td>
@@ -74,7 +75,7 @@ layout: default
  <tr>
  <td>9</td>
  <td>Over 50% of bugs for five compilers affect only 1 file.</td>
- <td>Bugs are localized within a few core files, that are covered by the existing test-suites. However, the test-suites failed to expose errors due to the insufficient input and scenario coverage. Developers could improve the test-suites’ quality. The existing test suites achieve sufficient code coverage while failed to cover diverse inputs and scenarios. Developers could spend more effort on covering more input space and diverse scenarios. For example, Implication 9 states that the current Emscripten test suite is comprehensive enough to cover relevant APIs but not deep enough to find complex bugs. In <a href="https://github.com/emscripten-core/emscripten/issues/9562">Emscripten Issue #9562</a>, the report describes a bug where using the <code>-s MAIN_MODULE=1</code> compiler flag with a code snippet utilizing the Filesystem API causes a type error that passes an illegal value between WebAssembly and JavaScript. This bug should be covered by the test cases for dynamic linking <a href="https://github.com/emscripten-core/emscripten/blob/635c4608fbcc34b025267e0b626f3f245296f4e6/tests/test_browser.py#L3425">test_dynamic_link,  test_dylink_dso_needed, ...</a> or the test cases for the filesystem <a href="https://github.com/emscripten-core/emscripten/blob/635c4608fbcc34b025267e0b626f3f245296f4e6/tests/test_browser.py#L4501">test_asmfs_hello_file, test_asmfs_read_file_twice, etc...</a>. However, the bug-inducing input manages to avoid hitting these test cases as the two APIs were not tested in combination with each other.</td>
+ <td>Bugs are localized within a few core files, that are covered by the existing test-suites. However, the test-suites failed to expose errors due to the insufficient input and scenario coverage. Developers could improve the test-suites’ quality. The existing test suites achieve sufficient code coverage while failed to cover diverse inputs and scenarios. Developers could spend more effort on covering more input space and diverse scenarios. 
  </tr>
  <tr>
  <td>10</td>
@@ -88,13 +89,19 @@ layout: default
  </tr>
  </tbody>
  </table>
+ Our findings can be used to help guide testing improvements in WebAssembly compilers. For example, Implication 9 states that the current Emscripten test suite is comprehensive enough to cover relevant APIs but not deep enough to find complex bugs. In <a href="https://github.com/emscripten-core/emscripten/issues/9562">Emscripten Issue #9562</a>, the report describes a bug where using the <code>-s MAIN_MODULE=1</code> compiler flag with a code snippet utilizing the Filesystem API causes a type error that passes an illegal value between WebAssembly and JavaScript. This bug should be covered by the test cases for dynamic linking <a href="https://github.com/emscripten-core/emscripten/blob/635c4608fbcc34b025267e0b626f3f245296f4e6/tests/test_browser.py#L3425">test_dynamic_link,  test_dylink_dso_needed, ...</a> or the test cases for the filesystem <a href="https://github.com/emscripten-core/emscripten/blob/635c4608fbcc34b025267e0b626f3f245296f4e6/tests/test_browser.py#L4501">test_asmfs_hello_file, test_asmfs_read_file_twice, etc...</a>. However, the bug-inducing input manages to avoid hitting these test cases as the two APIs were not tested in combination with each other.</td> 
 
  <h3 id="dataset"><a href="https://github.com/wasm-compiler-bugs/wasm-compiler-bugs.github.io/tree/master/Dataset">Dataset</a></h3>
- <p>This folder contains the samples collected from the qualitative study,&nbsp;<a href="https://github.com/wasm-compiler-bugs/wasm-compiler-bugs.github.io/tree/master/Data/qualitative_dataset.csv">quantitative_dataset.csv</a>, and the quantitative dataset,&nbsp;<a href="https://github.com/wasm-compiler-bugs/wasm-compiler-bugs.github.io/tree/master/Data/quantitative_dataset.csv">quantitative_dataset.csv</a>.</p>
+ <p>This folder contains the samples collected from the qualitative study,&nbsp;<a href="https://github.com/wasm-compiler-bugs/wasm-compiler-bugs.github.io/tree/master/Dataset/qualitative_dataset.csv">qualitative_dataset.csv</a>, and the quantitative dataset,&nbsp;<a href="https://github.com/wasm-compiler-bugs/wasm-compiler-bugs.github.io/tree/master/Dataset/quantitative_dataset.csv">quantitative_dataset.csv</a>.</p>
+ 
+ <h4>Quantitative Study Bug Collection</h4>
  <p> The bug dataset is constructed by scanning the repositories of six compilers, AssemblyScript, Asterius, Binaryen, Emscripten, TinyGo, and Wasm-Bindgen (obtained from <a href="https://github.com/mbasso/awesome-wasm">this list</a>), to identify issues that contained bug reports. We do this using two approaches.</p>
- <p>In the first approach, we use the GitHub Search API to collect all the closed issues that had a label indiciating the issue was a bug, including &quot;bug&quot;, &quot;good first bug&quot;, &quot;breaking change&quot;, etc... This produced a total of 243 issues. </p>
- <p>In the second approach, we use the GitHub REST API to collect all the issues from the six compilers, ariving at a total of 96,186 issuess.  We limit these bugs to closed issues in order to reliably obtain information on the bug fix and root cause, which reduces the number to 88,037 issues. We restrict the bugs to those after the year 2015 as this is when the initial versions of WebAssembly were introduced, bringing the number to 64,673. Next we search for keywords in the title and body of the issue to include, such as &quot;bug&quot;, &quot;error&quot;, &quot;defect&quot;, and &quot;fault&quot;, and to excude, such as &quot;feature&quot; and &quot;install&quot;. This filter reduces the number of issues to 19,335. We apply more keywords to search for issues that are particularly relevant to WebAsembly using &quot;wasm&quot;, &quot;wat&quot;, and &quot;WebAssembly&quot;. This brings the number down to 1,752 issues. </p>
+ <p>In the first approach, we use the GitHub Search API to collect all the closed issues that had a label indicating the issue was a bug, including &quot;bug&quot;, &quot;good first bug&quot;, &quot;breaking change&quot;, etc... This produced a total of 243 issues. </p>
+ <p>In the second approach, we use the GitHub REST API to collect all the issues from the six compilers, arriving at a total of 96,186 issuess.  We limit these bugs to closed issues in order to reliably obtain information on the bug fix and root cause, which reduces the number to 88,037 issues. We restrict the bugs to those after the year 2015 as this is when the initial versions of WebAssembly were introduced, bringing the number to 64,673. Next, we search for keywords in the title and body of the issue to include, such as &quot;bug&quot;, &quot;error&quot;, &quot;defect&quot;, and &quot;fault&quot;, and to excude, such as &quot;feature&quot; and &quot;install&quot;. This filter reduces the number of issues to 19,335. We apply more keywords to search for issues that are particularly relevant to WebAsembly using &quot;wasm&quot;, &quot;wat&quot;, and &quot;WebAssembly&quot;. This brings the number down to 1,752 issues. </p>
  <p>The issues from both apporaches are combined (243 issues using the bug labels, 1,752 using keywords). Finally, the issues are manually inspected to verify that they are closed issues related to WebAssembly with a reported bug fix. This manual inspection brings the number of issues to the final number of 1,400.</p>
+
+ <h4>Qualitative Study Bug Collection</h4>
+<p>We obtain the bug for the qualitiative study by filtering the dataset used in the quantitative study (1,400 samples) to those that belong to Emsscripten (430 samples) and contain a bug-inducing input (142 samples). </p>
 
  <h3 id="figures"><a href="https://github.com/wasm-compiler-bugs/wasm-compiler-bugs.github.io/tree/master/Figures">Figures</a></h3>
 
@@ -111,12 +118,12 @@ layout: default
  <h3 id="code"><a href="https://github.com/wasm-compiler-bugs/wasm-compiler-bugs.github.io/tree/master/Code">Code</a></h3>
  <p>This folder contains the source code used to crawl GitHub for the bug samples and the script used to build the visualizations for it. </p>
  <h2 id="qualitative-study">Qualitative Study</h2>
- <p>We perform a qualitative analysis on 142 bugs. We obtain these bugs by filtering the dataset used in the quanititative study (1,400 samples) to those that belong to Emsscripten (430 samples) and contain a bug-inducing input (142 samples). We collect the information in the qualitative study through the following steps: </p>
+ <p>We perform a qualitative analysis on 142 bugs. We collect the information in the qualitative study through the following steps: </p>
  <ol>
  <li>Beginning with the Columns <em>ID</em> and <em>URL</em>, we first visit the issue page through the link in <em>URL</em>.</li>
  <li>We identify bug-inducing code snippet in the page by reading the initial post and, if need, a few of the following posts. We record the source code language of the bug-inducing input in the <em>Language</em> column and the link to the post containing the bug-inducing input in the <em>Bug Inducing Input Location</em> column.</li>
  <li>We identify the intended functionality that the code snippet is trying to trigger and record in the column <em>Purpose</em>. We list the indicative API/keyword that helps us identify the purpose of the code snippet in the <em>Tested API</em> column.</li>
- <li>We read through all the posts in the issue conversation to find what the compiler developers and/or reporting user found the root cause to be. We summarize the root cause and record it in the <em>Root Cause</em> column. </li>
+ <li>We read through all the posts in the issue conversation to find what the compiler developers and/or reporting user found the root cause to be. We also read any linked issues if the root cause cannot be determined from the issue conversation. We summarize the root cause and record it in the <em>Root Cause</em> column. </li>
  <li>We read through all the posts to find out how the bug was fixed or resolved. We summarize the bug fix and record it in the <em>Bug Fix</em> column.</li>
  <li>After performing Steps 1-5 on all the samples, we look at the root cause summaries in the <em>Root Cause</em> column to group similar ones together. We distinguish the causes by where they occur in the compiler infrastructure (e.g. frontend, linker, lirbaries, etc.. ) or by differences in the languages, platforms, or infrastructures involved (e.g C-to-WebAssembly, WebAssembly-to-JS,...). We record the final categories created in the <em>Root Cause Category</em> column.</li>
  </ol>
