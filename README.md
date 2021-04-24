@@ -1,6 +1,6 @@
-# An Empirical Analysis on WebAssembly Compiler Bugs
+# An Empirical Study on Bugs in WebAssembly Compiler
 
-This repo contains the figures and data presented in the ISSTA 2021 submission "An Empirical Analysis of WebAssembly Compiler Bugs".
+This repo contains the figures and data presented in the ASE 2021 submission "An Empirical Study on Bugs in WebAssembly Compiler".
 
 ## Findings
 
