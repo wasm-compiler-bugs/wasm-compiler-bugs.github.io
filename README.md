@@ -1,6 +1,6 @@
-# An Empirical Study on Bugs in WebAssembly Compiler
+# An Empirical Study on Bugs in WebAssembly Compilers
 
-This repo contains the figures and data presented in the ASE 2021 submission "An Empirical Study on Bugs in WebAssembly Compiler".
+This repo contains the figures and data presented in the ASE 2021 submission "An Empirical Study on Bugs in WebAssembly Compilers".
 
 ## Findings
 
