@@ -80,7 +80,7 @@ the indirect calls used here can pass i64 values to the appropriate
 function when legalization is not required.
 
 ## Quantitative Study
-<img src="https://github.com/wasm-compiler-bugs/wasm-compiler-bugs.github.io/raw/master/Tables/Table3.PNG" alt="Table 3: Bug Dataset" width="600">
+<img src="https://github.com/wasm-compiler-bugs/wasm-compiler-bugs.github.io/raw/master/Tables/Table3.PNG" alt="Table 3: Bug Dataset" width="500">
 
 In the second study, we perform a quantitative study on 1,316 bugs among six WebAssembly compilers, namely AssemblyScript, Binaryen, Emscripten, and Wasm-Bindgen. These bugs are obtained by scanning the repositories of the six compilers listed above, which where obtained form [this list](https://github.com/mbasso/awesome-wasm). We first use the GitHub Search API to collect all the closed issues that had a label indiciating the issue was a bug, including "bug", "good first bug", "breaking change", etc... This produced a total of 243 issues. 
 
