@@ -1,145 +1,988 @@
-ID,URL,Language,Bug Inducing Input Location,Purpose,Tested API,Root Cause,Root Cause Category,Bug Fix
-52858,https://github.com/emscripten-core/emscripten/issues/10654,C++,https://github.com/emscripten-core/emscripten/issues/10654#issue-576985606,Threading,emscripten_atomic_exchange_u8,Incorrect variable types/casting,Data Type Incompatibilities,Fix incorrect variable type
-53006,https://github.com/emscripten-core/emscripten/pull/10506,C++,https://github.com/emscripten-core/emscripten/pull/10506#issue-377273583,HTML5,"emscripten_enter_soft_fullscreen, emscripten_exit_soft_fullscreen",Missing function definition,Missing Symbol,Add function
-53127,https://github.com/emscripten-core/emscripten/issues/10385,C,Test case for emscripten stray syscall issue · GitHub,Filesystem,"__syscall3, FS.read",Bad function definition in external component,Missing Symbol,Replace FS object in syscalls with assertions when FS is disabled
-53516,https://github.com/emscripten-core/emscripten/issues/9996,C,https://github.com/emscripten-core/emscripten/issues/9996#issue-535398034,Exception Handling,"EPERM, __WASI_ERRNO_PERM, DAV1D_ERR",Incorrect variable types/casting,Data Type Incompatibilities,Change variable type used
-53611,https://github.com/emscripten-core/emscripten/issues/9901,C++,https://github.com/emscripten-core/emscripten/issues/9901#issue-528903620,"Dynamic Pointers, Function Signature Types","EMSCRIPTEN_KEEPALIVE, Module.dynamicLibraries",Inconsistent function names with prior compiler versions,Missing Symbol,Add missing function name lookup
-53662,https://github.com/emscripten-core/emscripten/issues/9850,C++,https://github.com/emscripten-core/emscripten/issues/9850#issue-523926945,Indirect Calls,"typedef, long long",Type of value returned from Wasm to JS,Data Type Incompatibilities ,Fix i64 value legalization
-53877,https://github.com/emscripten-core/emscripten/issues/9635,C++,https://github.com/emscripten-core/emscripten/issues/9635#issue-506239249,Program-Level Features,No main(),"Main function not required, but symbol is exported",Emit Unneeded Symbol,Make 'main' symbol export optional
-53950,https://github.com/emscripten-core/emscripten/issues/9562,C++,https://github.com/emscripten-core/emscripten/issues/9562#issue-501403470,"Filesystem, Floating Point Values"," std::fopen, std::fseek, std::fclose",JS-called function return values used in indirect calls have incorrect type,Data Type Incompatibilities ,Export original wasm functions along with Js-wrapped versions to prevent JS legalization issues
-54376,https://github.com/emscripten-core/emscripten/issues/9136,C,https://github.com/emscripten-core/emscripten/issues/9136#issue-475689133,Filesystem,std::fclose,Using 'access' system call with empty string throws null,Faulty Program Logic,Add check for empty string to throw useful error message
-54390,https://github.com/emscripten-core/emscripten/issues/9122,C++,https://github.com/emscripten-core/emscripten/issues/9122#issue-474554352,Bindings,EMSCRIPTEN_BINDINGS,Bind.cpp library needs to compiled with same -rtti setting,Other,Build bind.cpp at link time
-54531,https://github.com/emscripten-core/emscripten/issues/8981,C++,https://github.com/emscripten-core/emscripten/issues/8981#issue-467786122,Templates,"template <typename T> struct, static, template <typename T> T, ",Linker removes initialization function,Bugs in Other Infrastructures,Fix functions in init array
-54577,https://github.com/emscripten-core/emscripten/issues/8935,C,https://github.com/emscripten-core/emscripten/issues/8935#issue-464924167,Setjmp,setjmp,Function alias for malloc breaks canLongjmp function and breaks setjmp tables,Bugs in Other Infrastructures,"Remove string constant comparisons for function names, excludes two functions from being longjump-able"
-54582,https://github.com/emscripten-core/emscripten/issues/8930,C++,https://github.com/emscripten-core/emscripten/issues/8930#issue-464733655,Memory,extern int,Incorrect handling of undefined symbols during linking,Bugs in Other Infrastructures,Change handling of undefined symbol location
-54618,https://github.com/emscripten-core/emscripten/issues/8894,C,https://github.com/emscripten-core/emscripten/issues/8894#issue-462354233,"Inlining, Setjmp","EM_ASM, setjmp",Calls to emscripten_asm_* get consumed,Bugs in Other Infrastructures,Remove invoke_* wrappers from emscripten_asm_* functions
-54784,https://github.com/emscripten-core/emscripten/issues/8728,C,https://github.com/emscripten-core/emscripten/issues/8728#issue-451095270,Templates,"template<typename T>,   static",Bug in wasm-ld emits empty import function,Bugs in Other Infrastructures,Discarded functions are removed from init list
-54789,https://github.com/emscripten-core/emscripten/pull/8723,C,https://github.com/emscripten-core/emscripten/pull/8723#issue-284215060,Sanitizing,UBSAN_OPTIONS': 'print_stacktrace=1',Sanitizers not working in certain v8 environments,Bugs in Other Infrastructures,Add stack trace caching
-55629,https://github.com/emscripten-core/emscripten/issues/7883,C,https://github.com/emscripten-core/emscripten/issues/7883#issue-400761736,Debugger,"-g3, -g4",Option change in Clang discards variable names in debug information,Bugs in Other Infrastructures,Add option preventing value name discard
-55694,https://github.com/emscripten-core/emscripten/issues/7818,C++,https://github.com/emscripten-core/emscripten/issues/7818#issue-396463547,Globals,"double a = emscripten_get_now();
-double b = emscripten_get_now();
-double c = emscripten_get_now();",Global initializers are emitted as redundant initialization functions,Emit Unneeded Symbol,Group into one initialization function call
-55989,https://github.com/emscripten-core/emscripten/issues/7472,C,Emscripten Testcase · GitHub,GL,"glGetVertexAttribiv, GL_VERTEX_ATTRIB_ARRAY_ENABLED","Closure compiler minification breaks ""Math"" import object",Missing Symbol,Exclude Math.* from minifcation
-56062,https://github.com/emscripten-core/emscripten/issues/7399,C++,https://github.com/emscripten-core/emscripten/issues/7399#issue-374593788,"Exception Handling,Indirect Calls",Func *,Functions returning i64 and called through indirection are not being legalized,Data Type Incompatibilities ,Fix wrappers for functions under EMULATED_FUNCTION_POINTERS setting
-56702,https://github.com/emscripten-core/emscripten/issues/6727,C,https://github.com/emscripten-core/emscripten/issues/6727#issue-334009811,SDL,"emscripten_wait, emscripten_sleep",Malloc calls not working with emterpretify functionality,Synchronous/Asynchronous,Add maloc to whitelist of async  emterpretify functions
-57196,https://github.com/emscripten-core/emscripten/issues/6233,C,https://github.com/emscripten-core/emscripten/issues/6233#issue-296532315,Attributes,EMSCRIPTEN_KEEPALIVE,EMSCRIPTEN_KEEPALIVE doesn't preserve function through optimization passes,Bugs in Other Infrastructures,Support new visibility attribute to preserve exported functions 
-57077,https://github.com/emscripten-core/emscripten/issues/6352,C++,https://github.com/emscripten-core/emscripten/issues/6352#issue-306809878,Floating Point Values,int64_t,Outlining is not needed with wasm,Data Type Incompatibilities,Mention in documentation
-57184,https://github.com/emscripten-core/emscripten/issues/6245,C,https://github.com/emscripten-core/emscripten/issues/6245#issue-296823866,Function Export,"__attribute__((visibility(""default"")))",Attributes not preserved through optimization,Bugs in Other Infrastructures,Support new visibility attribute to preserve exported functions 
-57195,https://github.com/emscripten-core/emscripten/issues/6234,C,https://github.com/emscripten-core/emscripten/issues/6234#issue-296535030,Math Library,"exp2, log10, log10f",Some functions in math.h are not included in runtime libraries,Bugs in Other Infrastructures,Add functions from llvm
-58038,https://github.com/emscripten-core/emscripten/issues/5391,C++,https://github.com/emscripten-core/emscripten/issues/5391#issue-243156004,Globals,,Global constructors are optimzed away,Missing Symbol,Add support for not optimizing away all constructors
-58059,https://github.com/emscripten-core/emscripten/issues/5370,C,https://github.com/emscripten-core/emscripten/issues/5370#issue-241358675,Integers,int64_t,Setting EMULATED_FUNCTION_POINTERS option disables 64-bit integers,Data Type Incompatibilities,Fix so that option can be disabled by choice
-58161,https://github.com/emscripten-core/emscripten/issues/5268,C++,https://github.com/emscripten-core/emscripten/issues/5268#issue-233122758,Filesystem,FS.readdir,Filesystem permissions on Windows require different permissions bit ,Platform Differences,Add conditional check for Windows
-58250,https://github.com/emscripten-core/emscripten/issues/5179,C,https://github.com/emscripten-core/emscripten/issues/5179#issue-225381531,"Filesystem, Memory","fopen, fgetc",File path references in old heap are not updated when heap is grown,Memory Allocation Differences,Force --no-heap-copy option to prevent heap growth when filesystem is used
-58435,https://github.com/emscripten-core/emscripten/issues/4994,C,https://github.com/emscripten-core/emscripten/issues/4994#issue-211495143,IndexedDB,"__emscripten_fetch_delete_cached_data, EM_IDB_DELETE, emscripten_fetch_attr_init, emscripten_fetch",Runtime dependency setup is missing __emscripten_fetch_delete_cached_data function,Missing Symbol,Add missing function to init function
-53307,https://github.com/emscripten-core/emscripten/issues/10205,C,https://github.com/emscripten-core/emscripten/issues/10205#issuecomment-576985404,SDL,"SDL_Init, SDL_LogError",Optimization fails when libraries depend on function provided through JavaScript support code,Missing Symbol,Fix optimizer to warn when missing function instead of crashing
-56044,https://github.com/emscripten-core/emscripten/issues/7417,C++,https://github.com/emscripten-core/emscripten/issues/7417#issuecomment-435007276,Socket/Net,"getaddrinfo, struct addrinfo *",Certain networking functions are not implementable on the web and return placeholder IPs,Missing Symbol,Implement in JS
-56106,https://github.com/emscripten-core/emscripten/issues/7323,C,https://github.com/emscripten-core/emscripten/issues/7323#issuecomment-432439885,Inlining,EM_JS,UTF-8 characters broke EM_ASM and EM_JS ,Parsing,Properly encode string as UTF-8
-56910,https://github.com/emscripten-core/emscripten/issues/6519,C++,https://github.com/emscripten-core/emscripten/issues/6519#issuecomment-388333784,Closure Compiler,emscripten_worker_respond,Closure compiler missing function declarations for worker onmessage,Missing Symbol,Add mising closure extern declaration
-57004,https://github.com/emscripten-core/emscripten/issues/6425,C,https://github.com/emscripten-core/emscripten/issues/6425#issuecomment-378821429,Floating Point Values,"typedef float, sinf",Missing float coersions in emterpreter async mode,Data Type Incompatibilities,Add float coersions
-57216,https://github.com/emscripten-core/emscripten/issues/6213,C,https://github.com/emscripten-core/emscripten/issues/6213#issuecomment-364277995,Inlining,asm,EM_ASM not supported in llvm wasm backend,Missing Symbol,Implement EM_ASM as formatted string
-57489,https://github.com/emscripten-core/emscripten/issues/5940,C++,https://github.com/emscripten-core/emscripten/issues/5940#issuecomment-352272116,Inlining,"Module.Pointer_stringify, SDL_Init, SDL_CreateWindow, SDL_DestroyWindow",SDL does not automatically export Module.Pointer_stringify function to use with EM_ASM,Missing Symbol,SDL exports Pointer_stringify automatically
-57843,https://github.com/emscripten-core/emscripten/issues/5586,C++,https://drive.google.com/open?id=0B462aSLeSsPMUFhnNW1iYzhjeHM,Function Export,,Module setting exports all methods by default,Emit Unneeded Symbol,Change setting to not export all methods by default
-53109,https://github.com/emscripten-core/emscripten/issues/10403,C++,https://github.com/emscripten-core/emscripten/issues/10403#issue-562190683,Unresolved Symbol,"wordexp_t, wordexp, wordfree",Wordexp header excluded from build,Missing Symbol,Wordexp.h removed from exclusion list
-53333,https://github.com/emscripten-core/emscripten/issues/10179,C,https://github.com/emscripten-core/emscripten/issues/10179#issue-547808854,"Inlining, Memory",GROWABLE_HEAP_VIEW_I32,Array bounds are shifted unnecessarily,Other,Array bounds are fixed
-53461,https://github.com/emscripten-core/emscripten/issues/10051,C,https://github.com/emscripten-core/emscripten/issues/10051#issuecomment-566232729,HTML5,"emscripten_set_main_loop_timing, emscripten_set_interval, emscripten_set_main_loop",Document shows rendering warning when document is not rendered to page,Synchronous/Asynchronous,Addition check in document hidden attribute added to error print condition
-53689,https://github.com/emscripten-core/emscripten/issues/9823,C,https://github.com/emscripten-core/emscripten/issues/9823#issue-521448554,"Emterpreter, SDL","emscripten_sleep_with_yeld, emsripten_sleep, SDL.audio.queueNewAudioData, SDL.audio.yieldCallback",Sleep callbacks not called in emterpreter asyncify mode,Synchronous/Asynchronous,Add sleep callbacks
-54306,https://github.com/emscripten-core/emscripten/issues/9206,C++,https://github.com/emscripten-core/emscripten/issues/9206#issue-479391268,Asyncify,"f(bool,bool)",ASYNCIFY_WHITELIST command fails to parse inputs correctly on Windows,Platform Differences,Add support to specify arguments through a file to avoid command line parsing
-54358,https://github.com/emscripten-core/emscripten/issues/9154,C,https://github.com/emscripten-core/emscripten/files/3466945/conftests.zip,Socket/Net,"getnameinfo, getpeername",Socket libraries missing some dependency code,Missing Symbol,Add missing dependencies to socket libraries
-54415,https://github.com/emscripten-core/emscripten/issues/9097,C,https://github.com/emscripten-core/emscripten/issues/9097#issue-473622987,HTML5,"emscripten_request_fullscreen_strategy, emscripten_exit_fullscreen, emscripten_set_canvas_element_size, emscripten_set_fullscreenchange_callback, emscripten_set_keydown_callback, emscripten_set_main_loop",Resized callback called in incorrect order when leaving fullscreen ,Faulty Program Logic,Fix callback ordering
-54444,https://github.com/emscripten-core/emscripten/issues/9068,C,https://github.com/emscripten-core/emscripten/issues/9068#issue-472353373,Inlining,EM_ASM,Emcc incorrectly handles newlines on non-Windows platforms,Platform Differences,Fix newline replacement
-54482,https://github.com/emscripten-core/emscripten/issues/9030,C++,https://github.com/emscripten-core/emscripten/issues/9030#issue-470351883,Inlining,EM_ASM,"Inlining causes passed arguments to be evaluated twice, affecting values that cause side-effects",Faulty Program Logic,Change function to get argument types to prevent executing arguments to EM_ASM
-54558,https://github.com/emscripten-core/emscripten/issues/8954,C,https://github.com/emscripten-core/emscripten/issues/8954#issue-466482925,Strings,std::wstring,4-byte chracters are converted to UTF-32 encoding incorrectly,Data Type Incompatibilities ,Improve UTF-32 character encoding
-54571,https://github.com/emscripten-core/emscripten/issues/8941,C,https://github.com/emscripten-core/emscripten/issues/8941#issue-465319622,Memory,unsigned*,BINARYEN_IGNORE_IMPLICIT_TRAPS causes load conditional statement to be incorrectly truncated with optimizations,Bugs in Other Infrastructures,Document behavior
-54633,https://github.com/emscripten-core/emscripten/issues/8879,C,https://github.com/emscripten-core/emscripten/issues/8879#issue-461642566,Inlining,EM_JS,Symbol flags not preserved during linking ,Bugs in Other Infrastructures,Preserve flags during linking
-54875,https://github.com/emscripten-core/emscripten/issues/8637,C,https://github.com/emscripten-core/emscripten/issues/8637#issue-445684831,Memory,,Call to dynamic alloc fails to update heap pinter,Memory Allocation Differences,Remove support for memory growth in dynamicAlloc
-55066,https://github.com/emscripten-core/emscripten/issues/8446,C++,https://github.com/emscripten-core/emscripten/issues/8446#issuecomment-499775442,Threading,"std::async, std::launch::async","Exception thrown within thread initialization gets consumed but not thrown. Instead, a different error is thrown due to continuing in an unstable state",Missing Symbol,Avoid calling later function if not defined
-55502,https://github.com/emscripten-core/emscripten/issues/8010,C++,https://github.com/emscripten-core/emscripten/issues/8010#issue-407157207,"Filesystem, Closure Compiler",fopen,Using closure compiler with ENVIRONMENT=web caused issues due to NODEFS being emitted,Emit Unneeded Symbol,Fix environment check and fix catch statement in write()
-55511,https://github.com/emscripten-core/emscripten/issues/8001,C,https://github.com/emscripten-core/emscripten/issues/8001#issue-406554424,"Threading, Filesystem",pthread_exit,Filesystem function declarations continue to be exported even though NO_FILESYSTEM is specified,Emit Unneeded Symbol,Remove hardcoded exports and make them conditionally export when FS is actually used
-56219,https://github.com/emscripten-core/emscripten/issues/7210,C,https://github.com/emscripten-core/emscripten/issues/7210#issue-365375451,SDL,"ALCint,alcGetIntegerv, ALCchar,alcGetStringiSOFT, _alcGetString",Typo resulted in undefined function being called,Missing Symbol,Fixed function name
-54015,https://github.com/emscripten-core/emscripten/issues/9497,C++,https://github.com/emscripten-core/emscripten/issues/3299,Strings,embind_register_std_wstring,"When string is too large, faulty memory initializing order casuses string remains uninitialized.",Memory Allocation Differences,Fix memory initializing order
-55091,https://github.com/emscripten-core/emscripten/issues/8421,C,https://github.com/emscripten-core/emscripten/issues/8421#issue-431286516,Filesystem,utimes,"assumes that syscalls are the only thing that can require FS support, but there are things like utimes which are implemented in library.js and need the FS",Missing Symbol,Leave other code free to include FS support
-56874,https://github.com/emscripten-core/emscripten/issues/6555,C,https://github.com/mruby/mruby/blob/master/mrbgems/mruby-time/src/time.c,Unresolved Symbol,timespec_get,"don't use the time module in the musl libc, so the func isn't in their JS impl.",Missing Symbol,Add timespec_get to JS implementation
-58242,https://github.com/emscripten-core/emscripten/issues/5187,C,https://github.com/emscripten-core/emscripten/issues/5187#issue-225612119,Memory,mmap,raise RangeError inside mmap(),Memory Allocation Differences,modify the code in that function to handle memory growth
-59528,https://github.com/emscripten-core/emscripten/issues/3896,C,https://github.com/emscripten-core/emscripten/issues/3896#issue-115155787,Inlining,EM_ASM_INT,C preprocessor assumes top-level commas mean additional macro arguments.,Parsing,just make sure the commas are surrounded by parentheses. Nothing can be done to the C preprocessor.
-59635,https://github.com/emscripten-core/emscripten/issues/3788,C,https://github.com/emscripten-core/emscripten/issues/3788#issue-107216556,Integers,_mm_add_epi64,Int64x2 functions are currently not available in optimized builds and they are skipped in test_sse2_full,Bugs in Other Infrastructures,Prevent LLVM's optimizer from emitting silly vector types
-59889,https://github.com/emscripten-core/emscripten/issues/3534,C,https://github.com/emscripten-core/emscripten/issues/3534#issue-87378708,Switch-case,switch,When encounter a large switch-case LLVM may crash,Bugs in Other Infrastructures,Expand big swithes
-57836,https://github.com/emscripten-core/emscripten/issues/5593,C++,https://github.com/emscripten-core/emscripten/issues/5593#issue-258492318,Inlining,EM_ASM_INT,error occurs when inside a string there is a TAB,Parsing,Add support for tabs in EM_ASM
-59036,https://github.com/emscripten-core/emscripten/issues/4392,C++,https://github.com/emscripten-core/emscripten/issues/4392#issue-159601679,Exception Handling,std::uncaught_exception,begin_catch is called more than once on a single exception,Faulty Program Logic,Fix begin_catch called time
-59934,https://github.com/emscripten-core/emscripten/issues/3489,C,https://github.com/emscripten-core/emscripten/issues/3489#issuecomment-109173286,Bindings,embind,trying to call the embinded function with the array as the function argument while the function requires a raw pointer,Missing Symbol,takes an uintptr_t as the input parameter which is the address to the array.
-59987,https://github.com/emscripten-core/emscripten/issues/3436,C++,https://github.com/emscripten-core/emscripten/issues/3436#issue-73091948,Bindings,select_overload,"in the embind code, a variable sometimes can be undefined",Missing Symbol,Fix the undefined problem
-60282,https://github.com/emscripten-core/emscripten/issues/3141,C,https://github.com/emscripten-core/emscripten/issues/3141#issue-54911055,SDL,SDL_JoystickUpdate,emterpreter compilation breaks,Missing Symbol,parse expresions with no output register but with internal subeffects
-59796,https://github.com/emscripten-core/emscripten/issues/3627,C,https://github.com/emscripten-core/emscripten/issues/3627#issuecomment-121979499,Linking,printf,broke printf when NO_FILESYSTEM,Missing Symbol,enable printf to work despite not having any underlying FS
-59755,https://github.com/emscripten-core/emscripten/issues/3668,C,https://github.com/emscripten-core/emscripten/commit/43b35ab9c73cc642f511a3539b76118473488974,Filesystem,realpath(3),something specific to realpath(3),Faulty Program Logic,fix flagsToPermissionString bug
-59658,https://github.com/emscripten-core/emscripten/issues/3765,C,https://github.com/emscripten-core/emscripten/issues/3765#issue-105915755,I/O,printf,bug in test_llvm_lto,Bugs in Other Infrastructures,fix and test --llvm-lto
-59599,https://github.com/emscripten-core/emscripten/issues/3824,C++,https://github.com/emscripten-core/emscripten/issues/3824#issue-108688108,Strings,std::out,libc++ need to raise the priority of it's global constructors,Bugs in Other Infrastructures,ensure a high priority for iostream constructor
-58348,https://github.com/emscripten-core/emscripten/issues/5081,C++,https://github.com/emscripten-core/emscripten/issues/5081#issue-216939116,SDL,SDL_CreateWindow,multi-canvas usage not tested,Incompatible Options,Support window selector in shell.html
-57770,https://github.com/emscripten-core/emscripten/issues/5659,C++,https://github.com/emscripten-core/emscripten/issues/5659#issuecomment-336031087,Inlining,EM_ASM,bug in cocos2d sources,Parsing,fix cocos bug
-57418,https://github.com/emscripten-core/emscripten/pull/6011,C,https://github.com/emscripten-core/emscripten/issues/6010#issue-285280452,Filesystem,fgets,bug in output,Faulty Program Logic,Implement rawPrint and async input in browsers
-57175,https://github.com/emscripten-core/emscripten/pull/6254,C,https://github.com/emscripten-core/emscripten/pull/6254#issuecomment-434897119,"Threading,SDL,GL","SDL_CreateWindow,SDL_GL_CreateContext",current JS-implemented EGL (library_egl.js) is not multithreading aware,Synchronous/Asynchronous,"improves supports for OffscreenCanvas, allowing pthreads"
-57070,https://github.com/emscripten-core/emscripten/issues/6359,C++,https://github.com/emscripten-core/emscripten/issues/6359#issue-307167420,"Memory, Fetch",fetch,memory leak bug in Fetch.js,Memory Allocation Differences,fix the memory leak issue
-56769,https://github.com/emscripten-core/emscripten/issues/6660,C,https://github.com/emscripten-core/emscripten/issues/6660#issue-330103889,Integers,max_align_t,max_align_t not defined libcxx directory,Missing Symbol,Define max_align_t in stddef.h
-56603,https://github.com/emscripten-core/emscripten/issues/6826,C,https://github.com/emscripten-core/emscripten/issues/6826#issue-339479362,Threading,pthread_t,can't use function-calls from Threads to the js-main-loop,Synchronous/Asynchronous,use MAIN_THREAD_ASYNC_EM_ASM
-56052,https://github.com/emscripten-core/emscripten/pull/7409,C++,https://github.com/emscripten-core/emscripten/pull/7409#issuecomment-435197909,Memory,emscripten/val.h,"val::new_() calls an allocator, which become stale after memory growth",Memory Allocation Differences,prevent exception after memory growth
-55274,https://github.com/emscripten-core/emscripten/issues/8238,JS,https://github.com/emscripten-core/emscripten/issues/8238#issue-417452629,Threading,USE_PTHREADS,they disable TEXTDECODER for pthreads,Missing Symbol,Fix UTF8ArrayToString without TEXTDECODER in the case we exit from the loop
-52837,https://github.com/emscripten-core/emscripten/issues/10675,JS,https://drive.google.com/file/d/1rM2AualqVlrt5Ahf0fzahy_kssK9hFCG/view?usp=sharing,Wasm2JS,,"Typo caused functions to be scanned and treated as locals during optimization, cua",Bugs in Other Infrastructures,Fix typo
-53286,https://github.com/emscripten-core/emscripten/issues/10226,C,openssl/digest.c at OpenSSL_1_1_1a · openssl/openssl (github.com),OpenSSL,EVP_MD_CTX_free,Undefined symbol was warning on linking instead of erroring,Bugs in Other Infrastructures,"Rename stub/error functions to a more meaningful name instead of ""unreachable"""
-54383,https://github.com/emscripten-core/emscripten/issues/9129,JS,https://github.com/emscripten-core/emscripten/issues/9129#issue-475135655,Wasm2JS,convertJsFunctionToWasm,"Dead code left in internal convertJsFunctionToWasm function, causing warning",Other,Remove dead code
-55872,https://github.com/emscripten-core/emscripten/issues/7589,C,flatmax/WASM: Foundation for a C++ WebAssembly project (github.com),Bindings,,Compiling to Wasm doesn't bind .so library,Incompatible Options,Disable wasm compilation
-55917,https://github.com/emscripten-core/emscripten/pull/7544,C,https://github.com/emscripten-core/emscripten/pull/7544#issue-232387979,Inlining,EM_JS,"Asterisk of pointer on variable name is kept in JS, producing invalid syntax",Parsing,Fix asterick symbol removal
-55989,https://github.com/emscripten-core/emscripten/issues/7472,C,https://gist.github.com/ILikeBigBoots/bc06e5b0f774e819663c3f18dc3171ae/raw/fc3303b8b69e7ab3b49d6e01fb6b5d35bed3038f/testcase,"Math Library, GL","glGetVertexAttribiv, GL_VERTEX_ATTRIB_ARRAY_ENABLED",Closure compiler removing Math library functions,Missing Symbol,Ignore Math library during minification
-56698,https://github.com/emscripten-core/emscripten/issues/6731,C,https://github.com/emscripten-core/emscripten/issues/6731#issue-334302102,WebIDL,enum,Binding with enums not working in WebIDL,Emit Unneeded Symbol,Remove unnecessary enum typedefs in WebIDL
-56705,https://github.com/emscripten-core/emscripten/issues/6724,C,https://github.com/emscripten-core/emscripten/issues/6724#issue-333854330,"Emterpreter, Source Maps",,Emterpreter bytecode is not compatible with source maps,Incompatible Options,Show error when combining options
-56761,https://github.com/emscripten-core/emscripten/issues/6668,C,https://github.com/kripken/emscripten/files/2085962/SimpleWasmThread.zip,Threading,std::thread,Compiling with -Oz optimizes away necessary pthread functions,Missing Symbol,Explicitly export required pthread methods
-57397,https://github.com/emscripten-core/emscripten/pull/6032,C,https://github.com/emscripten-core/emscripten/pull/6032#issue-161396666,Dead Code Elimination,,MetaDCE cannot scan functions across JS and WebAssembly boundary,Incompatible Options,"Add Js function scanning support, enabling better optimization"
-57593,https://github.com/emscripten-core/emscripten/issues/5836,C,https://github.com/emscripten-core/emscripten/issues/5836#issue-276223920,Optimization,,Emitted JS and WebAssembly boilerplate code contains unnessary code,Emit Unneeded Symbol,Minimize unneeded code exported by default to JS wrapper and Wasm boilerplate
-58030,https://github.com/emscripten-core/emscripten/issues/5399,LLVM IR,https://github.com/emscripten-core/emscripten/issues/5399#issue-244289446,Floating Point Values,"float, frem",frem gets miscompiled with parameters being f32's and return type as f64,Bugs in Other Infrastructures,Fix float parameter type mismatch
-58152,https://github.com/emscripten-core/emscripten/issues/5277,C,https://github.com/emscripten-core/emscripten/issues/5277#issue-233971461,"Integers, Bindings","uint32_t, set_bind_u32",Embind did not properly support 32-bit unsigned integers,Data Type Incompatibilities,Add check for unsigned integer type
-58398,https://github.com/emscripten-core/emscripten/issues/5031,JS,https://github.com/emscripten-core/emscripten/issues/5031#issue-214242638,Emterpreter,ASM_NONE,Emterpreter fails to set up completely,Faulty Program Logic,Switch conditional is modified to bypass incorrect type check on ASM_NONE
-56221,https://github.com/emscripten-core/emscripten/issues/7208,C,https://github.com/emscripten-core/emscripten/issues/7208#issue-365289873,Threading,,"SafeHeap emits atomic float operations, which are not supported by specification",Data Type Incompatibilities,Prevent emitting atomic floats in SafeHeap
-58312,https://github.com/emscripten-core/emscripten/pull/5117,C,https://github.com/emscripten-core/emscripten/pull/5117#issuecomment-293050677,"Bindings, Indirect Calls"," int (*f)(int), void (*fptr)(void)",Function pointer bitcasting is not supported in WebAssembly as it violates call_indirect type checking ,WebAssembly Limitation,Remove function pointer casting and replace with simple pointer return type
-53859,https://github.com/emscripten-core/emscripten/issues/9653,C,https://github.com/emscripten-core/emscripten/issues/9653#issue-508023581,Emar,,Running incremental builds causes Emar to duplicate objects instead of overwriting old ones,Emit Unneeded Symbol,Always add hash prefix to object filenames
-54175,https://github.com/emscripten-core/emscripten/issues/9337,C,https://github.com/emscripten-core/emscripten/issues/9337#issue-486059780,Memory,dlmalloc,system/lib/dlmalloc.c weakly defines the dlxxxx symbols. This means that user code can interfere with dlmalloc in ways that it probably shouldn't,Missing Symbol,Internalize dlmalloc symbols to avoid conflict with user code
-56712,https://github.com/emscripten-core/emscripten/issues/6717,C,https://github.com/emscripten-core/emscripten/issues/6717#issue-333370327,Linking,#NAME?,#if ENVIRONMENT block was stripped out and instead the #else path is taken,Missing Symbol,Fix preprocessor bug handling of truthy values
-56775,https://github.com/emscripten-core/emscripten/issues/6654,C,https://github.com/emscripten-core/emscripten/issues/6654#issue-330006978,Filesystem,#NAME?,only handled the case where it is loaded before the main program,Missing Symbol,Fix file packager separate-metadata when loaded later
-56817,https://github.com/emscripten-core/emscripten/issues/6612,C,https://github.com/emscripten-core/emscripten/issues/6612#issue-328286585,Filesystem,"fseek, fwrite",the test failed because noderawfs.write() attempted to do a seeking fs.writesync() when printing the result to stdout,Missing Symbol,fix bug in noderawfs.llseek()
-56924,https://github.com/emscripten-core/emscripten/issues/6505,C,https://github.com/emscripten-core/emscripten/issues/6505#issue-320395846,I/O,scanf,missing something in handling stdin in src/shell.js,Platform Differences,fix Buffer() deprecation warning in library_tty.js
-56980,https://github.com/emscripten-core/emscripten/issues/6449,C++,https://github.com/emscripten-core/emscripten/issues/6449#issue-314865687,Exception Handling,mutiple inheritance,"don't de-adjust the pointer for a rethrow, used exception key as string instead of int",Missing Symbol,fix exception handling of classes with multiple non-empty bases
-57043,https://github.com/emscripten-core/emscripten/pull/6386,C,https://github.com/emscripten-core/emscripten/pull/6386#issue-177967596,GL,glGetFramebufferAttachmentParameteriv,bug in  src/library_gl.js,Data Type Incompatibilities,fix glGetFramebufferAttachmentParameteriv() when it returns a GL object name
-57419,https://github.com/emscripten-core/emscripten/issues/6010,C,https://github.com/emscripten-core/emscripten/issues/6010#issue-285280452,Filesystem,fgetc,Doesn't support and check UTF-16 file.,Faulty Program Logic,Auto check parameter type on writeFile
-57564,https://github.com/emscripten-core/emscripten/issues/5865,C,https://github.com/emscripten-core/emscripten/issues/5865#issue-277422161,Fetch,emscripten_fetch,attr.requestHeaders are simply ignored,Missing Symbol,Fix fetch API headers implementation
-57955,https://github.com/emscripten-core/emscripten/issues/5474,C,https://github.com/emscripten-core/emscripten/issues/5474#issuecomment-322832960,Strings,setlocale,Value of ENV['LANG'] is set incorrectly. ,Data Type Incompatibilities,ENV['LANG'] set to 'C.UTF-8' instead of 'C'
-58146,https://github.com/emscripten-core/emscripten/issues/5283,C,https://github.com/emscripten-core/emscripten/issues/5283#issue-234316898,Linking,LibraryManager.library,*__postset order incorrect,Faulty Program Logic,Fix order
-58147,https://github.com/emscripten-core/emscripten/issues/5282,C,https://github.com/emscripten-core/emscripten/issues/5282#issue-234285093,Socket/Net,getaddrinfo,getaddrinfo() gets a spurious non-null value for ai_canonname sometimes,Faulty Program Logic,Unconditionally initialize addrinfo.ai_canonname field to 0 if not specified.
-58225,https://github.com/emscripten-core/emscripten/issues/5204,C,https://github.com/emscripten-core/emscripten/issues/5204#issue-226761537,Setjmp,"sigsetjmp, siglongjmp",Emscripten currently does not support signals jmp,WebAssembly Limitation,Add stubs for sigsetjmp / siglongjmp
-58305,https://github.com/emscripten-core/emscripten/issues/5124,C,https://github.com/satoshinm/emglfwbugs/blob/3657a7f505b5d6da9740a0588d6e94b84a27bebf/test_fullscreen_fullwindow_toggle/test_fullscreen_fullwindow_toggle.c,"HTML5,GL",emscripten_request_fullscreen_strategy,"root cause is that the two APIs, GLFW and HTML5 events, are incompatible in this manner",Incompatible Options,Implements monitor-related functions in glfw
-58308,https://github.com/emscripten-core/emscripten/issues/5121,C,https://github.com/satoshinm/emglfwbugs/blob/gh-pages/test_glfw_char_callback/test_glfw_char_callback.c,GL,glfwSetCharCallback,"input such as Cmd-A, is called as if ""a"" was typed.",Faulty Program Logic,Fix glfwSetCharCallback typing with hotkeys
-58309,https://github.com/emscripten-core/emscripten/issues/5120,C,https://github.com/satoshinm/emglfwbugs/blob/gh-pages/test_glfw_cursor_disabled/test_glfw_cursor_disabled.c,GL,glfwGetInputMode,glfwGetInputMode return faulty result of API status,Faulty Program Logic,Implement glfwGetInputMode(GLFW_CURSOR) as Pointer Lock
-58503,https://github.com/emscripten-core/emscripten/issues/4926,C++,https://github.com/emscripten-core/emscripten/issues/4926#issue-205641394,Floating Point Values,ELIMINATE_DUPLICATE_FUNCTIONS,Logic bug in eliminate-duplicate-functions.js,Data Type Incompatibilities,Fix bug in eliminate-duplicate-functions.js
-58619,https://github.com/emscripten-core/emscripten/issues/4810,C,https://github.com/emscripten-core/emscripten/issues/4810#issue-196470916,Unresolved Symbol,-,problem related to -xc++ flag,Missing Symbol,Fix explicitly compiling a header whith -x### flag
-58668,https://github.com/emscripten-core/emscripten/issues/4761,C,https://github.com/emscripten-core/emscripten/issues/4761#issue-192462654,Socket/Net,htons,Miss an entry during connect libc and JS,Missing Symbol,fix missing dependency of gethostbyname on htons
-58785,https://github.com/emscripten-core/emscripten/issues/4643,C,https://github.com/emscripten-core/emscripten/issues/4643#issue-184206823,Exception Handling,,Exceptions are caught and rethrown with more error messages than needed,Emit Unneeded Symbol,Add option to disable catching
-58918,https://github.com/emscripten-core/emscripten/pull/4510,C,https://github.com/emscripten-core/emscripten/pull/4510#issue-82755577,Bindings,array field in struct,array field isn't allowed in struct,Other,Allow array fields in embind's value_object
-59136,https://github.com/emscripten-core/emscripten/issues/4291,C++,https://github.com/emscripten-core/emscripten/issues/4291#issuecomment-258706745,Filesystem,FS.createPreloadedFile,"FS.createPreloadedFile is in JS, where the compiler can't see it",Missing Symbol,Fix html startup problems by ensuring browser.js is included by calling dummy async function
-59176,https://github.com/emscripten-core/emscripten/issues/4251,C,https://github.com/emscripten-core/emscripten/issues/4251#issue-148851616,Floating Point Values,std::pow,compiled methods are sensitive to float precision,Data Type Incompatibilities,use PRECISE_F32 to get the proper precision
-59347,https://github.com/emscripten-core/emscripten/issues/4077,C++,https://github.com/emscripten-core/emscripten/issues/4077#issue-131460950,Linking,extern,Lack symbol check,Missing Symbol,"warn/error on missing js library symbols, avoiding false positives by telling compiler.js which methods were implemented in C"
-59516,https://github.com/emscripten-core/emscripten/issues/3908,C,https://github.com/emscripten-core/emscripten/issues/3908#issue-116326917,"Filesystem, IndexedDB",FS.syncfs,Need to do a single sync at the end of a batch of operations.,Synchronous/Asynchronous,Work around Chrome memory leak/crash by disabling IndexedDB
-59517,https://github.com/emscripten-core/emscripten/issues/3907,C,https://github.com/emscripten-core/emscripten/issues/3907#issue-116128955,Memory,-,large zero-initialized values should be excluded from .mem file,Emit Unneeded Symbol,Detect zero-initialized values and exclude it automatically.
-59532,https://github.com/emscripten-core/emscripten/pull/3892,C++,https://github.com/emscripten-core/emscripten/pull/3892#issue-49524807,"Integers, Threading",std::atomic<int64_t>,"C++11 threading is still unsupported in our pthreads code, partly due to libc++ needs",Data Type Incompatibilities ,Fix __atomic_fetch_add_8() and __atomic_fetch_sub_8() when pthreads are disabled.
-59561,https://github.com/emscripten-core/emscripten/issues/3862,C,https://github.com/emscripten-core/emscripten/issues/3862#issue-112214674,Filesystem,O_CLOEXEC,EINVAL is enforced for all unknown flags,Platform Differences,Ignore O_CLOEXEC flag on NODEFS
-59634,https://github.com/emscripten-core/emscripten/issues/3789,C++,https://github.com/emscripten-core/emscripten/issues/3789#issuecomment-145179278,Integers,m128i,Instruction not yet supported for integer types larger than 64 bits,Data Type Incompatibilities ,Handle bitcast of <4 x i32> to i128
-59636,https://github.com/emscripten-core/emscripten/issues/3787,C++,https://github.com/emscripten-core/emscripten/issues/3787#issue-107208760,SIMD,_mm_set1_ps,SIMD breakage,Data Type Incompatibilities,"fix an unnecessary ad-hoc assign, which can mark a param as a UsedVar"
-59687,https://github.com/emscripten-core/emscripten/issues/3736,C,https://github.com/emscripten-core/emscripten/issues/3736#issue-104674897,Bindings,buffer,The global variable buffer (defined in src/preamble.js) is overwritten by mistake,Missing Symbol,fix buffer variable shadowing src/preamble.js
-59702,https://github.com/emscripten-core/emscripten/issues/3721,C++,https://github.com/emscripten-core/emscripten/issues/3721#issue-103569713,Threading,std::thread,emscripten has a std::thread error on exit,Synchronous/Asynchronous,delete the thread join() funtion in src/Frame.cc
-59787,https://github.com/emscripten-core/emscripten/issues/3636,C,https://github.com/emscripten-core/emscripten/issues/3636#issue-96649357,Threading,pthread,library_pthread.js has bug related to memory allocation,Memory Allocation Differences,fix memory allocation assert in pthreads worker creation code
-59936,https://github.com/emscripten-core/emscripten/issues/3487,C++,https://github.com/emscripten-core/emscripten/issues/3487#issue-83658230,Bindings,EMSCRIPTEN_BINDINGS,getTypeName is not defined in embind.js,Missing Symbol,Fix getTypeName not defined
-60023,https://github.com/emscripten-core/emscripten/issues/3400,C,https://github.com/emscripten-core/emscripten/issues/3400#issue-70579044,SDL,SDL_HWPALETTE,code which is only used for supporting this weird 8 bpp mode should be removed,Other,fix bug with locking an sdl surface not reading the canvas pixel data
-60164,https://github.com/emscripten-core/emscripten/issues/3259,C,https://github.com/emscripten-core/emscripten/issues/3259#issuecomment-81212151,Bindings,expf,the exp2f is not emitted without LTO enabled,Missing Symbol,ensure only enables LTO when there is no optimization flag or -O0 is in effect
-60272,https://github.com/emscripten-core/emscripten/issues/3151,C,https://github.com/emscripten-core/emscripten/issues/3151#issuecomment-71416416,Setjmp,"setjmp, longjmp","Each time we call setjmp immediately after due to a longjmp(the goto RETRY_BLOCK in the code), we will create a new item in the setjmp_table. This will eventually lead to too many setjmps in a function call, build with a higher value for MAX_SETJMPS errors",Faulty Program Logic,"rewrote some of the setjmp support to remove the need for MAX_SETJMPS, it will now grow the space dynamically."
-57064,https://github.com/emscripten-core/emscripten/issues/6365,C,https://github.com/emscripten-core/emscripten/issues/6365#issue-307787344,Math Library,global.Math,Math isn't exported or imported automatically due to bug,Missing Symbol,Fix wasm side module importing of global.Math
-58265,https://github.com/emscripten-core/emscripten/issues/5164,C,https://github.com/emscripten-core/emscripten/issues/5164#issue-224431752,Integers,int64_t,the break 64-bit stuff to 32-bit parts is unable to operate on vectors,Data Type Incompatibilities ,expand i64 to vector
-59533,https://github.com/emscripten-core/emscripten/issues/3890,JS,https://github.com/emscripten-core/emscripten/issues/3890#issuecomment-153347209,GL,glDrawBuffers,bug in Firefox Nightly ,Platform Differences,report to Mozilla
-60253,https://github.com/emscripten-core/emscripten/issues/3170,C++,https://github.com/emscripten-core/emscripten/issues/3170#issuecomment-73235308,SDL,alBufferData? alSourcePlay,"Under some circumstances the audioBuf field might be null, and this leads to a JS exception being thrown",Faulty Program Logic,Check null buffer in runtime
-,https://github.com/emscripten-core/emscripten/issues/10774,C,https://github.com/emscripten-core/emscripten/issues/10774#issuecomment-753413342,Filesystem,opendir,version of emscripten is old(__syscall5 style syscalls have not existed in JS for a long time),Faulty Program Logic,"Fix /proc/self/fd parent node, and also add test for this fake filesystem."
-,https://github.com/emscripten-core/emscripten/issues/8242,C,https://github.com/emscripten-core/emscripten/issues/8242#issue-417583005,Link Time Optimization,USE_PTHREADS,"function exists without adding an explicit export for it, and LTO manages to optimize it out in this case.",Missing Symbol,add thread to library_fetch.js
-,https://github.com/emscripten-core/emscripten/issues/11533,C,https://github.com/emscripten-core/emscripten/issues/11533#issuecomment-653546154,"Memory, Bindings",EMSCRIPTEN_BINDINGS,Embind's destructors are never called for some reason. This causes memory leak.,Faulty Program Logic,Change the code logic related to EXIT_RUNTIME
-,https://github.com/emscripten-core/emscripten/issues/7199,C,https://github.com/emscripten-core/emscripten/issues/7199#issue-364627862,Integers,int64_t,"JS can't represent int64s, causing incorrect computation result",Data Type Incompatibilities ,add FAQ regarding int64s in JS
+ï»¿Bug Details,,,,,Categorizations,,,,,,Reporting Details,,,,,,,,Reproducing Difficulty,,,,,Reduction
+ ID,URL,Title,Created Date,Closed Date,WebAssembly-Specific Paradigm,Bug Fix Link,Root Cause Category,Root Cause Category 2,Bug Fix Category,Bug Fix Category 2,Source Code Snippet?,JS Code Snippet?,Stack Trace?,Incorrect Result Output/ Ground Truth Known?,Compiler Options/Command?,Compiler Version?,Runtime Environment?,Faulty WebAssembly Output?,Cannot Reproduce Locally,Developer Reported Difficult to Reproduce,Developer reported difficult to fix,Needs Additional User Action,Needs Additional Client-Side Configuration/Preconditions,Bug-Inducing Input is Simplified/Reduced in Size
+52858,https://github.com/emscripten-core/emscripten/issues/10654,Atomics are miscompiled in wasm backend,2020-03-06,2020-03-06,Data Type Incompatibilities,https://github.com/emscripten-core/emscripten/commit/f89d14ed0c7e6424a8338da0edb5eeebe62e03ba,1. Incorrect Thread-Safe Types,Special Types,Change Casting Type,1. Change Type Used,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,,,FALSE
+53516,https://github.com/emscripten-core/emscripten/issues/9996,errno.h constants regression (wasi types vs preprocessor),2019-12-09,2019-12-13,Data Type Incompatibilities,https://github.com/brion/emscripten/commit/fdac20f39e2cac2f790af4d8e25cb7fa1309ffed,2. Error Code Type Change,Special Types,Change Variable Type,1. Change Type Used,TRUE,FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,,,FALSE
+53662,https://github.com/emscripten-core/emscripten/issues/9850,Indirect call signature mismatch with MAIN_MODULE=1,2019-11-17,2019-11-19,Data Type Incompatibilities,https://github.com/emscripten-core/emscripten/commit/1488c44c521c3d312028a81cf314ed6c8562b2c9,3. i64 Legalization Issue,Native Types,Fix return type legalization,2. Fix/Bypass Legalization,TRUE,FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,,,FALSE
+53950,https://github.com/emscripten-core/emscripten/issues/9562,-s MAIN_MODULE=1 + upstream + function pointer calls using i64 => TypeError: cannot pass i64 to or from JS,2019-10-02,2019-11-14,Data Type Incompatibilities,https://github.com/emscripten-core/emscripten/pull/9810/files,3. i64 Legalization Issue,Native Types,Bypass Legalization,2. Fix/Bypass Legalization,TRUE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,,,TRUE
+56062,https://github.com/emscripten-core/emscripten/issues/7399,EMULATED_FUNCTION_POINTERS=1 issue with EH and functions returning int64,2018-10-27,2019-02-23,Data Type Incompatibilities,https://github.com/emscripten-core/emscripten/pull/8065/files,3. i64 Legalization Issue,Native Types,Fix legalization,2. Fix/Bypass Legalization,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,,,FALSE
+57077,https://github.com/emscripten-core/emscripten/issues/6352,WebAssembly: wrong conversion from double to int64 when OUTLINING_LIMIT isn't 0,2018-03-20,2019-09-26,Data Type Incompatibilities,https://github.com/emscripten-core/emscripten/pull/6371/files,4. Floating Point Precision Issue,Native Types,Add to documentation,3. Add Documentation,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,,,FALSE
+58059,https://github.com/emscripten-core/emscripten/issues/5370,64-bit code generation,2017-07-07,2019-11-20,Data Type Incompatibilities,https://github.com/emscripten-core/emscripten/pull/7498/files,3. i64 Legalization Issue,Native Types,Disable Legalization,2. Fix/Bypass Legalization,TRUE,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,,,FALSE
+57004,https://github.com/emscripten-core/emscripten/issues/6425,EmterpreterAsync -O0 Float errors,2018-04-05,2018-04-06,Data Type Incompatibilities,https://github.com/emscripten-core/emscripten/commit/cbf96bcde4be30f9221597a55b507c039bd217ad,4. Unsupported Floating-Point or Precision Loss,Native Types,Add type support,4. Add/Improve Type Support,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,,,TRUE
+59934,https://github.com/emscripten-core/emscripten/issues/3489,"Embind Reference Error: ""getTypeName is not defined""",2015-06-02,2018-04-02,Data Type Incompatibilities,https://github.com/emscripten-core/emscripten/pull/3809/files,5. Undefined Cross-Langauge Type Function,Undefined Function,Add missing function,5. Add Missing Function,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,Use custom JS Code to call export,,FALSE
+58152,https://github.com/emscripten-core/emscripten/issues/5277,emscripten::val::as<uint32_t> - 'RuntimeError: integer result unrepresentable' where value >= 0x80000000,2017-06-06,2018-03-30,Data Type Incompatibilities,https://github.com/juj/emscripten/commit/d57c2300656c5ea399024f641a8c42e996c25b57,6. Missing i32 Operation,Native Types,Add type support,4. Add/Improve Type Support,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,Use custom JS Code to call export,,FALSE
+58398,https://github.com/emscripten-core/emscripten/issues/5031,`-s WASM=1` not working with emterpreter,2017-03-14,2017-04-10,Data Type Incompatibilities,https://github.com/emscripten-core/emscripten/pull/5046/files,4. Unsupported Floating-Point or Precision Loss,Native Types,Improve float sign handling,4. Add/Improve Type Support,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,,,TRUE
+56221,https://github.com/emscripten-core/emscripten/issues/7208,WASM + USE_PTHREADS doesn't work with SAFE_HEAP,2018-10-01,2018-10-05,Data Type Incompatibilities,https://github.com/WebAssembly/binaryen/commit/e7756828726ec87afeb923a94d785f594de96aa7,1. Incorrect Thread-Safe Types,Special Types,Remove emitted invalid code,6. Fix/Remove Emitted Type Operations,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,,,FALSE
+59176,https://github.com/emscripten-core/emscripten/issues/4251,Single precision floating point issues,2016-04-16,2019-09-25,Data Type Incompatibilities,https://github.com/emscripten-core/emscripten/issues/4251#issuecomment-219486317,4. Unsupported Floating-Point or Precision Loss,Native Types,Provide Workaround,7. Provide Workaround,TRUE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,,,TRUE
+59532,https://github.com/emscripten-core/emscripten/pull/3892,64-bit c++11 atomics do not behave correctly when high bits are set,2015-11-03,2015-11-25,Data Type Incompatibilities,https://github.com/juj/emscripten/commit/ea80084b419fc0fd61399aae993e9aa32099e830,1. Incorrect Thread-Safe Types,Special Types,Fix emitted type,6. Fix/Remove Emitted Type Operations,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,,,FALSE
+59634,https://github.com/emscripten-core/emscripten/issues/3789,LLVM optimizations generate temporary 128-bit integers which fail compilation.,2015-09-18,2019-11-28,Data Type Incompatibilities,https://github.com/emscripten-core/emscripten-fastcomp/pull/124/files,7. Invalid SIMD Type Operations,Special Types,Prevent emitted type,6. Fix/Remove Emitted Type Operations,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,,,TRUE
+59636,https://github.com/emscripten-core/emscripten/issues/3787,Passing SIMD output by reference fails asm.js validation.,2015-09-18,2015-09-22,Data Type Incompatibilities,https://github.com/emscripten-core/emscripten-fastcomp/pull/119/files,7. Invalid SIMD Type Operations,Special Types,Remove emitted invalid code,6. Fix/Remove Emitted Type Operations,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,,,FALSE
+59936,https://github.com/emscripten-core/emscripten/issues/3487,getTypeName is not defined when calling C function,2015-06-01,2018-04-02,Data Type Incompatibilities,https://github.com/emscripten-core/emscripten/pull/3809/files,5. Undefined Cross-Langauge Type Function,Undefined Function,Add missing function,5. Add Missing Function,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,,,FALSE
+58265,https://github.com/emscripten-core/emscripten/issues/5164,Test case of extractelement-incompatibility with Int64-related SIMD,2017-04-26,2019-09-26,Data Type Incompatibilities,https://github.com/emscripten-core/emscripten/commit/2ec641a5bd034ca7b3dffab10be02c8aef0445cb,7. Invalid SIMD Type Operations,Special Types,Provide Workaround,7. Provide Workaround,TRUE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,,,FALSE
+55753,https://github.com/emscripten-core/emscripten/pull/7708,WIP: Fix function pointer calls with new signatures in side modules,2018-12-20,2020-01-04,Data Type Incompatibilities,https://github.com/emscripten-core/emscripten/pull/7708/files,3. i64 Legalization Issue,Native Types,Bypass Legalization,2. Fix/Bypass Legalization,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,,,TRUE
+56230,https://github.com/emscripten-core/emscripten/issues/7199,Incorrect results when calling functions with int64_t parameters.,2018-09-27,2020-01-29,Data Type Incompatibilities,https://github.com/emscripten-core/emscripten/pull/7224/files,3. i64 Legalization Issue,Native Types,Add to documentation,3. Add Documentation,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,,,FALSE
+57120,https://github.com/emscripten-core/emscripten/issues/6309,EMULATE_FUNCTION_POINTER_CASTS and WASM=1,2018-03-07,2018-03-15,Data Type Incompatibilities,https://github.com/emscripten-core/emscripten/commit/286b22c688c53e2784bd30d031a0210ffd9092f4,3. i64 Legalization Issue,Native Types,Improve type metadata handling,4. Add/Improve Type Support,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,,,TRUE
+59120,https://github.com/emscripten-core/emscripten/issues/4307,TypeError: asm.js type error: void incompatible with previous return of type i32,2016-05-10,2016-05-17,Data Type Incompatibilities,https://github.com/emscripten-core/emscripten-fastcomp/commit/84e3c5678fea206b918490d1ab1588aa5bdbf1f3,1. Incorrect Thread-Safe Types,Special Types,Fix invalid emitted code,6. Fix/Remove Emitted Type Operations,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,,,FALSE
+59635,https://github.com/emscripten-core/emscripten/issues/3788,SIMD Int64x2 code fails to build in optimized mode.,2015-09-18,2015-10-07,Data Type Incompatibilities,https://github.com/emscripten-core/emscripten-fastcomp/pull/124/files,7. Invalid SIMD Type Operations,Special Types,Prevent optimizer emitting vector types,6. Fix/Remove Emitted Type Operations,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,,,TRUE
+53689,https://github.com/emscripten-core/emscripten/issues/9823,Asyncify behaving differently then emterpreter,2019-11-12,2019-12-03,Synchronous/Asynchronous,https://github.com/emscripten-core/emscripten/pull/9828/files,3. Missing Sleep Callback,Asyncify,Add Sleep Callbacks,2. Add Sleep Callback,TRUE,FALSE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,,,FALSE
+53461,https://github.com/emscripten-core/emscripten/issues/10051,Looks like you are rendering without using requestAnimationFrame for the main loop,2019-12-16,2019-12-21,Synchronous/Asynchronous,https://github.com/emscripten-core/emscripten/pull/10090/files,2. Redundant Warning Message,Animation,Provide Workaround,3. Add Warning Message,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,,,FALSE
+59516,https://github.com/emscripten-core/emscripten/issues/3908,Race condition can cause redundant IDBFS store sync operations.,2015-11-11,2019-09-07,Synchronous/Asynchronous,https://github.com/emscripten-core/emscripten/pull/3867/files,7. Async API Implementing Sync,IndexedDB,Add to documentation,5. Add Documentation,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,,,FALSE
+56702,https://github.com/emscripten-core/emscripten/issues/6727,EMTERPRETIFY + SDL2 + emscripten_sleep = abort,2018-06-20,2018-07-06,Synchronous/Asynchronous,https://github.com/emscripten-core/emscripten/pull/6749/files,1. Incorrect Emterpretify Stack State,Emterpreter,Improve State Checking,1. Improve State Checking,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,Click page,,FALSE
+60282,https://github.com/emscripten-core/emscripten/issues/3141,SDL 2 SDL_JoystickUpdate() breaks emterpreter compilation,2015-01-20,2015-01-20,Synchronous/Asynchronous,https://github.com/emscripten-core/emscripten/commit/e22c24cd7b39b1c7f5c93a406ff7678d4e296ee1,4. Emterpreter Parsing Errors,Emterpreter,Improve Side Effect Checking,4. Improve Emterpreter Parsing,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,,,FALSE
+56705,https://github.com/emscripten-core/emscripten/issues/6724,EMTERPRETIFY incompatible with g4,2018-06-19,2018-06-22,Synchronous/Asynchronous,https://github.com/emscripten-core/emscripten/commit/f18422704fe7873c2bf74b38e1139bf2269773da,6. Missing Features in Emterpreter,Emterpreter,Add to documentation,7. Throw Exception,TRUE,FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,,,FALSE
+55524,https://github.com/emscripten-core/emscripten/issues/7988,Emterpreter and changing function names,2019-02-03,2019-09-14,Synchronous/Asynchronous,https://github.com/Beuc/emscripten/commit/66c4e1d839368ef8dbd089d057a3db7bda84e166,8. Function Names Non-Deterministic,Emterpreter,Support Whitelisting By Pattern,6. Improve Function Whitelisting ,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,,,FALSE
+57713,https://github.com/emscripten-core/emscripten/issues/5716,"llvm.round.f32/f64, libc round() and rint() rounding mode errors",2017-10-26,2019-09-26,Synchronous/Asynchronous,https://github.com/emscripten-core/emscripten/pull/5725/files,4. Emterpreter Parsing Errors,Emterpreter,Fix double constant check,4. Improve Emterpreter Parsing,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,,,FALSE
+56611,https://github.com/emscripten-core/emscripten/issues/6818,EMTERPRET abort(-12) in 1.38.8 with SDL,2018-07-06,2019-09-26,Synchronous/Asynchronous,https://github.com/emscripten-core/emscripten/pull/6822/files,1. Incorrect Emterpretify Stack State,Emterpreter,Improve State Checking,1. Improve State Checking,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,,,TRUE
+56625,https://github.com/emscripten-core/emscripten/issues/6804,EMTERPRETIFY and unary ! operator,2018-07-03,2018-07-05,Synchronous/Asynchronous,https://github.com/emscripten-core/emscripten/commit/12fcd271f1d2502740a6c7f8c5f8e9ddd4ff1ab4,4. Emterpreter Parsing Errors,Emterpreter,Fix logical-not detection,4. Improve Emterpreter Parsing,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,,,FALSE
+56691,https://github.com/emscripten-core/emscripten/issues/6738,EMTERPRETIFY and % operator,2018-06-22,2018-06-28,Synchronous/Asynchronous,https://github.com/emscripten-core/emscripten/pull/6763/files,4. Emterpreter Parsing Errors,Emterpreter,Fix signed modulo operands,4. Improve Emterpreter Parsing,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,,,FALSE
+59378,https://github.com/emscripten-core/emscripten/issues/4046,debugging async emterpreter failure,2016-01-20,2016-01-21,Synchronous/Asynchronous,https://github.com/emscripten-core/emscripten/commit/d666686e2df1cc2b4e1993acad52b14ab2ddeb87,6. Missing Features in Emterpreter,Emterpreter,Add blocked function to Whitelist,6. Improve Function Whitelisting ,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,,,TRUE
+58250,https://github.com/emscripten-core/emscripten/issues/5179,Cannot access packaged files after memory growth,2017-05-01,2017-11-13,Memory Allocation Differences,https://github.com/juj/emscripten/commit/42d8c853c4cc500b7490a2a2377f3e3fa381ae5e,1. Stale Reference,1. Stale Reference,Prevent holding on to references,1. Clean Up/Update References,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,,,FALSE
+54875,https://github.com/emscripten-core/emscripten/issues/8637,dynamicAlloc() doesn't work with memory growth,2019-05-18,2019-05-21,Memory Allocation Differences,https://github.com/emscripten-core/emscripten/pull/8643/files,1. Stale Reference,1. Stale Reference,Throw Exception ,2. Add Exception,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,,One memory growth call,FALSE
+54015,https://github.com/emscripten-core/emscripten/issues/9497,embind serialization of string to std::wstring fails if memory growth happens,2019-09-25,2019-09-25,Memory Allocation Differences,https://github.com/emscripten-core/emscripten/commit/edb65f82a72564b236802cefba1e01afb012c19c,1. Stale Reference,1. Stale Reference,Update reference,1. Clean Up/Update References,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,,,FALSE
+58242,https://github.com/emscripten-core/emscripten/issues/5187,mmap and memory growth,2017-05-02,2019-11-05,Memory Allocation Differences,https://github.com/emscripten-core/emscripten/pull/5190/files,1. Stale Reference,1. Stale Reference,Change reference to use global object instead of parameter,1. Clean Up/Update References,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,,,FALSE
+57070,https://github.com/emscripten-core/emscripten/issues/6359,Memory-leak in fetch API,2018-03-21,2018-07-10,Memory Allocation Differences,https://github.com/haberbyte/emscripten/commit/42946185ecaf630c539146d26d36b4e21e257b71,2. Memory Leak,2. Memory Leak,Handle resource freeing,3. Free Unused Resources,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,,,FALSE
+56052,https://github.com/emscripten-core/emscripten/pull/7409,prevent exception in val::new_() after memory growth,2018-10-30,2018-11-06,Memory Allocation Differences,https://github.com/emscripten-core/emscripten/pull/7409/files,1. Stale Reference,1. Stale Reference,Change reference to use global object instead of parameter,1. Clean Up/Update References,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE,TRUE,FALSE,,,FALSE
+59517,https://github.com/emscripten-core/emscripten/issues/3907,Exclude zero-initialized values from .mem file,2015-11-10,2015-11-13,Memory Allocation Differences,https://github.com/emscripten-core/emscripten/commit/e7599a1e9da218abf4053d4ff282342fbe4730c2,3. Initial Memory File Includes Zeros,3. Initial Memory File Includes Zeros,Exclude zero-initialized values,3. Free Unused Resources,TRUE,FALSE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,,,FALSE
+59787,https://github.com/emscripten-core/emscripten/issues/3636,USE_PTHREADS freezes Firefox Nightly 42.0a1,2015-07-22,2015-11-18,Memory Allocation Differences,https://github.com/emscripten-core/emscripten/commit/1cf114cc244d769d9f24b3e8da49705f885c016f,Worker Memory Allocation Request Hangs,Worker Memory Allocation Request Hangs,Change allocation method,4. Improve Initial Allocation,TRUE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,,,FALSE
+53333,https://github.com/emscripten-core/emscripten/issues/10179,RangeError: start offset of Int32Array should be a multiple of 4,2020-01-10,2020-01-15,Memory Allocation Differences,https://github.com/emscripten-core/emscripten/pull/10189/files,4. Unnecessary Memory Boundary Shifting,4. Unnecessary Memory Boundary Shifting,Remove shifting functions,5. Fix Memory Bounds,TRUE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,,,FALSE
+53925,https://github.com/emscripten-core/emscripten/issues/9587,"Build regression: ""STANDALONE_WASM does not support memory growth yet""",2019-10-07,2019-10-09,Memory Allocation Differences,https://github.com/emscripten-core/emscripten/pull/9588/files,5. Memory Growth Unnecessarily disabled,5. Memory Growth Unnecessarily disabled,Remove uneeded assertion,6. Enable Functionality,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,,,FALSE
+53704,https://github.com/emscripten-core/emscripten/issues/9808,Malloc behavior on full heap,2019-11-08,2019-11-08,Memory Allocation Differences,https://github.com/emscripten-core/emscripten/commit/2f73b388547f979492fe1e734e1e2475d28e46c6,6. Memory Overflow,6. Memory Overflow,Add memory size limit check,5. Fix Memory Bounds,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,,No more available space,FALSE
+57844,https://github.com/emscripten-core/emscripten/issues/5585,ALLOW_MEMORY_GROWTH not supported with -s MAIN_MODULE and -s WASM=1,2017-09-13,2017-09-14,Memory Allocation Differences,https://github.com/emscripten-core/emscripten/pull/5589/files,5. Memory Growth Unnecessarily disabled,5. Memory Growth Unnecessarily disabled,Enable feature,6. Enable Functionality,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,,,FALSE
+54531,https://github.com/emscripten-core/emscripten/issues/8981,wasm-ld bug,2019-07-14,2019-07-17,Bugs in Other Infrastructures,https://reviews.llvm.org/D64872,Conflicting Template Variables Issue,1. LLVM wasm Backend (wasm-ld linking error),Fix in wasm-ld project,1. Fix in wasm-ld project,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,,,FALSE
+54577,https://github.com/emscripten-core/emscripten/issues/8935,setjmp breaks with WASM_OBJECT_FILES=0,2019-07-07,2019-09-03,Bugs in Other Infrastructures,https://reviews.llvm.org/D67129,WASM_OBJECT_FILES Setjmp Issue,1. LLVM wasm Backend (Codegen),Fix in LLVM WebAssembly Codegen project,2. Fix in LLVM WebAssembly Codegen project,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,,,FALSE
+54582,https://github.com/emscripten-core/emscripten/issues/8930,Wasm backend: invalid data relocation hits LLVM unreachable,2019-07-05,2019-07-18,Bugs in Other Infrastructures,https://reviews.llvm.org/D64280,Undefined Pointer Location Issue,1. LLVM wasm Backend (wasm-ld linking error),Fix in wasm-ld project,1. Fix in wasm-ld project,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,,,FALSE
+54618,https://github.com/emscripten-core/emscripten/issues/8894,wasm backend: EM_ASM incompatible with setjmp,2019-06-30,2019-08-16,Bugs in Other Infrastructures,https://reviews.llvm.org/D65358,EM_ASM Setjmp Issue,1. LLVM wasm Backend (wasm-ld linking error),Fix in wasm-ld project,1. Fix in wasm-ld project,TRUE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,,,FALSE
+54784,https://github.com/emscripten-core/emscripten/issues/8728,Template static variable failing in new upstream Clang,2019-06-01,2019-06-07,Bugs in Other Infrastructures,https://reviews.llvm.org/D62983,Conflicting Template Variables Issue,1. LLVM wasm Backend (wasm-ld linking error),Fix in wasm-ld project,1. Fix in wasm-ld project,TRUE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,,,FALSE
+54789,https://github.com/emscripten-core/emscripten/pull/8723,Port sanitizer stack traces to emscripten,2019-05-31,2019-06-07,Bugs in Other Infrastructures,https://bugs.chromium.org/p/v8/issues/detail?id=9262,Stack Trace Format Issue,5. V8,Fix in V8 project,3. Fix in V8 Project,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,,,FALSE
+55629,https://github.com/emscripten-core/emscripten/issues/7883,1.38.24 does not generate asm.js with correct variable names with -g3/g4,2019-01-18,2019-03-19,Bugs in Other Infrastructures,https://github.com/VirtualTim/emscripten/commit/8b86f6e84c797f3155d3a889c6419e8cbc4a235d,Incorrect Variable Names Issue,3. Clang,Add flag to Clang options preventing value name discarding,4. Use Workaround,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,,,FALSE
+57196,https://github.com/emscripten-core/emscripten/issues/6233,EMSCRIPTEN_KEEPALIVE doesn't work with WebAssembly backend,2018-02-12,2019-02-08,Bugs in Other Infrastructures,https://reviews.llvm.org/D57869,Export Function Lost,1. LLVM wasm Backend (wasm-ld linking error),Fix in wasm-ld project,1. Fix in wasm-ld project,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,TRUE,,,FALSE
+57184,https://github.com/emscripten-core/emscripten/issues/6245,WASM backend + lld require strange combination to export a function,2018-02-13,2018-08-28,Bugs in Other Infrastructures,https://reviews.llvm.org/D57869,Export Function Lost,1. LLVM wasm Backend (wasm-ld linking error),Fixed by other patch,1. Fix in wasm-ld project,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,,,FALSE
+57216,https://github.com/emscripten-core/emscripten/issues/6213,BREAKING EM_ASM API change,2018-02-07,2018-02-14,Bugs in Other Infrastructures,https://github.com/emscripten-core/emscripten/pull/6163/files,EM_ASM Issue,1. LLVM wasm backend (EM_ASM not supported),Implement EM_ASM using a format string,1. Fix in wasm-ld project,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,,,FALSE
+54571,https://github.com/emscripten-core/emscripten/issues/8941,Out of bounds memory access with Os & BINARYEN_IGNORE_IMPLICIT_TRAPS=1,2019-07-08,2019-07-10,Bugs in Other Infrastructures,https://github.com/emscripten-core/emscripten/pull/8957/files,BINARYEN_IGNORE_IMPLICIT_TRAPS Issue,2. Binaryen (ignore implicit traps),Provide Workaround,4. Use Workaround,TRUE,FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,,,FALSE
+54633,https://github.com/emscripten-core/emscripten/issues/8879,EM_JS code fails when using upstream Clang,2019-06-27,2019-09-25,Bugs in Other Infrastructures,https://reviews.llvm.org/D67729,Linking Object Files Issue,1. LLVM wasm Backend (wasm-ld linking error),Fix in wasm-ld project,1. Fix in wasm-ld project,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,,,FALSE
+59889,https://github.com/emscripten-core/emscripten/issues/3534,Add support for compiling switch-cases of unbounded length.,2015-06-11,2015-06-18,Bugs in Other Infrastructures,https://github.com/emscripten-core/emscripten-fastcomp/pull/102/files,Large Switch Case Issue,4. Firefox,Fix in Firefox project,5. Fix in Firefox project,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,TRUE,,,TRUE
+59599,https://github.com/emscripten-core/emscripten/issues/3824,Using std::cout before main has been entered,2015-09-28,2015-09-29,Bugs in Other Infrastructures,https://reviews.llvm.org/D31413,IOStream Priority Issue,1. LLVM C++ (libcxx attribute error),Fix in libcxx project,6. Fix in libcxx project,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,,,FALSE
+58030,https://github.com/emscripten-core/emscripten/issues/5399,frem float miscompilation,2017-07-20,2017-07-20,Bugs in Other Infrastructures,https://github.com/WebAssembly/binaryen/commit/da680fdbcb7eaad1c692369c7c826fc02b00c877,Floating Point Remainder Operation Issue,2. Binaryen (asm2wasm float parsing),Fix in asm2wasm project,7. Fix in asm2wasm project,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,,,FALSE
+58377,https://github.com/emscripten-core/emscripten/issues/5052,Entering full screen from touch event handlers does not work,2017-03-19,2019-09-06,Bugs in Other Infrastructures,https://github.com/emscripten-core/emscripten/commit/ac437dd95947842966504f88600f79258e4ca5fc,Fullscreen Touch Events Issue,4. Firefox,Fix in Firefox project,8. Fix in Firefox project,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,,,FALSE
+58395,https://github.com/emscripten-core/emscripten/issues/5034,RuntimeError: indirect call signature mismatch,2017-03-15,2019-09-06,Bugs in Other Infrastructures,https://github.com/emscripten-core/emscripten/issues/5034#issuecomment-320788792,Wasm+Asm.js Build Issue,5. V8,Fix in V8 project,3. Fix in V8 Project,FALSE,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,,,FALSE
+59562,https://github.com/emscripten-core/emscripten/issues/3861,pauseWebAudio failed: TypeError: Not enough arguments on Safari,2015-10-19,2019-09-07,Bugs in Other Infrastructures,https://github.com/emscripten-core/emscripten/issues/3861#issuecomment-149704445,WebAudio Control Issue,6. Safari,Provide Workaround,4. Use Workaround,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,,,FALSE
+54195,https://github.com/emscripten-core/emscripten/issues/9317,Assertion `gotIndex == INVALID_INDEX' failed,2019-08-25,2019-09-25,Bugs in Other Infrastructures,https://reviews.llvm.org/D66784,FPIC Issue,1. LLVM wasm Backend (wasm-ld linking error),Fix in wasm-ld project,1. Fix in wasm-ld project,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,,,FALSE
+54499,https://github.com/emscripten-core/emscripten/issues/9013,wasm-backend: Code compiled with fPIC is not compatible with regular executables,2019-07-17,2019-11-04,Bugs in Other Infrastructures,https://bugs.llvm.org/show_bug.cgi?id=42656,FPIC Issue,1. LLVM wasm Backend (wasm-ld linking error),Fix in wasm-ld project,1. Fix in wasm-ld project,TRUE,FALSE,TRUE,FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,,,FALSE
+54938,https://github.com/emscripten-core/emscripten/issues/8574,LTO flags with wasm backend,2019-05-09,2019-07-16,Bugs in Other Infrastructures,https://bugs.llvm.org/show_bug.cgi?id=40412,Link Time Optimization Issue,1. LLVM wasm Backend (wasm-ld linking error),Fix in wasm-ld project,1. Fix in wasm-ld project,FALSE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,,,FALSE
+56306,https://github.com/emscripten-core/emscripten/issues/7123,"Links OK with -O1, but crashes in asm2wasm with -O2 or -O3",2018-09-14,2018-09-15,Bugs in Other Infrastructures,https://github.com/WebAssembly/binaryen/pull/1681/files,Floating Point Modulo Operation Issue,2. Binaryen (asm2wasm float parsing),Fix in asm2wasm project,7. Fix in asm2wasm project,FALSE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,,,FALSE
+59533,https://github.com/emscripten-core/emscripten/issues/3890,Error: WebGL: drawBuffers: invalid <buffers> (buffers must not be empty),2015-11-02,2015-11-02,Bugs in Other Infrastructures,https://bugzilla.mozilla.org/show_bug.cgi?id=1221077,WebGL drawBuffers Issue,4. Firefox,Fix in Firefox project,8. Fix in Firefox project,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,,,TRUE
+56895,https://github.com/emscripten-core/emscripten/issues/6534,SAFE_HEAP=1 breaks source map generation for WASM,2018-05-15,2019-02-12,Bugs in Other Infrastructures,https://github.com/WebAssembly/binaryen/pull/1557,Source Maps in Wasm-Opt Unsupported,2. Binaryen (wasm-opt source maps),Fix in wasm-opt project,9. Fix in wasm-opt project,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,,,FALSE
+58714,https://github.com/emscripten-core/emscripten/issues/4715,The parser is failing when _emscripten_replace_memory is present,2016-11-10,2016-11-11,Bugs in Other Infrastructures,https://github.com/WebAssembly/binaryen/pull/835/files,ONLY_MY_CODE Issue,2. Binaryen (asm2wasm parsing),Fix in asm2wasm project,7. Fix in asm2wasm project,FALSE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,,,FALSE
+55989,https://github.com/emscripten-core/emscripten/issues/7472,glGetVertexAttribiv throws TypeError when using closure,2018-11-08,2018-11-10,Cross-Language Optimizations,https://github.com/haberbyte/emscripten/commit/c9386afb6e9724f9c2935f8a5b0a71604b71f605,Closure Math Issue,1. Optimizer Removes Symbol,Prevent minifying Math functions,1. Prevent Optimization,TRUE,FALSE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,,,FALSE
+53307,https://github.com/emscripten-core/emscripten/issues/10205,acorn-optimizer.js fails with SDL_Init() if O3 optimization is set,2020-01-14,2020-01-28,Cross-Language Optimizations,https://github.com/emscripten-core/emscripten/pull/10273/files,MetaDCE SDL Standalone Issue,1. Optimizer Removes Symbol,Support missing functions not emitted in standalone,2. Add Warning Message,TRUE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,,,FALSE
+59658,https://github.com/emscripten-core/emscripten/issues/3765,Missing input file for `--llvm-lto 3`,2015-09-10,2015-09-11,Cross-Language Optimizations,https://github.com/emscripten-core/emscripten/commit/5ec0fe2ad5d7a128b7b4c187dd92d4ad913963db,Link Time Optimization Issue,2. Syntax Issue in Optimizer,Fix incorrect file path,3. Fix Typo,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,,,FALSE
+52837,https://github.com/emscripten-core/emscripten/issues/10675,LLVM backend producing js with Optimisation fails to run TypeError: r is not a function,2020-03-10,2020-03-12,Cross-Language Optimizations,https://github.com/emscripten-core/emscripten/commit/237082e69aba30be692b921820875dcf7bd57a5a,JS Optimizer Local Scope Issue,3. Incorrect Optimization Scope,Fix typo,3. Fix Typo,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,,,FALSE
+54322,https://github.com/emscripten-core/emscripten/issues/9190,USE_PTHREADS=1 and ALLOW_MEMORY_GROWTH=1 restricts --js-library file in ES5.,2019-08-09,2019-12-09,Cross-Language Optimizations,https://github.com/emscripten-core/emscripten/pull/9629/files,JS Optimizer Pthreads and Memory Growth Issue,2. Syntax Issue in Optimizer,Change optimizer to Acorn Optimizer,6. Change Optimizer,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,,,FALSE
+53195,https://github.com/emscripten-core/emscripten/issues/10317,"FS.mount, WORKERFS is undefined",2020-01-30,2020-02-06,Cross-Language Optimizations,https://github.com/emscripten-core/emscripten/pull/10368/files,Closure Filesystem Issue,1. Optimizer Removes Symbol,Handle exporting FS object in Closure,1. Prevent Optimization,FALSE,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,,,FALSE
+56552,https://github.com/emscripten-core/emscripten/issues/6877,emscripten_is_webgl_context_lost and Closure,2018-07-19,2018-07-25,Cross-Language Optimizations,https://github.com/emscripten-core/emscripten/pull/6891/files,Closure WebGL Issue,1. Optimizer Removes Symbol,Prevent minifying WebGL context object,1. Prevent Optimization,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,,,FALSE
+56987,https://github.com/emscripten-core/emscripten/issues/6442,Document CommonJS/AMD support,2018-04-12,2019-09-26,Cross-Language Optimizations,https://github.com/emscripten-core/emscripten/pull/6477/files,MetaDCE Function Scope Issue,3. Incorrect Optimization Scope,Add warning message,2. Add Warning Message,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,,,FALSE
+52919,https://github.com/emscripten-core/emscripten/issues/10593,WASM=2 and symbol maps,2020-02-27,2020-03-03,Cross-Language Optimizations,https://github.com/emscripten-core/emscripten/pull/10633/files,Symbol Map JS Optimizer Issue,4. Optimizer Incorrectly Disabled,Fix incorrect side effect,1. Prevent Optimization,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,,,FALSE
+53707,https://github.com/emscripten-core/emscripten/issues/9805,Closure compiler breaks web worker JS by optimizing (Dedicated)WorkerGlobalScope symbols,2019-11-08,2019-12-04,Cross-Language Optimizations,https://github.com/emscripten-core/emscripten/pull/9945/files,Closure WebWorker Issue,1. Optimizer Removes Symbol,Prevent minifying DedicatedWorkerGlobalScope fields,4. Add Missing Externally-Defined Function Definitions,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,,,FALSE
+56283,https://github.com/emscripten-core/emscripten/issues/7146,asm2wasm error when trying to use emterpretify_async with emterpretify_whitelist,2018-09-19,2018-10-06,Cross-Language Optimizations,https://github.com/emscripten-core/emscripten/pull/7157/files,JS Optimizer Coercion Issue,1. Optimizer Removes Symbol,Add check to prevent removing coercion during optimization,1. Prevent Optimization,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,,,FALSE
+58415,https://github.com/emscripten-core/emscripten/issues/5014,"Emscripten minifies asm.js code before calling asm2wasm, crashing cashew in assert(isNode);",2017-03-09,2017-08-07,Cross-Language Optimizations,https://github.com/emscripten-core/emscripten/pull/5015/files,JS Optimizer Asm2Wasm Minified Input Issue,1. Optimizer Removes Symbol,Prevent minifying asm.js before inputting into asm2wasm,1. Prevent Optimization,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,,,FALSE
+53006,https://github.com/emscripten-core/emscripten/pull/10506,Add missing removeEventListener extern.,2020-02-19,2020-02-21,Cross-Language Optimizations,https://github.com/emscripten-core/emscripten/pull/10506/commits/de763b30f07135cc0e2543492eebc38e380a763a,Closure HTML5 Issue,1. Optimizer Removes Symbol,Add missing HTML5 API closure externs,4. Add Missing Externally-Defined Function Definitions,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,,,FALSE
+58880,https://github.com/emscripten-core/emscripten/issues/4548,glBlitFramebuffer issue compiling with closure=1,2016-09-07,2016-09-13,Cross-Language Optimizations,https://github.com/emscripten-core/emscripten/pull/4554/files,Closure WebGL Issue,1. Optimizer Removes Symbol,Prevent minifying WebGL functions,1. Prevent Optimization,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,,,FALSE
+59302,https://github.com/emscripten-core/emscripten/issues/4122,window.id conflict when compiling with --closure 1,2016-02-22,2016-03-02,Cross-Language Optimizations,https://github.com/emscripten-core/emscripten/pull/4123/files,Closure HTML5 Issue,5. Optimizer Emits Conflicting Symbol,Add type check before accessing field,5. Prevent Emitting Conflicting Names,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,,,FALSE
+55511,https://github.com/emscripten-core/emscripten/issues/8001,USE_PTHREADS=1 with NO_FILESYSTEM=1 breaks at -O1 and higher,2019-02-04,2019-02-16,Emulating Native Environment Features,https://github.com/emscripten-core/emscripten/commit/b089a0823d82924e0d06239fe63afd361ac042ec,Pthread Dependent on Filesystem Library,1. Implicit Filesystem Dependency,Prevent automatically exporting FS when Pthreads are enabled,1. Remove Dependency,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,FALSE,,,FALSE
+55091,https://github.com/emscripten-core/emscripten/issues/8421,undefined symbol: $FS,2019-04-10,2019-04-19,Emulating Native Environment Features,https://github.com/haberbyte/emscripten/commit/8398e83ad87b6e7f3b3ac773960c69b5882d1996,Syscalls Dependent on Filesystem Library,1. Implicit Filesystem Dependency,Add compiler option to specify if syscalls require filesystem support,2. Automatically Include Dependency,TRUE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,,,FALSE
+59796,https://github.com/emscripten-core/emscripten/issues/3627,"Linking problem with new ""use all of musl"" fix with NO_FILESYSTEM=1",2015-07-16,2015-07-17,Emulating Native Environment Features,https://github.com/emscripten-core/emscripten/commit/7b500b5178a36e7e3dc83aaaa2977d3ea8b35ea0,Pthread Dependent on Filesystem Library,1. Implicit Filesystem Dependency,Export minimal filesystem dependencies,2. Automatically Include Dependency,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,,,FALSE
+59136,https://github.com/emscripten-core/emscripten/issues/4291,FS.createPreloadedFile throws Uncaught ReferenceError: Browser is not defined,2016-05-03,2019-09-06,Emulating Native Environment Features,https://github.com/moai/moai-dev/commit/48dc0057a66a56b55353a5917a4210c64fe217cd,Filesystem Dependent on Browser Library,2. Implicit Dependency,Provide Workaround,2. Automatically Include Dependency,TRUE,FALSE,TRUE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,,,FALSE
+53885,https://github.com/emscripten-core/emscripten/issues/9627,Pthread assert on exit,2019-10-11,2019-10-12,Emulating Native Environment Features,https://github.com/emscripten-core/emscripten/commit/1e33c7ef072abb100110270588c28e89c33cc1b9,Pthreads Terminate Incorrectly,3. Incorrect Thread Termination,Return threads to pool instead of terminating immeditately,3. Fix Thread Cleanup,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,Exit App,,FALSE
+58782,https://github.com/emscripten-core/emscripten/issues/4646,"1.36.12: error in mkdirTree, invalid argument",2016-10-20,2016-10-31,Emulating Native Environment Features,https://github.com/emscripten-core/emscripten/pull/4649/files,Filesystem Relative Path Issue in Wget,4. Incorrect Path Handling ,Fix incorrect relative path resolution,4. Fix File/Path Information Lookup,FALSE,TRUE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,,,FALSE
+59502,https://github.com/emscripten-core/emscripten/issues/3922,Filesystem accesses from pthreads are much slower than in the main thread.,2015-11-17,2015-11-17,Emulating Native Environment Features,https://github.com/emscripten-core/emscripten/pull/3923/files#diff-8ed8acb1e65231edaf765bee0755ea5d0f336fea304cf7e66a70e22918f966c5,Filesystem From Pthread Access Slow,5. Thread Scope Issue,Decrease main thread futex wait time ,5. Improve Main Thread Responsiveness,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,,,FALSE
+53127,https://github.com/emscripten-core/emscripten/issues/10385,"error ""variable FS is undeclared"" in 1.39.7 with closure compiler, NO_FILESYSTEM",2020-02-07,2020-03-05,Emulating Native Environment Features,https://github.com/emscripten-core/emscripten/pull/10427/files,Syscalls Dependent on Filesystem Library,1. Implicit Filesystem Dependency,Add compiler option to specify if syscalls require filesystem support,2. Automatically Include Dependency,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,,,TRUE
+53671,https://github.com/emscripten-core/emscripten/pull/9841,Fail with ENOSYS on unsupported socketcalls,2019-11-15,2019-11-18,Emulating Native Environment Features,https://github.com/emscripten-core/emscripten/pull/9841/files,Socket Abort Issue,6. Socket Limitations,Throw useful error message instead,6. Add Exception,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,,,FALSE
+53753,https://github.com/emscripten-core/emscripten/issues/9759,Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:,2019-11-01,2019-11-04,Emulating Native Environment Features,https://github.com/emscripten-core/emscripten/commit/07133efd1f38300aa2cc0af3a8ce72a1ded57b06,Pthread Missing Function Definition,7. Incomplete Library API Set,Add missing function definitions as stubs,7. Add Missing Function,FALSE,FALSE,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,,,FALSE
+54421,https://github.com/emscripten-core/emscripten/issues/9091,worker.js: onmessage() captured an uncaught exception: ReferenceError: __register_pthread_ptr is not defined,2019-07-26,2020-02-25,Emulating Native Environment Features,https://github.com/emscripten-core/emscripten/pull/10449/files,Pthreads Custom Export Name Issue,5. Thread Scope Issue,Define custom name variable in worker scope,8. Define Variables in Thread Scope,FALSE,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,,,TRUE
+54794,https://github.com/emscripten-core/emscripten/issues/8718,Remaining test failures with wasm-backend pthreads,2019-05-31,2019-06-22,Emulating Native Environment Features,https://github.com/emscripten-core/emscripten/pull/8842/files,Pthreads Incorrect Stack Layout Issue,10. Thread Memory Layout Issue,Fix stack layout in pthread ,9. Fix Thread Memory Layout Assumptions,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,TRUE,,,FALSE
+55327,https://github.com/emscripten-core/emscripten/pull/8185,Delegate canvas operations to main thread,2019-02-26,2019-03-08,Emulating Native Environment Features,https://github.com/emscripten-core/emscripten/pull/8185/files,Pthread HTML5 Canvas Issue,5. Thread Scope Issue,Perform canvas operations on main thread instead of worker,10. Delegate Thread Operation to Main Thread,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,,,FALSE
+58192,https://github.com/emscripten-core/emscripten/issues/5237,native filesystem is not accessible without mounting on node.js,2017-05-23,2020-03-04,Emulating Native Environment Features,https://github.com/emscripten-core/emscripten/issues/5237#issuecomment-462856839,Filesystem NODEFS Issue,4. Incorrect Path Handling ,Add compiler flag to enable NODEFS,11. Add FS Compiler Flag,TRUE,FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,,,FALSE
+59052,https://github.com/emscripten-core/emscripten/issues/4375,EXTRA_EXPORTED_RUNTIME_METHODS not considered for functions exported from library_fs.js,2016-06-01,2018-01-22,Emulating Native Environment Features,https://github.com/emscripten-core/emscripten/pull/5023/files,Filesystem Export Issue,12. Library Cannot Export,Add support for FS library in compiler export flag,2. Automatically Include Dependency,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,,,FALSE
+59173,https://github.com/emscripten-core/emscripten/issues/4254,WORKERFS created nodes cannot be found in FS.nameTable,2016-04-19,2019-09-06,Emulating Native Environment Features,https://github.com/emscripten-core/emscripten/pull/4274/files,Filesystem WORKERFS Lookup Issue,4. Incorrect Path Handling ,Fix incorrect path names added to Fs.nameTable when created,4. Fix File/Path Information Lookup,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,,,FALSE
+59586,https://github.com/emscripten-core/emscripten/issues/3837,Gzip and Lazy Filesystem,2015-10-07,2015-12-23,Emulating Native Environment Features,https://github.com/fzimmermann89/emscripten/commit/89b3661ff6427132c4fcfe55f7689af9ae85fcb2,Filesystem GZip Truncating Issue,13. Filesystem Data Truncation,Download full file and report real length when webserver Gzips files,4. Fix File/Path Information Lookup,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,,,FALSE
+56013,https://github.com/emscripten-core/emscripten/issues/7448,`-s MODULARIZE=1` does not work with pthreads,2018-11-03,2019-06-24,Emulating Native Environment Features,https://github.com/emscripten-core/emscripten/pull/7667/files,Pthreads MODULARIZE Issue,5. Thread Scope Issue,Fix pthread variables to work with MODULARIZE scope change,8. Define Variables in Thread Scope,FALSE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,,,FALSE
+58850,https://github.com/emscripten-core/emscripten/issues/4578,pthread-main.js: FS is not defined,2016-09-23,2016-09-23,Emulating Native Environment Features,https://github.com/emscripten-core/emscripten/pull/4579/files,Pthread Dependent on Filesystem Library,1. Implicit Filesystem Dependency,Add null check on FS object before accessing,1. Remove Dependency,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,,,FALSE
+56603,https://github.com/emscripten-core/emscripten/issues/6826,Call global-scope-js-function from threads,2018-07-09,2018-12-14,Emulating Native Environment Features,https://github.com/emscripten-core/emscripten/issues/6826#issuecomment-447285524,Pthreads Global Scope Function Call Issue,5. Thread Scope Issue,Use workaround,8. Define Variables in Thread Scope,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,,,FALSE
+56044,https://github.com/emscripten-core/emscripten/issues/7417,getaddrinfo and other blacklisted functions in EmScripten,2018-10-31,2018-11-01,Emulating Native Environment Features,https://github.com/emscripten-core/emscripten/commit/86ee826d0f8c6d330b587d8eb1f23566f879ccc4,Socket Host Resolution Unsupported,6. Socket Limitations,Document in Code,12. Add Documentation,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,,,FALSE
+58668,https://github.com/emscripten-core/emscripten/issues/4761,unresolved symbol at link time from library code,2016-11-30,2016-12-01,Emulating Native Environment Features,https://github.com/emscripten-core/emscripten/pull/4762/files,Socket Function Missing Dependency,2. Implicit Dependency,Add missing htons dependency,2. Automatically Include Dependency,TRUE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,,,FALSE
+59702,https://github.com/emscripten-core/emscripten/issues/3721,std::thread error on exit,2015-08-27,2019-05-20,Emulating Native Environment Features,https://github.com/pancx/ORB_SLAM2/commit/49b893f1804d18a42d6ee0ea039fbd623ea6a85a,Pthreads Terminate Incorrectly,3. Incorrect Thread Termination,Use workaround,3. Fix Thread Cleanup,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,,,FALSE
+58914,https://github.com/emscripten-core/emscripten/issues/4514,WebGL 2 GL errors,2016-08-26,2016-09-02,Supporting WebAPIs,https://github.com/emscripten-core/emscripten/commit/0cdefa6d9ac98688bb0512c47b676a7569bdc5c6,WebGL Missing Extensions Issue,1. OpenGL/WebGL Inconsistent Implementation,Add missing WebGL extensions,1. Add Missing WebGL Extensions,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,,,FALSE
+59213,https://github.com/emscripten-core/emscripten/issues/4214,Problem with converting the OpenGL glDrawElements function to WebGL in emscripten,2016-03-31,2019-09-26,Supporting WebAPIs,https://github.com/emscripten-core/emscripten/commit/a4fcb6b005dc0efc952409b14798bcb9f52fbf14,OpenGL glDrawElements WebGL Implementation Issue,1. OpenGL/WebGL Inconsistent Implementation,Properly calculate vertices in glDrawElements,2. Fix Incorrect WebGL Calculation,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,,,FALSE
+57043,https://github.com/emscripten-core/emscripten/pull/6386,fix glGetFramebufferAttachmentParameteriv() when it returns a GL object name,2018-03-28,2018-04-05,Supporting WebAPIs,https://github.com/emscripten-core/emscripten/pull/6386/files,WebGL Object Type Issue,1. OpenGL/WebGL Inconsistent Implementation,Handle different possible return types in getFramebufferAttachmentParameter(),3. Add Type Check,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,,,FALSE
+57682,https://github.com/emscripten-core/emscripten/issues/5747,GLFW unable to call WebGL 2 functions,2017-11-07,2019-09-26,Supporting WebAPIs,https://github.com/emscripten-core/emscripten/pull/6629/files,OpenGL Missing Function Aliases,1. OpenGL/WebGL Inconsistent Implementation,Add missing functions to emscripten_GetProcAddress,1. Add Missing WebGL Extensions,FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,,,FALSE
+53275,https://github.com/emscripten-core/emscripten/issues/10237,SDL2_MIXER cannot be used yet.,2020-01-18,2020-01-21,Supporting WebAPIs,https://github.com/emscripten-core/emscripten/pull/10238/files,SDL2  Symbol Mismatch Issue,2. SDL Headers Inconsistent Versions,Fix incorrect SDL2 headers,4. Fix Incorrect Headers,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,,,FALSE
+55864,https://github.com/emscripten-core/emscripten/issues/7597,"Invalid Enum error on glGetIntegerv(GL_VERTEX_ARRAY_BINDING,...) with Webgl 1.0",2018-12-03,2018-12-13,Supporting WebAPIs,https://github.com/juj/emscripten/commit/8444e5acc3e07599b4ec2d8e2567106e028b7f2a,WebGL Missing Extensions Issue,1. OpenGL/WebGL Inconsistent Implementation,Add missing WebGL extensions,1. Add Missing WebGL Extensions,FALSE,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,,,FALSE
+58780,https://github.com/emscripten-core/emscripten/issues/4648,Browser.requestFullsreen stack overflow,2016-10-20,2016-10-31,Supporting WebAPIs,https://github.com/emscripten-core/emscripten/pull/4651/files,HTML5 Fullscreen Callback Issue,3. Fullscreen Callback Error,Prevent progogating to resize listeners when resizing canvas,5. Improve Event Handling,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,,,FALSE
+58872,https://github.com/emscripten-core/emscripten/issues/4556,emscripten_webgl_create_context fails if canvas has no id attribute,2016-09-10,2016-09-13,Supporting WebAPIs,https://github.com/emscripten-core/emscripten/compare/e7a024b07210...cd3881ad9bee,WebGL Canvas Issue,1. OpenGL/WebGL Inconsistent Implementation,Add null check on canvas id attribute before accessing,3. Add Type Check,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,,,FALSE
+58403,https://github.com/emscripten-core/emscripten/issues/5026,Fetch: failed cache store errors in successful XHR are not reported,2017-03-14,2017-03-14,Supporting WebAPIs,https://github.com/emscripten-core/emscripten/pull/5027/files,Fetch IndexedDB Cache Issue,4. Improper Cleanup,Propogate caching errors to Fetch statusText,7. Propogate Error To Allow Catching,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,,,FALSE
+53862,https://github.com/emscripten-core/emscripten/issues/9650,glVertexAttribIPointer cause javascript function undefined error,2019-10-16,2019-11-21,Supporting WebAPIs,https://github.com/emscripten-core/emscripten/issues/9650,OpenGL FullES3 Missing ES2 Dependencies,1. OpenGL/WebGL Inconsistent Implementation,Automatically turn on FULL_ES2 exports when FULL_ES3 is set,8. Automatically Include Dependency,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,,,FALSE
+54324,https://github.com/emscripten-core/emscripten/issues/9188,glGetString crashes when called on a lost context,2019-08-08,2019-08-09,Supporting WebAPIs,https://github.com/emscripten-core/emscripten/commit/095b841dd7d75466d06d70eff61c2ad55745c49d,OpenGL Null Access,1. OpenGL/WebGL Inconsistent Implementation,Add null check,3. Add Type Check,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,,,FALSE
+54415,https://github.com/emscripten-core/emscripten/issues/9097,emscripten_request_fullscreen_strategy callback order,2019-07-27,2019-11-13,Supporting WebAPIs,https://github.com/haberbyte/emscripten/commit/ae6c6fb761f33651d42885150fdadbca666d59d7,HTML5 Fullscreen Callback Issue,3. Fullscreen Callback Error,Remove unncessary callback call,5. Improve Event Handling,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,"Enter fullscreen and Press F,Esc",,FALSE
+57260,https://github.com/emscripten-core/emscripten/issues/6169,Cannot issue normal fetch if IndexedDB initialization failed,2018-02-01,2018-07-24,Supporting WebAPIs,https://github.com/emscripten-core/emscripten/pull/6178/files,Fetch with IndexedDB Initialization Issue,4. Improper Cleanup,Properly remove run dependency if IndexedDB initialization fails in Fetch API,7. Propogate Error To Allow Catching,FALSE,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,Wait 10 seconds,,FALSE
+59645,https://github.com/emscripten-core/emscripten/issues/3778,Some GL tests fail on gamma(?) differences.,2015-09-15,2019-09-07,Supporting WebAPIs,https://github.com/emscripten-core/emscripten/pull/3757/files,WebGL Gamma Differences,1. OpenGL/WebGL Inconsistent Implementation,Unfixed,10. Unfixed,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,,,FALSE
+58348,https://github.com/emscripten-core/emscripten/issues/5081,Cannot create multiple SDL_Window objects in Emscripten,2017-03-25,2019-09-06,Supporting WebAPIs,https://github.com/emscripten-core/emscripten/pull/6374/files,SDL Lacks Multiple Window Support,5. SDL/Canvas Inconsistenct,Partially fixed by implementing multiple canvas in Shell only,9. Implement Partial Fix,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,,,FALSE
+57286,https://github.com/emscripten-core/emscripten/issues/6143,GLFW key listener blocking backspace and tab,2018-01-25,2018-11-27,Supporting WebAPIs,https://github.com/emscripten-core/emscripten/pull/6148/files,WebGL Input Blocking,1. OpenGL/WebGL Inconsistent Implementation,Unfixed,10. Unfixed,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,,,FALSE
+58307,https://github.com/emscripten-core/emscripten/issues/5122,"glfwGetKey() stuck key state, GLFW_PRESS persists after onblur - should clear key state on window losing focus",2017-04-09,2019-09-06,Supporting WebAPIs,https://github.com/emscripten-core/emscripten/pull/5159/files,OpenGL Sticky Keypress Issue,4. Improper Cleanup,Release key on onBlur event,5. Improve Event Handling,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,"Visit test page, hold down space, switch out of browser with Cmd-Tab, switch back",,FALSE
+55502,https://github.com/emscripten-core/emscripten/issues/8010,ENVIRONMENT=web optimised builds Closure and stdio,2019-02-06,2019-02-06,Runtime Implementation Discrepancy,https://github.com/juj/emscripten/commit/90b16900f2c8cfda863de75646d4faa59316bccf,MEMFS and ENVIRONMENT=web Issue,1. Other Fallback Support,Fix non-Node environment branch,1. Fix Check on Environment Properties,TRUE,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,,,FALSE
+54834,https://github.com/emscripten-core/emscripten/issues/8678,EXPORT_ES6 + USE_PTHREADS not compatible with ASSERTIONS,2019-05-27,2019-07-30,Runtime Implementation Discrepancy,https://github.com/emscripten-core/emscripten/commit/95fc14d17cebc005c58b2e78c2b7814a14a0d316,ES6 Non-Modifiable Export Issue,2. ES5/ES6 Behavior Difference,Copy object to allow modification,4. Avoid Behavior Discrepencies,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,,,FALSE
+55276,https://github.com/emscripten-core/emscripten/pull/8236,TypeError: Document not active on exitFullscreen,2019-03-05,2019-03-07,Runtime Implementation Discrepancy,https://github.com/emscripten-core/emscripten/pull/8236/files,Chrome exitFullscreen Change,3. Chrome API Change,Add fullscreen state check before callign affected function,1. Fix Check on Environment Properties,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,,,FALSE
+59563,https://github.com/emscripten-core/emscripten/issues/3860,emscripten_async_wget2_data: POST requests output errors to console in Chrome,2015-10-18,2015-10-28,Runtime Implementation Discrepancy,https://github.com/emscripten-core/emscripten/pull/3874/files,Chrome POST Headers Issue,3. Chrome API Change,Remove unnecessary request headers,3. Update Changed Behavior,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,,,FALSE
+59566,https://github.com/emscripten-core/emscripten/issues/3857,Emscripten doesn't support passing data by transferring ownership to or from Web Workers,2015-10-16,2015-11-30,Runtime Implementation Discrepancy,https://github.com/emscripten-core/emscripten/pull/3910/files,Chrome WebWorker Data Passing Slow,4. Chrome Behavior Peculiarity,Support transfering data ownership to worker,2. Leverage Runtime Discrepancies,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,,,FALSE
+59930,https://github.com/emscripten-core/emscripten/issues/3493,Enable graceful fallback of executing pthreads-enabled code.,2015-06-03,2015-08-25,Runtime Implementation Discrepancy,https://github.com/emscripten-core/emscripten/pull/3705/files,Pthread Cannot Fallback on Unsupported Browsers,1. Other Fallback Support,Add fallback to single-threaded execution if unsupported,5. Add Fallback for Unsupported Feature,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,,,FALSE
+53645,https://github.com/emscripten-core/emscripten/issues/9867,Promise' is undefined,2019-11-19,2020-01-07,Runtime Implementation Discrepancy,https://github.com/emscripten-core/emscripten/commit/3529a675e4bbfef0746fb27b469637d2f172f07f,IE Promises Unsupported,5. IE Inconsistent Runtime Feature Support,Add Promise Polyfill for wasm2js,5. Add Fallback for Unsupported Feature,TRUE,FALSE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,,,FALSE
+54193,https://github.com/emscripten-core/emscripten/issues/9319,I have some problems when I use it,2019-08-26,2019-08-27,Runtime Implementation Discrepancy,https://github.com/emscripten-core/emscripten/pull/9324/files,Let Unsupported on Older NodeJS Versions,2. ES5/ES6 Behavior Difference,Remove let keyword,5. Add Fallback for Unsupported Feature,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,,,FALSE
+54279,https://github.com/emscripten-core/emscripten/issues/9233,Regression bug: Relative import of ES6 WASM modules from ES6 Modules does not work,2019-08-14,2019-08-23,Runtime Implementation Discrepancy,https://github.com/emscripten-core/emscripten/commit/7d250f8a9f57707b25e3030ba8701df9866760cf,document.currentScript Unavailable in Firefox and Chrome ES6 modules,2. ES5/ES6 Behavior Difference,Add compiler flag to enable newer import.meta.url on demand,5. Add Fallback for Unsupported Feature,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,,,FALSE
+54404,https://github.com/emscripten-core/emscripten/pull/9108,Fix memory leak in Chrome - Error objects do not like to be persistent,2019-07-29,2019-07-30,Runtime Implementation Discrepancy,https://github.com/emscripten-core/emscripten/pull/9108/files,Chrome Error Scope Behavior Issue,4. Chrome Behavior Peculiarity,Remove error call to prevent memory leak,4. Avoid Behavior Discrepencies,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,,,FALSE
+55233,https://github.com/emscripten-core/emscripten/issues/8279,Way to use precompiled wasm object?,2019-03-10,2020-03-11,Runtime Implementation Discrepancy,https://github.com/emscripten-core/emscripten/commit/1e801c87feb1d1e868caa5e39e7d6abc43b91f79,NodeJS Wasm Caching Not On By Default,6. NodeJS V8 API Misuse,Manually enable V8 compiled-code caching mechanims,2. Leverage Runtime Discrepancies,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,,,FALSE
+57145,https://github.com/emscripten-core/emscripten/issues/6284,es6 module support flag,2018-02-26,2018-05-30,Runtime Implementation Discrepancy,https://github.com/emscripten-core/emscripten/commit/13b830798295ab491d953da9b27e706ec62969c3,ES6 Module Export Unsupported,2. ES5/ES6 Behavior Difference,Add support to export Module as ES6 module,4. Avoid Behavior Discrepencies,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,,,FALSE
+57221,https://github.com/emscripten-core/emscripten/pull/6208,Wrong random number generator chosen on node,2018-02-07,2019-01-22,Runtime Implementation Discrepancy,https://github.com/emscripten-core/emscripten/pull/6208/files,NodeJS Crypto Issue,7. NodeJS API Misuse,Add check for random number generator in crypto module before calling,1. Fix Check on Environment Properties,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,,,FALSE
+57632,https://github.com/emscripten-core/emscripten/issues/5797,"exception thrown: TypeError: undefined is not an object (evaluating 'AL.currentContext.ctx.listener._position[0]=v1'),_alListener3f",2017-11-15,2018-03-12,Runtime Implementation Discrepancy,https://github.com/emscripten-core/emscripten/pull/6320/files,Safari OpenAL Immutable Native Object Issue,2. Safari Behavior Difference,Copy object to allow modification,4. Avoid Behavior Discrepencies,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,,,FALSE
+59313,https://github.com/emscripten-core/emscripten/issues/4111,Chrome Canary breaks regexes run on function toString(),2016-02-18,2016-02-20,Runtime Implementation Discrepancy,https://github.com/emscripten-core/emscripten/commit/659ba7750ce1f33aaa6c12b7d544f65a277bfd8d,Chrome toString Change,3. Chrome API Change,Improve Regex run on function names in toString,3. Update Changed Behavior,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,,,FALSE
+53279,https://github.com/emscripten-core/emscripten/issues/10233,browser.test_sdl2_ttf test is flakey,2020-01-17,2020-01-29,Runtime Implementation Discrepancy,https://github.com/emscripten-core/emscripten/pull/10296/files,CI Timing Issue,8. Other Performance Issue (on chrome and firefox),Simplify test to avoid excessive main loop rendering,4. Avoid Behavior Discrepencies,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,FALSE,,,FALSE
+59331,https://github.com/emscripten-core/emscripten/pull/4093,Fix interactive.test_html5_mouse,2016-02-11,2016-02-14,Runtime Implementation Discrepancy,https://github.com/emscripten-core/emscripten/pull/4093/files,Firefox and Chrome Button Mousedown Issue,9. Other API Change,Fix mousedown handler,3. Update Changed Behavior,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,,,FALSE
+58312,https://github.com/emscripten-core/emscripten/pull/5117,Fix embinding functions for wasm backend,2017-04-07,2017-04-18,WebAssembly Limitation,https://github.com/emscripten-core/emscripten/pull/5117/files,Function Pointer Bitcasting Unsupported,1. Function Pointer Bitcasting,Use workaround,1. Provide Workaround,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,,,FALSE
+58225,https://github.com/emscripten-core/emscripten/issues/5204,Usage of sigsetjmp/siglongjmp leads to undefined symbol references,2017-05-06,2017-08-12,WebAssembly Limitation,https://github.com/emscripten-core/emscripten/pull/5295/files,Sigsetjmp/Siglongjmp Unsupported,2. Sigsetjmp/Siglongjmp/Signals,Implement stub functions,2. Provide Workaround,TRUE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,,,FALSE
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
