@@ -1,6 +1,6 @@
-# An Empirical Study on Bugs in WebAssembly Compilers
+# An Empirical Study of Bugs in WebAssembly Compilers
 
-This repo contains the figures and data presented in the ASE 2021 submission "An Empirical Study on Bugs in WebAssembly Compilers".
+This repo contains the figures and data presented in the ASE 2021 submission "An Empirical Study of Bugs in WebAssembly Compilers".
 
 ## Findings
 
@@ -20,7 +20,7 @@ This repo contains the figures and data presented in the ASE 2021 submission "An
 Our findings can be used to help guide testing improvements in WebAssembly compilers. For example, Implication 9 states that the current Emscripten test suite is comprehensive enough to cover relevant APIs but not deep enough to find complex bugs. In [Emscripten Issue #9562](https://github.com/emscripten-core/emscripten/issues/9562), the report describes a bug where using the `-s MAIN_MODULE=1 ` compiler flag with a code snippet utilizing the Filesystem API causes a type error that passes an illegal value between WebAssembly and JavaScript. This bug should be covered by the test cases for dynamic linking [test_dynamic_link,  test_dylink_dso_needed, ...](https://github.com/emscripten-core/emscripten/blob/635c4608fbcc34b025267e0b626f3f245296f4e6/tests/test_browser.py#L3425) or the test cases for the filesystem [test_asmfs_hello_file, test_asmfs_read_file_twice, etc...](https://github.com/emscripten-core/emscripten/blob/635c4608fbcc34b025267e0b626f3f245296f4e6/tests/test_browser.py#L4501). However, the bug-inducing input manages to avoid hitting these test cases as the two APIs were not tested in combination with each other.
 
 ### [Dataset](https://github.com/wasm-compiler-bugs/wasm-compiler-bugs.github.io/tree/master/Dataset)
-This folder contains the samples collected from the qualitative study,  [quantitative_dataset.csv](https://github.com/wasm-compiler-bugs/wasm-compiler-bugs.github.io/tree/master/Data/qualitative_dataset.csv), and the quantitative dataset, [quantitative_dataset.csv](https://github.com/wasm-compiler-bugs/wasm-compiler-bugs.github.io/tree/master/Data/quantitative_dataset.csv).
+This folder contains the samples collected from the qualitative study,  [qualitative_dataset.csv](https://github.com/wasm-compiler-bugs/wasm-compiler-bugs.github.io/blob/master/Dataset/qualitative_dataset.csv), and the quantitative dataset, [quantitative_dataset.csv](https://github.com/wasm-compiler-bugs/wasm-compiler-bugs.github.io/blob/master/Dataset/quantitative_dataset.csv).
 
 The bug dataset is constructed by scanning the repositories of four compilers, AssemblyScript,  Binaryen, Emscripten,  and Wasm-Bindgen (obtained from <a href="https://github.com/mbasso/awesome-wasm">this list</a>), to identify issues that contained bug reports. We do this using two approaches.
 In the first approach, we use the GitHub Search API to collect all the closed issues that had a label indiciating the issue was a bug, including &quot;bug&quot;, &quot;good first bug&quot;, &quot;breaking change&quot;, etc... This produced a total of 243 issues. 
@@ -91,6 +91,6 @@ This study focuses on four dimensions: (a) We study the lifecycle of the bugs an
 
 ## Real-World WebAssembly Adoption Study
 
-![Distribution of WebAssembly Compilers](https://github.com/wasm-compiler-bugs/wasm-compiler-bugs.github.io/raw/master/Figures/compiler_dist.png)
+<img src="https://github.com/wasm-compiler-bugs/wasm-compiler-bugs.github.io/raw/master/Figures/compiler_dist.png" alt="Distribution of WebAssembly Compilers" width="550">
 
 Our analysis shows that Emscripten is the most widely-used compiler for creating real-world WebAssembly samples. Besides, Binaryen and Wasm-Bindgen have also been observed in the wild. There are duplicated samples because multiple websites used the same WebAssembly binary. Emscripten accounts for 68% (2,434 samples) of all samples, Binaryen takes 31% (1,133 samples), and Wasm-Bindgen accounts for 1% (38 samples). When considering distinct samples, Emscripten accounts for 95% (752 samples) of the unique samples, followed by Wasm-bindgen (4%, 32 samples), and Binaryen (1%, 7 samples).
