@@ -1,6 +1,6 @@
 # An Empirical Study of Bugs in WebAssembly Compilers
 
-This repo contains the figures and data presented in the ASE 2021 submission "An Empirical Study of Bugs in WebAssembly Compilers".
+This repository contains the figures and data presented in the ASE 2021 submission, "[An Empirical Study of Bugs in WebAssembly Compilers](https://alan-romano.github.io/An_Empirical_Study_of_Bugs_in_WebAssembly_Compilers.pdf)."
 
 ## Findings
 
